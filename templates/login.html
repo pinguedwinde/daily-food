@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>On mange quoi ? - Connexion</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="login-page">
+        <div class="login-card">
+            <div class="login-icon">🍽️</div>
+            <h1>On mange quoi aujourd'hui ?</h1>
+            <p>Entre ton pseudo pour rejoindre la cuisine familiale</p>
+            <form method="POST" action="/login">
+                <div class="form-group">
+                    <input type="text" name="username" placeholder="Ton prénom..." required autofocus>
+                </div>
+                <button type="submit" class="btn btn-primary">C'est parti !</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

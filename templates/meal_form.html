@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+{% block title %}{{ 'Modifier' if meal else 'Ajouter' }} un plat{% endblock %}
+{% block content %}
+
+<div class="page-header">
+    <h1>{{ '✏️ Modifier' if meal else '➕ Ajouter' }} un plat</h1>
+    <p>{{ 'Modifie les informations du plat' if meal else 'Ajoute un nouveau plat à ta base' }}</p>
+</div>
+
+<div class="form-container">
+    <form method="POST" action="{{ '/meals/' ~ meal.id ~ '/edit' if meal else '/meals/add' }}">
+        <div class="form-group">
+            <label for="name">Nom du plat *</label>
+            <input type="text" id="name" name="name" value="{{ meal.name if meal else '' }}" required placeholder="Ex: Poulet rôti, Pâtes carbonara...">
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label for="category">Catégorie *</label>
+                <select id="category" name="category" required>
+                    {% for key, label in CATEGORY_LABELS.items() %}
+                    <option value="{{ key }}" {% if meal and meal.category == key %}selected{% endif %}>{{ label }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="prep_time">Temps de préparation (minutes)</label>
+                <input type="number" id="prep_time" name="prep_time" value="{{ meal.prep_time if meal else '' }}" placeholder="Ex: 30" min="0">
+            </div>
+        </div>
+
+        {% if meal %}
+        {% set meal_tags = meal.tags|join(',') if meal.tags else '' %}
+        {% else %}
+        {% set meal_tags = '' %}
+        {% endif %}
+
+        <div class="form-group">
+            <label>Tags</label>
+            <div class="tags-input-container" id="tags-container">
+                <input type="text" id="tags-input" placeholder="Tape un tag et appuie sur Entrée...">
+            </div>
+            <input type="hidden" id="tags-hidden" name="tags" value="{{ meal_tags }}">
+            <div class="tags-suggestions">
+                {% for tag in COMMON_TAGS %}
+                <span class="tag-suggestion" data-tag="{{ tag }}">+ {{ tag }}</span>
+                {% endfor %}
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>Ingrédients</label>
+            <div class="ingredients-list" id="ingredients-list">
+                {% if meal and meal.ingredients %}
+                    {% for ingredient in meal.ingredients %}
+                    <div class="ingredient-row">
+                        <input type="text" name="ingredients" value="{{ ingredient }}" class="ingredient-input" placeholder="Ex: 200g de pâtes">
+                        <button type="button" class="remove-ingredient" onclick="this.parentElement.remove()">&times;</button>
+                    </div>
+                    {% endfor %}
+                {% else %}
+                <div class="ingredient-row">
+                    <input type="text" name="ingredients" class="ingredient-input" placeholder="Ex: 200g de pâtes">
+                    <button type="button" class="remove-ingredient" onclick="this.parentElement.remove()">&times;</button>
+                </div>
+                {% endif %}
+            </div>
+            <button type="button" id="add-ingredient-btn" class="add-ingredient-btn">+ Ajouter un ingrédient</button>
+        </div>
+
+        <div class="form-group">
+            <label for="notes">Notes / Instructions</label>
+            <textarea id="notes" name="notes" placeholder="Astuces, accompagnements, variantes...">{{ meal.notes if meal else '' }}</textarea>
+        </div>
+
+        <div class="form-actions">
+            <button type="submit" class="btn btn-primary btn-lg">
+                {{ 'Enregistrer les modifications' if meal else 'Ajouter le plat' }}
+            </button>
+            <a href="/meals" class="btn btn-outline btn-lg">Annuler</a>
+        </div>
+    </form>
+</div>
+
+{% endblock %}

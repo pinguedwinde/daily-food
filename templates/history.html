@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block title %}Historique{% endblock %}
+{% block content %}
+
+<div class="page-header">
+    <h1>📜 Historique</h1>
+    <p>Ce qu'on a mangé ces derniers temps</p>
+</div>
+
+{% if history_groups %}
+<div class="history-timeline">
+    {% for group in history_groups %}
+    <div class="history-group">
+        <h3>{{ group.date_label }}</h3>
+        {% for entry in group.entries %}
+        <div class="history-entry">
+            <span class="entry-slot" style="color:{{ SLOT_COLORS[entry.meal_slot] }}">{{ SLOT_LABELS[entry.meal_slot] }}</span>
+            <span class="entry-meal"><a href="/meals/{{ entry.meal_id }}/edit">{{ entry.name }}</a></span>
+            <span class="entry-meta">
+                {% if entry.eaten_by %}
+                <span>par {{ entry.eaten_by }}</span>
+                {% endif %}
+                {% if entry.rating %}
+                <span class="stars">{{ '★' * entry.rating }}{{ '☆' * (5 - entry.rating) }}</span>
+                {% endif %}
+            </span>
+        </div>
+        {% endfor %}
+    </div>
+    {% endfor %}
+</div>
+{% else %}
+<div style="text-align:center;padding:60px 24px;color:var(--color-text-lighter);">
+    <div style="font-size:3rem;margin-bottom:16px;">📖</div>
+    <p style="font-size:1.1rem;">Pas encore d'historique.</p>
+    <p style="margin-top:8px;">Quand tu planifieras et mangeras des plats, ils apparaîtront ici.</p>
+    <a href="/planner" class="btn btn-primary" style="margin-top:24px;">Planifier un repas</a>
+</div>
+{% endif %}
+
+{% endblock %}

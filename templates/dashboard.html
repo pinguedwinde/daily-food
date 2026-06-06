@@ -1,0 +1,119 @@
+{% extends "base.html" %}
+{% block title %}On mange quoi aujourd'hui ?{% endblock %}
+{% block content %}
+
+<div class="hero-section">
+    <h1>On mange quoi aujourd'hui ? 🤔</h1>
+    <p class="subtitle">
+        {% if suggestion %}
+            {{ user }}, j'ai une idée pour toi !
+        {% else %}
+            {{ user }}, ta base de plats est vide. Ajoute tes premiers plats !
+        {% endif %}
+    </p>
+</div>
+
+{% if suggestion %}
+<div class="suggestion-card">
+    <div class="suggestion-card-header category-{{ suggestion.category }}">
+        {{ CATEGORY_LABELS[suggestion.category] }}
+    </div>
+    <div class="suggestion-card-body">
+        <h2 class="suggestion-name">{{ suggestion.name }}</h2>
+
+        <div class="suggestion-meta">
+            {% if suggestion.prep_time %}
+            <span class="meta-item">⏱️ {{ suggestion.prep_time }} min</span>
+            {% endif %}
+        </div>
+
+        {% if suggestion.tags %}
+        <div class="suggestion-tags">
+            {% for tag in suggestion.tags %}
+            <span class="tag">{{ tag }}</span>
+            {% endfor %}
+        </div>
+        {% endif %}
+
+        {% if suggestion.ingredients %}
+        <div class="suggestion-ingredients">
+            <h4>Ingrédients</h4>
+            <ul>
+                {% for ingredient in suggestion.ingredients %}
+                <li>{{ ingredient }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endif %}
+
+        {% if suggestion.notes %}
+        <div class="suggestion-notes">{{ suggestion.notes }}</div>
+        {% endif %}
+
+        <div class="suggestion-actions">
+            <form method="GET" action="/" style="display:inline;">
+                {% if filter_category %}<input type="hidden" name="category" value="{{ filter_category }}">{% endif %}
+                {% if filter_max_time %}<input type="hidden" name="max_time" value="{{ filter_max_time }}">{% endif %}
+                <button type="submit" class="btn btn-outline btn-lg">🎲 Je veux autre chose</button>
+            </form>
+            <form method="POST" action="/planner/assign" style="display:inline;">
+                <input type="hidden" name="meal_id" value="{{ suggestion.id }}">
+                <input type="hidden" name="plan_date" value="{{ today }}">
+                <input type="hidden" name="meal_slot" value="dinner">
+                <button type="submit" class="btn btn-primary btn-lg">✅ Je mange ça ce soir !</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<form id="filter-form" method="GET" action="/" class="filters-bar">
+    <select name="category">
+        <option value="">Tous les types</option>
+        {% for key, label in CATEGORY_LABELS.items() %}
+        <option value="{{ key }}" {% if filter_category == key %}selected{% endif %}>{{ label }}</option>
+        {% endfor %}
+    </select>
+    <select name="max_time">
+        <option value="">Temps de prép.</option>
+        <option value="15" {% if filter_max_time == '15' %}selected{% endif %}>≤ 15 min</option>
+        <option value="30" {% if filter_max_time == '30' %}selected{% endif %}>≤ 30 min</option>
+        <option value="60" {% if filter_max_time == '60' %}selected{% endif %}>≤ 1 heure</option>
+    </select>
+    <button type="submit" class="btn btn-primary btn-sm">Filtrer</button>
+    {% if filter_category or filter_max_time %}
+    <a href="/" class="btn btn-outline btn-sm">Effacer les filtres</a>
+    {% endif %}
+</form>
+
+{% else %}
+<div class="suggestion-card">
+    <div class="suggestion-card-body">
+        <div class="empty-suggestion">
+            <div class="empty-icon">🍳</div>
+            <p>Ajoute tes premiers plats dans la base pour que je puisse te faire des suggestions !</p>
+            <a href="/meals/add" class="btn btn-primary btn-lg">Ajouter un plat</a>
+        </div>
+    </div>
+</div>
+{% endif %}
+
+<div class="stats-row">
+    <div class="stat-item">
+        <div class="stat-number">{{ total_meals }}</div>
+        <div class="stat-label">Plats dans la base</div>
+    </div>
+    <div class="stat-item">
+        <div class="stat-number">{{ planned_today }}</div>
+        <div class="stat-label">Plats prévus aujourd'hui</div>
+    </div>
+    <div class="stat-item">
+        <div class="stat-number">{{ week_planned }}</div>
+        <div class="stat-label">Plats cette semaine</div>
+    </div>
+    <div class="stat-item">
+        <div class="stat-number">{{ total_history }}</div>
+        <div class="stat-label">Plats déjà mangés</div>
+    </div>
+</div>
+
+{% endblock %}

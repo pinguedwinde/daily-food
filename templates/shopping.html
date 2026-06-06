@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block title %}Liste de courses{% endblock %}
+{% block content %}
+
+<div class="page-header">
+    <h1>🛒 Liste de courses</h1>
+    <p>Pour la semaine du {{ week_start.strftime('%d/%m/%Y') }}</p>
+</div>
+
+<div class="shopping-container">
+    {% if ingredients %}
+    <div class="list-actions">
+        <form method="POST" action="/shopping/clear">
+            <button type="submit" class="btn btn-outline btn-sm">Tout décochér</button>
+        </form>
+    </div>
+    <div>
+        {% for item in ingredients %}
+        <div class="shopping-item">
+            <input type="checkbox" id="item-{{ loop.index }}">
+            <label for="item-{{ loop.index }}" class="item-name">{{ item.ingredient }}</label>
+            {% if item.sources %}
+            <span class="item-source">({{ item.sources|join(', ') }})</span>
+            {% endif %}
+        </div>
+        {% endfor %}
+    </div>
+    {% else %}
+    <div class="shopping-empty">
+        <div class="empty-icon">🛍️</div>
+        <p style="font-size:1.1rem;">Aucun ingrédient dans la liste.</p>
+        <p style="margin-top:8px;color:var(--color-text-light);">Planifie des repas pour générer la liste de courses !</p>
+        <a href="/planner" class="btn btn-primary" style="margin-top:24px;">Planifier</a>
+    </div>
+    {% endif %}
+</div>
+
+{% endblock %}

@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+{% block title %}Planning de la semaine{% endblock %}
+{% block content %}
+
+<div class="page-header">
+    <h1>📅 Planning de la semaine</h1>
+</div>
+
+<div class="planner-header">
+    <div class="week-nav">
+        <a href="/planner?week={{ prev_week }}">← Semaine précédente</a>
+        <span class="week-label">{{ week_start.strftime('%d') }} – {{ week_end.strftime('%d %B %Y') }}</span>
+        <a href="/planner?week={{ next_week }}">Semaine suivante →</a>
+    </div>
+    <a href="/planner?week={{ today.isoformat() }}" class="btn btn-outline btn-sm">Cette semaine</a>
+</div>
+
+<div class="planner-grid">
+    {% for day_data in week_days %}
+    {% set day = day_data.date %}
+    <div class="planner-day {% if day == today.isoformat() %}is-today{% endif %}">
+        <div class="planner-day-header">
+            <div class="day-name">{{ day_data.day_name }}</div>
+            <div class="day-number">{{ day.day }}</div>
+        </div>
+        <div class="planner-day-slots">
+            {% for slot_key, slot_label in SLOT_LABELS.items() %}
+            {% set plan = day_data.plans.get(slot_key) %}
+            <div class="planner-slot slot-{{ slot_key }}">
+                <div class="planner-slot-header">{{ slot_label }}</div>
+                <div class="planner-slot-content">
+                    {% if plan %}
+                    <span class="meal-name">{{ plan.name }}</span>
+                    <div class="slot-actions">
+                        <form method="POST" action="/planner/remove" style="display:inline;">
+                            <input type="hidden" name="plan_id" value="{{ plan.id }}">
+                            <button type="submit" class="remove-slot" title="Enlever">✕</button>
+                        </form>
+                    </div>
+                    {% else %}
+                    <span class="empty-slot">—</span>
+                    <div class="slot-actions">
+                        <a href="#" onclick="event.preventDefault();openModal('{{ day }}','{{ slot_key }}')" title="Ajouter un plat">+</a>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+<!-- Modal for adding meals -->
+<div id="meal-select-modal" class="modal-overlay">
+    <div class="modal">
+        <div class="modal-header">
+            <h3>Choisir un plat</h3>
+            <button id="modal-close" class="modal-close">&times;</button>
+        </div>
+        <div class="modal-body" id="modal-meal-list">
+            <form method="POST" action="/planner/assign">
+                <input type="hidden" name="plan_date" id="modal-date">
+                <input type="hidden" name="meal_slot" id="modal-slot">
+                {% for meal in all_meals %}
+                <button type="submit" name="meal_id" value="{{ meal.id }}" class="meal-option" style="width:100%;text-align:left;background:none;border:1px solid var(--color-border-light);padding:12px 16px;border-radius:8px;margin-bottom:8px;cursor:pointer;font-family:var(--font);">
+                    <div class="meal-option-name">{{ meal.name }}</div>
+                    <div class="meal-option-meta">{{ CATEGORY_LABELS[meal.category] }}{% if meal.tags %} · {{ meal.tags|join(', ') }}{% endif %}</div>
+                </button>
+                {% endfor %}
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
