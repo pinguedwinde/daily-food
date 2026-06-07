@@ -21,6 +21,12 @@
     <div class="suggestion-card-body">
         <h2 class="suggestion-name">{{ suggestion.name }}</h2>
 
+        {% if suggestion.image_url %}
+        <div class="suggestion-image">
+            <img src="{{ suggestion.image_url }}" alt="{{ suggestion.name }}" loading="lazy">
+        </div>
+        {% endif %}
+
         <div class="suggestion-meta">
             {% if suggestion.prep_time %}
             <span class="meta-item">⏱️ {{ suggestion.prep_time }} min</span>

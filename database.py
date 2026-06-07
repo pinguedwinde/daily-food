@@ -25,6 +25,7 @@ def init_db():
             prep_time INTEGER,
             notes TEXT,
             created_by TEXT,
+            image_url TEXT,
             created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
         );
 

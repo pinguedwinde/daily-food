@@ -37,6 +37,11 @@
     {% for meal in meals %}
     <div class="meal-card">
         <div class="meal-card-top category-{{ meal.category }}"></div>
+        {% if meal.image_url %}
+        <div class="meal-card-image">
+            <img src="{{ meal.image_url }}" alt="{{ meal.name }}" loading="lazy">
+        </div>
+        {% endif %}
         <div class="meal-card-body">
             <h3><a href="/meals/{{ meal.id }}/edit">{{ meal.name }}</a></h3>
             <div class="meal-card-meta">

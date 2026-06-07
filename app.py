@@ -1,9 +1,12 @@
 import os
 import random
+import json
 from datetime import datetime, timedelta, date
 from contextlib import asynccontextmanager
 
-from fastapi import FastAPI, Request, Form, Query, HTTPException
+import shutil
+
+from fastapi import FastAPI, Request, Form, Query, HTTPException, UploadFile, File
 from fastapi.responses import HTMLResponse, RedirectResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
@@ -28,6 +31,9 @@ env = Environment(
 )
 templates = Jinja2Templates(env=env)
 app.mount("/static", StaticFiles(directory="static"), name="static")
+
+UPLOAD_DIR = os.path.join("static", "uploads")
+os.makedirs(UPLOAD_DIR, exist_ok=True)
 
 CATEGORY_LABELS = {
     "breakfast": "Petit-déjeuner",
@@ -91,6 +97,17 @@ def enrich_meals(conn, meals_list):
         d["ingredients"] = [i["ingredient"] for i in ingredients]
         result.append(d)
     return result
+
+
+def handle_image_upload(image_file: UploadFile | None) -> str | None:
+    if not image_file or not image_file.filename:
+        return None
+    ext = os.path.splitext(image_file.filename)[1] or ".jpg"
+    filename = f"{datetime.now().strftime('%Y%m%d%H%M%S%f')}{ext}"
+    filepath = os.path.join(UPLOAD_DIR, filename)
+    with open(filepath, "wb") as f:
+        shutil.copyfileobj(image_file.file, f)
+    return f"/static/uploads/{filename}"
 
 
 def get_common_tags(conn, limit=12):
@@ -295,15 +312,19 @@ def meal_add(
     notes: str = Form(""),
     tags: str = Form(""),
     ingredients: list[str] = Form([]),
+    image_url: str = Form(""),
+    image_file: UploadFile = File(None),
 ):
     user = get_user(request)
     if not user:
         return RedirectResponse(url="/login", status_code=303)
 
+    img = image_url.strip() or handle_image_upload(image_file)
+
     conn = get_db()
     cursor = conn.execute(
-        "INSERT INTO meals (name, category, prep_time, notes, created_by) VALUES (?, ?, ?, ?, ?)",
-        (name.strip(), category, prep_time or None, notes.strip(), user),
+        "INSERT INTO meals (name, category, prep_time, notes, created_by, image_url) VALUES (?, ?, ?, ?, ?, ?)",
+        (name.strip(), category, prep_time or None, notes.strip(), user, img),
     )
     meal_id = cursor.lastrowid
 
@@ -372,6 +393,8 @@ def meal_edit(
     notes: str = Form(""),
     tags: str = Form(""),
     ingredients: list[str] = Form([]),
+    image_url: str = Form(""),
+    image_file: UploadFile = File(None),
 ):
     user = get_user(request)
     if not user:
@@ -383,9 +406,11 @@ def meal_edit(
         conn.close()
         raise HTTPException(status_code=404, detail="Plat non trouvé")
 
+    img = image_url.strip() or handle_image_upload(image_file)
+
     conn.execute(
-        "UPDATE meals SET name=?, category=?, prep_time=?, notes=? WHERE id=?",
-        (name.strip(), category, prep_time or None, notes.strip(), meal_id),
+        "UPDATE meals SET name=?, category=?, prep_time=?, notes=?, image_url=? WHERE id=?",
+        (name.strip(), category, prep_time or None, notes.strip(), img, meal_id),
     )
 
     conn.execute("DELETE FROM meal_tags WHERE meal_id = ?", (meal_id,))
@@ -705,12 +730,15 @@ def export_download(request: Request):
         data.append(d)
     conn.close()
 
-    from fastapi.responses import JSONResponse
+    from fastapi.responses import Response
 
-    return JSONResponse(
-        data,
+    return Response(
+        content=json.dumps(data, ensure_ascii=False, indent=2),
         media_type="application/json",
-        headers={"Content-Disposition": "attachment; filename=daily-food-export.json"},
+        headers={
+            "Content-Disposition": "attachment; filename=daily-food-export.json",
+            "Content-Type": "application/json; charset=utf-8",
+        },
     )
 
 
@@ -723,8 +751,6 @@ def import_data(
     if not user:
         return RedirectResponse(url="/login", status_code=303)
 
-    import json
-
     try:
         meals = json.loads(data)
     except json.JSONDecodeError:
@@ -734,13 +760,14 @@ def import_data(
     count = 0
     for meal in meals:
         cursor = conn.execute(
-            "INSERT INTO meals (name, category, prep_time, notes, created_by) VALUES (?, ?, ?, ?, ?)",
+            "INSERT INTO meals (name, category, prep_time, notes, created_by, image_url) VALUES (?, ?, ?, ?, ?, ?)",
             (
                 meal.get("name", ""),
                 meal.get("category", "dinner"),
                 meal.get("prep_time"),
                 meal.get("notes", ""),
                 user,
+                meal.get("image_url"),
             ),
         )
         meal_id = cursor.lastrowid
