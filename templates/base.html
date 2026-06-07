@@ -20,6 +20,7 @@
                 <li><a href="/planner" class="{% if request.url.path.startswith('/planner') %}active{% endif %}">Planning</a></li>
                 <li><a href="/history" class="{% if request.url.path == '/history' %}active{% endif %}">Historique</a></li>
                 <li><a href="/shopping" class="{% if request.url.path == '/shopping' %}active{% endif %}">Courses</a></li>
+                <li><a href="/export" class="{% if request.url.path == '/export' %}active{% endif %}">Export</a></li>
             </ul>
             <div class="nav-user">
                 <span class="user-avatar">{{ user[0]|upper }}</span>

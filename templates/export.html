@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block title %}Export / Import{% endblock %}
+{% block content %}
+
+<div class="page-header">
+    <h1>💾 Export / Import</h1>
+    <p>Sauvegarde ou restaure ta base de plats</p>
+</div>
+
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;">
+    <div class="form-container" style="margin:0;">
+        <h3 style="margin-bottom:16px;">⬇️ Exporter</h3>
+        <p style="color:var(--color-text-light);margin-bottom:24px;font-size:0.9rem;">
+            Télécharge un fichier JSON contenant tous tes plats, tags et ingrédients.
+        </p>
+        <a href="/export/download" class="btn btn-primary btn-lg" style="width:100%;">Télécharger l'export</a>
+    </div>
+
+    <div class="form-container" style="margin:0;">
+        <h3 style="margin-bottom:16px;">⬆️ Importer</h3>
+        <p style="color:var(--color-text-light);margin-bottom:24px;font-size:0.9rem;">
+            Colle le contenu JSON d'un export précédent pour restaurer tes plats.
+            <br><small>Les plats existants ne sont pas supprimés.</small>
+        </p>
+        <form method="POST" action="/import">
+            <div class="form-group">
+                <textarea name="data" rows="10" placeholder="Colle ton JSON ici..." style="font-family:monospace;font-size:0.8rem;"></textarea>
+            </div>
+            <button type="submit" class="btn btn-success btn-lg" style="width:100%;">Importer</button>
+        </form>
+    </div>
+</div>
+
+{% endblock %}

@@ -668,6 +668,99 @@ def shopping_list(request: Request):
     )
 
 
+# ---------- EXPORT / IMPORT ----------
+
+
+@app.get("/export", response_class=HTMLResponse)
+def export_page(request: Request):
+    user = get_user(request)
+    if not user:
+        return RedirectResponse(url="/login", status_code=303)
+    return templates.TemplateResponse(request, "export.html", {"user": user})
+
+
+@app.get("/export/download")
+def export_download(request: Request):
+    user = get_user(request)
+    if not user:
+        return RedirectResponse(url="/login", status_code=303)
+
+    conn = get_db()
+    rows = conn.execute("SELECT * FROM meals ORDER BY id").fetchall()
+    data = []
+    for r in rows:
+        d = dict(r)
+        d["tags"] = [
+            t["tag"]
+            for t in conn.execute(
+                "SELECT tag FROM meal_tags WHERE meal_id = ?", (d["id"],)
+            ).fetchall()
+        ]
+        d["ingredients"] = [
+            i["ingredient"]
+            for i in conn.execute(
+                "SELECT ingredient FROM meal_ingredients WHERE meal_id = ?", (d["id"],)
+            ).fetchall()
+        ]
+        data.append(d)
+    conn.close()
+
+    from fastapi.responses import JSONResponse
+
+    return JSONResponse(
+        data,
+        media_type="application/json",
+        headers={"Content-Disposition": "attachment; filename=daily-food-export.json"},
+    )
+
+
+@app.post("/import")
+def import_data(
+    request: Request,
+    data: str = Form(...),
+):
+    user = get_user(request)
+    if not user:
+        return RedirectResponse(url="/login", status_code=303)
+
+    import json
+
+    try:
+        meals = json.loads(data)
+    except json.JSONDecodeError:
+        raise HTTPException(status_code=400, detail="JSON invalide")
+
+    conn = get_db()
+    count = 0
+    for meal in meals:
+        cursor = conn.execute(
+            "INSERT INTO meals (name, category, prep_time, notes, created_by) VALUES (?, ?, ?, ?, ?)",
+            (
+                meal.get("name", ""),
+                meal.get("category", "dinner"),
+                meal.get("prep_time"),
+                meal.get("notes", ""),
+                user,
+            ),
+        )
+        meal_id = cursor.lastrowid
+        for tag in meal.get("tags", []):
+            conn.execute(
+                "INSERT INTO meal_tags (meal_id, tag) VALUES (?, ?)", (meal_id, tag)
+            )
+        for ing in meal.get("ingredients", []):
+            conn.execute(
+                "INSERT INTO meal_ingredients (meal_id, ingredient) VALUES (?, ?)",
+                (meal_id, ing),
+            )
+        count += 1
+
+    conn.commit()
+    conn.close()
+
+    return RedirectResponse(url="/meals", status_code=303)
+
+
 # ---------- MAIN ----------
 
 if __name__ == "__main__":
