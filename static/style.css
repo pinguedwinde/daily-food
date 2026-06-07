@@ -549,6 +549,16 @@ body {
     box-shadow: var(--shadow);
 }
 
+.meal-card-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.meal-card-link:hover h3 {
+    color: var(--color-primary);
+}
+
 .meal-card-top {
     height: 4px;
 }

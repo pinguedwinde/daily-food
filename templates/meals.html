@@ -36,35 +36,37 @@
 <div class="meals-grid">
     {% for meal in meals %}
     <div class="meal-card">
-        <div class="meal-card-top category-{{ meal.category }}"></div>
-        {% if meal.image_url %}
-        <div class="meal-card-image">
-            <img src="{{ meal.image_url }}" alt="{{ meal.name }}" loading="lazy">
-        </div>
-        {% endif %}
-        <div class="meal-card-body">
-            <h3><a href="/meals/{{ meal.id }}/edit">{{ meal.name }}</a></h3>
-            <div class="meal-card-meta">
-                <span class="meta-badge">{{ CATEGORY_LABELS[meal.category] }}</span>
-                {% if meal.prep_time %}
-                <span class="meta-badge">⏱️ {{ meal.prep_time }} min</span>
-                {% endif %}
-            </div>
-            {% if meal.tags %}
-            <div class="meal-card-tags">
-                {% for tag in meal.tags %}
-                <span class="tag">{{ tag }}</span>
-                {% endfor %}
+        <a href="/meals/{{ meal.id }}/edit" class="meal-card-link">
+            <div class="meal-card-top category-{{ meal.category }}"></div>
+            {% if meal.image_url %}
+            <div class="meal-card-image">
+                <img src="{{ meal.image_url }}" alt="{{ meal.name }}" loading="lazy">
             </div>
             {% endif %}
-            <div class="meal-card-footer">
-                <span>Ajouté par {{ meal.created_by or '?' }}</span>
-                <div class="meal-card-actions">
-                    <a href="/meals/{{ meal.id }}/edit">✏️</a>
-                    <form method="POST" action="/meals/{{ meal.id }}/delete" style="display:inline;" onsubmit="return confirm('Supprimer « {{ meal.name }} » ?')">
-                        <button type="submit" class="delete-btn" style="background:none;border:none;cursor:pointer;padding:4px 8px;font-size:0.8rem;color:var(--color-text-lighter);">🗑️</button>
-                    </form>
+            <div class="meal-card-body">
+                <h3>{{ meal.name }}</h3>
+                <div class="meal-card-meta">
+                    <span class="meta-badge">{{ CATEGORY_LABELS[meal.category] }}</span>
+                    {% if meal.prep_time %}
+                    <span class="meta-badge">⏱️ {{ meal.prep_time }} min</span>
+                    {% endif %}
                 </div>
+                {% if meal.tags %}
+                <div class="meal-card-tags">
+                    {% for tag in meal.tags %}
+                    <span class="tag">{{ tag }}</span>
+                    {% endfor %}
+                </div>
+                {% endif %}
+            </div>
+        </a>
+        <div class="meal-card-footer">
+            <span>Ajouté par {{ meal.created_by or '?' }}</span>
+            <div class="meal-card-actions">
+                <a href="/meals/{{ meal.id }}/edit">✏️</a>
+                <form method="POST" action="/meals/{{ meal.id }}/delete" style="display:inline;" onsubmit="return confirm('Supprimer « {{ meal.name }} » ?')">
+                    <button type="submit" class="delete-btn" style="background:none;border:none;cursor:pointer;padding:4px 8px;font-size:0.8rem;color:var(--color-text-lighter);">🗑️</button>
+                </form>
             </div>
         </div>
     </div>
