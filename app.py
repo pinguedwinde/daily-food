@@ -350,6 +350,39 @@ def meal_add(
     return RedirectResponse(url="/meals", status_code=303)
 
 
+@app.get("/meals/{meal_id}", response_class=HTMLResponse)
+def meal_detail(request: Request, meal_id: int):
+    user = get_user(request)
+    if not user:
+        return RedirectResponse(url="/login", status_code=303)
+
+    conn = get_db()
+    meal = conn.execute("SELECT * FROM meals WHERE id = ?", (meal_id,)).fetchone()
+    if not meal:
+        conn.close()
+        raise HTTPException(status_code=404, detail="Plat non trouvé")
+
+    meal = dict(meal)
+    tags = conn.execute(
+        "SELECT tag FROM meal_tags WHERE meal_id = ?", (meal_id,)
+    ).fetchall()
+    meal["tags"] = [t["tag"] for t in tags]
+    ingredients = conn.execute(
+        "SELECT ingredient FROM meal_ingredients WHERE meal_id = ?", (meal_id,)
+    ).fetchall()
+    meal["ingredients"] = [i["ingredient"] for i in ingredients]
+    conn.close()
+
+    return templates.TemplateResponse(request, "meal_detail.html",
+        {
+            "user": user,
+            "meal": meal,
+            "CATEGORY_LABELS": CATEGORY_LABELS,
+            "SLOT_LABELS": SLOT_LABELS,
+        },
+    )
+
+
 @app.get("/meals/{meal_id}/edit", response_class=HTMLResponse)
 def meal_edit_form(request: Request, meal_id: int):
     user = get_user(request)

@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+{% block title %}{{ meal.name }}{% endblock %}
+{% block content %}
+
+<div class="page-header">
+    <a href="/meals" class="btn btn-outline btn-sm">← Retour aux plats</a>
+</div>
+
+<div class="detail-card">
+    <div class="detail-card-top category-{{ meal.category }}"></div>
+
+    {% if meal.image_url %}
+    <div class="detail-card-image">
+        <img src="{{ meal.image_url }}" alt="{{ meal.name }}">
+    </div>
+    {% endif %}
+
+    <div class="detail-card-body">
+        <div class="detail-card-header">
+            <h1>{{ meal.name }}</h1>
+            <div class="detail-card-meta">
+                <span class="meta-badge">{{ CATEGORY_LABELS[meal.category] }}</span>
+                {% if meal.prep_time %}
+                <span class="meta-badge">⏱️ {{ meal.prep_time }} min</span>
+                {% endif %}
+            </div>
+        </div>
+
+        {% if meal.tags %}
+        <div class="detail-card-section">
+            <div class="detail-card-tags">
+                {% for tag in meal.tags %}
+                <span class="tag">{{ tag }}</span>
+                {% endfor %}
+            </div>
+        </div>
+        {% endif %}
+
+        {% if meal.ingredients %}
+        <div class="detail-card-section">
+            <h3>Ingrédients</h3>
+            <ul class="detail-ingredients">
+                {% for ingredient in meal.ingredients %}
+                <li>{{ ingredient }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endif %}
+
+        {% if meal.notes %}
+        <div class="detail-card-section">
+            <h3>Notes</h3>
+            <p class="detail-notes">{{ meal.notes }}</p>
+        </div>
+        {% endif %}
+
+        <div class="detail-card-footer">
+            <span>Ajouté par {{ meal.created_by or '?' }}</span>
+            <div class="detail-card-actions">
+                <a href="/meals/{{ meal.id }}/edit" class="btn btn-primary btn-sm">✏️ Modifier</a>
+                <form method="POST" action="/meals/{{ meal.id }}/delete" style="display:inline;" onsubmit="return confirm('Supprimer « {{ meal.name }} » ?')">
+                    <button type="submit" class="btn btn-outline btn-sm">🗑️ Supprimer</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

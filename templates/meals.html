@@ -36,7 +36,7 @@
 <div class="meals-grid">
     {% for meal in meals %}
     <div class="meal-card">
-        <a href="/meals/{{ meal.id }}/edit" class="meal-card-link">
+        <a href="/meals/{{ meal.id }}" class="meal-card-link">
             <div class="meal-card-top category-{{ meal.category }}"></div>
             {% if meal.image_url %}
             <div class="meal-card-image">

@@ -669,6 +669,121 @@ body {
     background: #FDF0EA;
 }
 
+/* DETAIL CARD */
+.detail-card {
+    max-width: 860px;
+    margin: 0 auto;
+    background: var(--color-card);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    overflow: hidden;
+    border: 1px solid var(--color-border-light);
+}
+
+.detail-card-top {
+    height: 4px;
+}
+
+.detail-card-image {
+    width: 100%;
+    max-height: 400px;
+    overflow: hidden;
+}
+
+.detail-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    max-height: 400px;
+}
+
+.detail-card-body {
+    padding: 32px;
+}
+
+.detail-card-header {
+    margin-bottom: 20px;
+}
+
+.detail-card-header h1 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.detail-card-meta {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.detail-card-meta .meta-badge {
+    font-size: 0.8rem;
+    font-weight: 500;
+    padding: 4px 14px;
+    border-radius: 20px;
+    background: var(--color-bg);
+    color: var(--color-text-light);
+}
+
+.detail-card-section {
+    margin-bottom: 24px;
+}
+
+.detail-card-section h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--color-text-light);
+}
+
+.detail-card-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.detail-ingredients {
+    list-style: none;
+    padding: 0;
+    columns: 2;
+    column-gap: 24px;
+}
+
+.detail-ingredients li {
+    padding: 4px 0;
+    font-size: 0.95rem;
+    break-inside: avoid;
+}
+
+.detail-ingredients li::before {
+    content: "•";
+    color: var(--color-primary);
+    margin-right: 8px;
+}
+
+.detail-notes {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--color-text-light);
+}
+
+.detail-card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    border-top: 1px solid var(--color-border-light);
+    font-size: 0.85rem;
+    color: var(--color-text-lighter);
+}
+
+.detail-card-actions {
+    display: flex;
+    gap: 8px;
+}
+
 /* MEAL FORM */
 .form-container {
     max-width: 650px;
