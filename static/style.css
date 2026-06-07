@@ -542,6 +542,9 @@ body {
     overflow: hidden;
     transition: all var(--transition);
     border: 1px solid var(--color-border-light);
+    display: flex;
+    flex-direction: column;
+    height: 420px;
 }
 
 .meal-card:hover {
@@ -550,9 +553,12 @@ body {
 }
 
 .meal-card-link {
-    display: block;
+    display: flex;
+    flex-direction: column;
     text-decoration: none;
     color: inherit;
+    flex: 1;
+    min-height: 0;
 }
 
 .meal-card-link:hover h3 {
@@ -561,12 +567,14 @@ body {
 
 .meal-card-top {
     height: 4px;
+    flex-shrink: 0;
 }
 
 .meal-card-image {
     width: 100%;
-    height: 140px;
+    height: 200px;
     overflow: hidden;
+    flex-shrink: 0;
 }
 
 .meal-card-image img {
@@ -577,13 +585,21 @@ body {
 }
 
 .meal-card-body {
-    padding: 20px;
+    padding: 16px 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
 }
 
 .meal-card-body h3 {
     font-size: 1.1rem;
     font-weight: 600;
     margin-bottom: 8px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
 .meal-card-body h3 a {
@@ -622,10 +638,11 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 12px;
+    padding: 12px 20px;
     border-top: 1px solid var(--color-border-light);
     font-size: 0.8rem;
     color: var(--color-text-lighter);
+    flex-shrink: 0;
 }
 
 .meal-card-actions {
