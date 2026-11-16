@@ -486,5 +486,138 @@
   ],
   "notes": "Le taro doit être bien cuit avant d'être consommé ; ne jamais le manger cru.",
   "image_query": "Taro gratiné"
+ },
+ {
+  "slug": "foufou-sauce-gombo",
+  "name": "Foufou et sauce gombo",
+  "region": "africain",
+  "origin": "Côte d'Ivoire",
+  "category": "dinner",
+  "prep_time": 30,
+  "cook_time": 50,
+  "difficulty": 2,
+  "ingredient_access": 2,
+  "equipment": [
+   "marmite",
+   "pilon ou robot"
+  ],
+  "servings": 4,
+  "batch_friendly": false,
+  "keeps_days": 2,
+  "tags": [
+   "gombo",
+   "fufu",
+   "viande",
+   "poisson",
+   "traditionnel"
+  ],
+  "ingredients": [
+   "500 g de gombo frais",
+   "500 g de viande de bœuf ou de mouton en morceaux",
+   "200 g de poisson fumé",
+   "2 crabes ou crevettes (facultatif)",
+   "1 oignon",
+   "2 tomates",
+   "1 piment",
+   "1 cube de bouillon",
+   "2 cuillères à soupe d'huile de palme",
+   "800 g de banane plantain et d'igname pour le foufou",
+   "sel"
+  ],
+  "steps": [
+   "Faire cuire la viande 30 minutes dans de l'eau avec l'oignon, le cube et le sel.",
+   "Laver et couper le gombo en rondelles fines, puis le hacher ou le mixer grossièrement pour obtenir une texture gluante.",
+   "Ajouter dans la marmite le gombo, les tomates mixées, le poisson fumé, le piment entier et l'huile de palme, et laisser mijoter 15 à 20 minutes.",
+   "Pour le foufou, faire bouillir les plantains et l'igname épluchés jusqu'à tendreté, puis les piler ou les mixer en pâte lisse et élastique.",
+   "Former des boules de foufou et les servir dans la sauce bien chaude."
+  ],
+  "notes": "Ne pas trop cuire le gombo pour qu'il garde sa couleur verte et son onctuosité. Le piment entier parfume sans trop épicer.",
+  "image_query": "Foufou et sauce gombo"
+ },
+ {
+  "slug": "salade-quinoa-saumon-fume-avocat",
+  "name": "Salade de quinoa, saumon fumé et avocat",
+  "region": "europeen",
+  "origin": "France",
+  "category": "lunch",
+  "prep_time": 15,
+  "cook_time": 15,
+  "difficulty": 1,
+  "ingredient_access": 1,
+  "equipment": [
+   "casserole"
+  ],
+  "servings": 2,
+  "batch_friendly": false,
+  "keeps_days": 2,
+  "tags": [
+   "salade",
+   "quinoa",
+   "saumon",
+   "avocat",
+   "frais"
+  ],
+  "ingredients": [
+   "150 g de quinoa",
+   "4 tranches de saumon fumé",
+   "1 avocat mûr",
+   "100 g de jeunes pousses d'épinards",
+   "1 citron",
+   "2 cuillères à soupe d'huile d'olive",
+   "1 cuillère à soupe de graines de courge ou de sésame",
+   "aneth, sel, poivre"
+  ],
+  "steps": [
+   "Rincer le quinoa et le cuire 12 minutes dans 2 fois son volume d'eau salée, puis le laisser tiédir.",
+   "Préparer la vinaigrette avec le jus de citron, l'huile, le sel et le poivre.",
+   "Dresser les épinards et le quinoa dans des assiettes.",
+   "Ajouter l'avocat en tranches et le saumon fumé roulé.",
+   "Arroser de vinaigrette et parsemer de graines et d'aneth."
+  ],
+  "notes": "Arroser l'avocat de citron pour éviter qu'il noircisse si la salade est préparée à l'avance.",
+  "image_query": "Salade de quinoa, saumon fumé et avocat"
+ },
+ {
+  "slug": "salade-tiede-quinoa-magret-canard",
+  "name": "Salade tiède de quinoa au magret de canard",
+  "region": "europeen",
+  "origin": "France",
+  "category": "dinner",
+  "prep_time": 15,
+  "cook_time": 20,
+  "difficulty": 2,
+  "ingredient_access": 1,
+  "equipment": [
+   "poêle",
+   "casserole"
+  ],
+  "servings": 2,
+  "batch_friendly": false,
+  "keeps_days": 2,
+  "tags": [
+   "salade",
+   "quinoa",
+   "canard",
+   "tiède"
+  ],
+  "ingredients": [
+   "150 g de quinoa",
+   "1 magret de canard",
+   "150 g de tomates cerises",
+   "1 petite laitue ou de la roquette",
+   "1 concombre",
+   "1 cuillère à soupe de vinaigre balsamique",
+   "2 cuillères à soupe d'huile d'olive",
+   "persil, sel, poivre"
+  ],
+  "steps": [
+   "Cuire le quinoa 12 minutes dans de l'eau salée, l'égoutter et le laisser tiédir.",
+   "Quadriller la peau du magret, le saler et le poivrer. Le cuire côté peau 8 minutes à feu moyen, puis 3 à 4 minutes côté chair.",
+   "Laisser reposer le magret 5 minutes sous une feuille d'aluminium, puis le trancher finement.",
+   "Mélanger le quinoa, les tomates coupées en deux, le concombre en dés et la salade avec le balsamique et l'huile.",
+   "Disposer les tranches de magret sur la salade et parsemer de persil."
+  ],
+  "notes": "Cuire le magret démarré à froid dans la poêle permet de faire fondre la graisse et d'obtenir une peau croustillante.",
+  "image_query": "Salade tiède de quinoa au magret de canard"
  }
 ]
