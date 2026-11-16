@@ -34,16 +34,6 @@
   "file": "File:Bún bò Huế minh28397.jpg",
   "source": "https://commons.wikimedia.org/wiki/File:B%C3%BAn_b%C3%B2_Hu%E1%BA%BF_minh28397.jpg"
  },
- "boeuf-bourguignon": {
-  "credit": "Asamboi — CC BY-SA 4.0 — Wikimedia Commons",
-  "file": "File:Boeuf Bourguignon Paris Beaubourg.jpg",
-  "source": "https://commons.wikimedia.org/wiki/File:Boeuf_Bourguignon_Paris_Beaubourg.jpg"
- },
- "bokit-poulet": {
-  "credit": "GrandCelinien — CC BY-SA 4.0 — Wikimedia Commons",
-  "file": "File:Bokit au poulet 02.jpg",
-  "source": "https://commons.wikimedia.org/wiki/File:Bokit_au_poulet_02.jpg"
- },
  "boudin-creole": {
   "credit": "don_padre — CC BY 2.0 — Wikimedia Commons",
   "file": "File:Boudin créole.jpg",
@@ -114,11 +104,6 @@
   "file": "File:Pudding-casero-de-coco-venta-aurelio-restaurante-chipiona.JPG",
   "source": "https://commons.wikimedia.org/wiki/File:Pudding-casero-de-coco-venta-aurelio-restaurante-chipiona.JPG"
  },
- "fufu-sauce-claire-graine": {
-  "credit": "Edem228 — CC BY-SA 4.0 — Wikimedia Commons",
-  "file": "File:Fufu accompagné d'une sauce arachide au poulet.JPG",
-  "source": "https://commons.wikimedia.org/wiki/File:Fufu_accompagn%C3%A9_d%27une_sauce_arachide_au_poulet.JPG"
- },
  "gateau-au-yaourt": {
   "credit": "Mathieu MD — CC BY-SA 3.0 — Wikimedia Commons",
   "file": "File:Recette du Gâteau au Yaourt 01.jpg",
@@ -163,11 +148,6 @@
   "credit": "Leon Brocard — CC BY 2.0 — Wikimedia Commons",
   "file": "File:Hachis Parmentier.jpg",
   "source": "https://commons.wikimedia.org/wiki/File:Hachis_Parmentier.jpg"
- },
- "lasagnes-bolognaise": {
-  "credit": "Benoît Prieur — CC0 — Wikimedia Commons",
-  "file": "File:Préparation des lasagnes (mars 2020) - (004) beurrer le plat.jpg",
-  "source": "https://commons.wikimedia.org/wiki/File:Pr%C3%A9paration_des_lasagnes_(mars_2020)_-_(004)_beurrer_le_plat.jpg"
  },
  "mapo-tofu-simplifie": {
   "credit": "Sichuanfoodlover — CC BY-SA 4.0 — Wikimedia Commons",
@@ -224,11 +204,6 @@
   "file": "File:Pâtes à la cassonade.jpg",
   "source": "https://commons.wikimedia.org/wiki/File:P%C3%A2tes_%C3%A0_la_cassonade.jpg"
  },
- "pates-creoles": {
-  "credit": "Alaf2 — CC BY-SA 4.0 — Wikimedia Commons",
-  "file": "File:Pâté créole.jpg",
-  "source": "https://commons.wikimedia.org/wiki/File:P%C3%A2t%C3%A9_cr%C3%A9ole.jpg"
- },
  "pates-viande-hachee-champignons": {
   "credit": "Huguespotter — CC BY-SA 4.0 — Wikimedia Commons",
   "file": "File:Pâtes à la cassonade.jpg",
@@ -279,20 +254,10 @@
   "file": "File:Poisson grillé avec une sauce aux oignons.jpg",
   "source": "https://commons.wikimedia.org/wiki/File:Poisson_grill%C3%A9_avec_une_sauce_aux_oignons.jpg"
  },
- "polenta-parmesan": {
-  "credit": "J.P.Lon — CC BY-SA 3.0 — Wikimedia Commons",
-  "file": "File:Cotechino-Servito-Polenta-Lenticchie.jpg",
-  "source": "https://commons.wikimedia.org/wiki/File:Cotechino-Servito-Polenta-Lenticchie.jpg"
- },
  "poulet-a-la-creole": {
   "credit": "jeffreyw — CC BY 2.0 — Wikimedia Commons",
   "file": "File:Poulet au riz à la créole.jpg",
   "source": "https://commons.wikimedia.org/wiki/File:Poulet_au_riz_%C3%A0_la_cr%C3%A9ole.jpg"
- },
- "poulet-au-four-farci": {
-  "credit": "Cexco — CC0 — Wikimedia Commons",
-  "file": "File:Poulet au Four.jpg",
-  "source": "https://commons.wikimedia.org/wiki/File:Poulet_au_Four.jpg"
  },
  "poulet-dg-attieke": {
   "credit": "Ji-Elle — CC BY-SA 4.0 — Wikimedia Commons",
@@ -339,11 +304,6 @@
   "file": "File:Rougail Saucisse 04-07-07.jpg",
   "source": "https://commons.wikimedia.org/wiki/File:Rougail_Saucisse_04-07-07.jpg"
  },
- "salade-de-morue": {
-  "credit": "cédric Icower from Paris, France — CC BY 2.0 — Wikimedia Commons",
-  "file": "File:Paléo - Salade de foie de morue (15184283954).jpg",
-  "source": "https://commons.wikimedia.org/wiki/File:Pal%C3%A9o_-_Salade_de_foie_de_morue_(15184283954).jpg"
- },
  "salade-nouilles-canette-cacahuetes": {
   "credit": "Rasoa Nirina 05 — CC BY-SA 4.0 — Wikimedia Commons",
   "file": "File:Nouilles et salade de pâtes.jpg",
@@ -353,26 +313,6 @@
   "credit": "ADT 04 — CC BY 2.0 — Wikimedia Commons",
   "file": "File:40 Salade de saumon fumé de l'Adour et concombres.jpg",
   "source": "https://commons.wikimedia.org/wiki/File:40_Salade_de_saumon_fum%C3%A9_de_l%27Adour_et_concombres.jpg"
- },
- "salade-tiede-quinoa-poitrine-fumee": {
-  "credit": "Guillaume Capron from Issy les Moulineaux, France — CC BY-SA 2.0 — Wikimedia Commons",
-  "file": "File:Salade Quinoa Poivrons Manchego Bio (4875466616).jpg",
-  "source": "https://commons.wikimedia.org/wiki/File:Salade_Quinoa_Poivrons_Manchego_Bio_(4875466616).jpg"
- },
- "soupe-miso-tofu-wakame": {
-  "credit": "Ocdp — CC0 — Wikimedia Commons",
-  "file": "File:Pholiota microspora miso soup 001.jpg",
-  "source": "https://commons.wikimedia.org/wiki/File:Pholiota_microspora_miso_soup_001.jpg"
- },
- "spaghetti-bolognaise": {
-  "credit": "Benoît Prieur — CC0 — Wikimedia Commons",
-  "file": "File:Spaghetti bolognaise à Bouillon Chartier Grands Boulevards (août 2023).JPG",
-  "source": "https://commons.wikimedia.org/wiki/File:Spaghetti_bolognaise_%C3%A0_Bouillon_Chartier_Grands_Boulevards_(ao%C3%BBt_2023).JPG"
- },
- "sukuma-wiki-chou-kale-sautes": {
-  "credit": "Paresh Jai from Nairobi, Kenya — CC BY 2.0 — Wikimedia Commons",
-  "file": "File:Ugali & Sukuma Wiki.jpg",
-  "source": "https://commons.wikimedia.org/wiki/File:Ugali_%26_Sukuma_Wiki.jpg"
  },
  "to-sauce-feuille-boulvanka": {
   "credit": "Jacquitoz — CC BY-SA 4.0 — Wikimedia Commons",
