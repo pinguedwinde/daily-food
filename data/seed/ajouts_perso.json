@@ -1,0 +1,490 @@
+[
+ {
+  "slug": "lentilles-mijotees-tomate",
+  "name": "Lentilles mijotées à la tomate",
+  "region": "monde",
+  "origin": "Cuisine du monde",
+  "category": "dinner",
+  "prep_time": 15,
+  "cook_time": 30,
+  "difficulty": 1,
+  "ingredient_access": 1,
+  "equipment": [
+   "casserole"
+  ],
+  "servings": 4,
+  "batch_friendly": true,
+  "keeps_days": 4,
+  "tags": [
+   "mijoté",
+   "végétarien",
+   "lentilles",
+   "économique"
+  ],
+  "ingredients": [
+   "300 g de lentilles vertes ou brunes",
+   "1 oignon",
+   "2 gousses d'ail",
+   "400 g de tomates concassées",
+   "1 poivron rouge",
+   "2 cuillères à soupe d'huile d'olive",
+   "1 cuillère à café de paprika",
+   "2 feuilles de laurier",
+   "sel, poivre"
+  ],
+  "steps": [
+   "Rincer les lentilles. Émincer l'oignon, l'ail et couper le poivron en petits dés.",
+   "Faire revenir l'oignon et le poivron dans l'huile 5 minutes, ajouter l'ail et le paprika 1 minute.",
+   "Ajouter les tomates, les lentilles, le laurier et 50 cl d'eau.",
+   "Laisser mijoter à couvert 25 minutes à feu doux jusqu'à ce que les lentilles soient tendres et la sauce épaisse.",
+   "Saler, poivrer en fin de cuisson et servir avec du riz ou du pain."
+  ],
+  "notes": "Ne pas saler trop tôt : le sel durcit les lentilles. Se garde bien et s'améliore le lendemain.",
+  "image_query": "Lentilles mijotées à la tomate"
+ },
+ {
+  "slug": "alloco-garni-attieke-choukouya-porc",
+  "name": "Alloco garni, attiéké et choukouya de porc",
+  "region": "africain",
+  "origin": "Côte d'Ivoire",
+  "category": "dinner",
+  "prep_time": 25,
+  "cook_time": 35,
+  "difficulty": 2,
+  "ingredient_access": 2,
+  "equipment": [
+   "four",
+   "poêle"
+  ],
+  "servings": 4,
+  "batch_friendly": false,
+  "keeps_days": 2,
+  "tags": [
+   "porc",
+   "plantain",
+   "attiéké",
+   "festif"
+  ],
+  "ingredients": [
+   "600 g d'échine de porc",
+   "4 bananes plantain bien mûres",
+   "500 g d'attiéké",
+   "2 oignons",
+   "1 cuillère à soupe de moutarde",
+   "1 cuillère à café de gingembre en poudre",
+   "2 gousses d'ail",
+   "1 tomate",
+   "1 concombre",
+   "1 carotte",
+   "1 citron vert",
+   "huile de friture, sel, piment"
+  ],
+  "steps": [
+   "Mariner le porc en cubes avec la moutarde, l'ail, le gingembre, un oignon haché, le sel et le piment pendant 1 heure.",
+   "Cuire le porc au four à 200 °C pendant 30 minutes en le retournant à mi-cuisson pour obtenir le côté grillé du choukouya.",
+   "Éplucher les plantains, les couper en rondelles obliques et les frire 3 minutes par face jusqu'à dorure.",
+   "Réhydrater l'attiéké selon les instructions du paquet et l'aérer à la fourchette.",
+   "Préparer la garniture : tomate, concombre, carotte râpée et oignon émincé assaisonnés au citron vert.",
+   "Dresser l'attiéké, l'alloco, le porc et la garniture sur le même plat."
+  ],
+  "notes": "Les plantains doivent être très mûrs (peau bien tachetée) pour un alloco moelleux et sucré.",
+  "image_query": "Alloco garni, attiéké et choukouya de porc"
+ },
+ {
+  "slug": "attieke-poulet-braise",
+  "name": "Attiéké au poulet braisé",
+  "region": "africain",
+  "origin": "Côte d'Ivoire",
+  "category": "dinner",
+  "prep_time": 20,
+  "cook_time": 45,
+  "difficulty": 2,
+  "ingredient_access": 2,
+  "equipment": [
+   "four",
+   "grill"
+  ],
+  "servings": 4,
+  "batch_friendly": false,
+  "keeps_days": 2,
+  "tags": [
+   "poulet",
+   "attiéké",
+   "grillé",
+   "traditionnel"
+  ],
+  "ingredients": [
+   "4 cuisses de poulet",
+   "500 g d'attiéké",
+   "3 oignons",
+   "1 cuillère à soupe de moutarde",
+   "2 gousses d'ail",
+   "1 cube de bouillon",
+   "2 tomates",
+   "1 laitue",
+   "1 piment",
+   "3 cuillères à soupe d'huile",
+   "sel, poivre"
+  ],
+  "steps": [
+   "Mariner le poulet avec l'ail, un oignon mixé, la moutarde, le bouillon émietté, l'huile, le sel et le poivre pendant au moins 1 heure.",
+   "Cuire le poulet au four à 200 °C ou au grill pendant 40 minutes, en le retournant et en l'arrosant régulièrement.",
+   "Faire revenir 2 oignons émincés à la poêle avec un peu de marinade jusqu'à ce qu'ils soient fondants.",
+   "Réhydrater l'attiéké, l'aérer, puis préparer une salade de laitue et de tomates.",
+   "Servir le poulet sur l'attiéké avec les oignons et la salade."
+  ],
+  "notes": "Une marinade de la veille donne un poulet beaucoup plus parfumé.",
+  "image_query": "Attiéké au poulet braisé"
+ },
+ {
+  "slug": "cari-lentilles-creole-rougail-saucisses",
+  "name": "Cari de lentilles créole et rougail saucisses",
+  "region": "antillais",
+  "origin": "La Réunion",
+  "category": "dinner",
+  "prep_time": 20,
+  "cook_time": 45,
+  "difficulty": 2,
+  "ingredient_access": 1,
+  "equipment": [
+   "cocotte",
+   "casserole"
+  ],
+  "servings": 4,
+  "batch_friendly": true,
+  "keeps_days": 3,
+  "tags": [
+   "mijoté",
+   "lentilles",
+   "saucisse",
+   "réunionnais"
+  ],
+  "ingredients": [
+   "250 g de lentilles vertes",
+   "4 saucisses fumées ou de Toulouse",
+   "4 tomates",
+   "2 oignons",
+   "3 gousses d'ail",
+   "1 morceau de gingembre",
+   "1 cuillère à café de curcuma",
+   "1 branche de thym",
+   "1 piment",
+   "2 cuillères à soupe d'huile",
+   "riz blanc pour servir",
+   "sel, poivre"
+  ],
+  "steps": [
+   "Cuire les lentilles 25 minutes dans de l'eau avec le thym et une gousse d'ail, puis les égoutter en gardant un peu de jus.",
+   "Préparer le rougail : faire dorer les saucisses coupées en tronçons, ajouter un oignon, les tomates concassées, l'ail, le gingembre et le piment, et laisser mijoter 20 minutes.",
+   "Faire revenir l'autre oignon avec le curcuma, ajouter les lentilles et un peu de jus de cuisson, laisser mijoter 10 minutes.",
+   "Rectifier l'assaisonnement et servir les lentilles avec le riz et le rougail saucisses."
+  ],
+  "notes": "Le cari de lentilles se prépare la veille sans souci et se réchauffe très bien.",
+  "image_query": "Cari de lentilles créole et rougail saucisses"
+ },
+ {
+  "slug": "cuisses-poulet-braisees-pommes-de-terre",
+  "name": "Cuisses de poulet braisées aux pommes de terre",
+  "region": "monde",
+  "origin": "Cuisine du monde",
+  "category": "dinner",
+  "prep_time": 15,
+  "cook_time": 50,
+  "difficulty": 1,
+  "ingredient_access": 1,
+  "equipment": [
+   "four"
+  ],
+  "servings": 4,
+  "batch_friendly": false,
+  "keeps_days": 3,
+  "tags": [
+   "poulet",
+   "four",
+   "pommes de terre",
+   "facile"
+  ],
+  "ingredients": [
+   "4 cuisses de poulet",
+   "600 g de pommes de terre grenaille",
+   "3 gousses d'ail",
+   "1 cuillère à café de paprika fumé",
+   "1 cuillère à café de thym",
+   "2 cuillères à soupe d'huile d'olive",
+   "1 citron vert",
+   "sel, poivre"
+  ],
+  "steps": [
+   "Préchauffer le four à 210 °C.",
+   "Mélanger l'huile, le paprika, le thym, l'ail écrasé, le sel et le poivre, et masser les cuisses avec cette marinade.",
+   "Disposer le poulet et les pommes de terre coupées en deux sur une plaque.",
+   "Enfourner 45 à 50 minutes en retournant à mi-cuisson, jusqu'à ce que la peau soit bien dorée.",
+   "Servir avec des quartiers de citron vert."
+  ],
+  "notes": "Piquer les cuisses à la fourchette avant de mariner pour que les épices pénètrent mieux.",
+  "image_query": "Cuisses de poulet braisées aux pommes de terre"
+ },
+ {
+  "slug": "lentilles-vertes-a-l-ancienne",
+  "name": "Lentilles vertes à l'ancienne",
+  "region": "europeen",
+  "origin": "France",
+  "category": "dinner",
+  "prep_time": 15,
+  "cook_time": 40,
+  "difficulty": 1,
+  "ingredient_access": 1,
+  "equipment": [
+   "casserole"
+  ],
+  "servings": 4,
+  "batch_friendly": true,
+  "keeps_days": 4,
+  "tags": [
+   "lentilles",
+   "lardons",
+   "mijoté",
+   "traditionnel"
+  ],
+  "ingredients": [
+   "300 g de lentilles vertes",
+   "150 g de poitrine fumée en tranches",
+   "1 oignon",
+   "2 carottes",
+   "1 clou de girofle",
+   "1 bouquet garni",
+   "2 gousses d'ail",
+   "1 cuillère à soupe de vinaigre",
+   "sel, poivre"
+  ],
+  "steps": [
+   "Rincer les lentilles sans les faire tremper.",
+   "Piquer l'oignon avec le clou de girofle et couper les carottes en dés.",
+   "Mettre lentilles, oignon, carottes, ail et bouquet garni dans une casserole, couvrir d'eau froide et porter à ébullition.",
+   "Laisser cuire 30 à 35 minutes à frémissement, en ajoutant de l'eau si besoin.",
+   "Faire dorer la poitrine fumée à la poêle puis la déposer sur les lentilles égouttées.",
+   "Assaisonner avec le vinaigre, le sel et le poivre juste avant de servir."
+  ],
+  "notes": "Un filet de vinaigre en fin de cuisson relève toute la saveur des lentilles.",
+  "image_query": "Lentilles vertes à l'ancienne"
+ },
+ {
+  "slug": "poulet-entier-braise",
+  "name": "Poulet entier braisé",
+  "region": "africain",
+  "origin": "Afrique de l'Ouest",
+  "category": "dinner",
+  "prep_time": 20,
+  "cook_time": 75,
+  "difficulty": 2,
+  "ingredient_access": 1,
+  "equipment": [
+   "four",
+   "grill"
+  ],
+  "servings": 5,
+  "batch_friendly": false,
+  "keeps_days": 3,
+  "tags": [
+   "poulet",
+   "grillé",
+   "convivial",
+   "marinade"
+  ],
+  "ingredients": [
+   "1 poulet entier de 1,5 kg",
+   "3 oignons",
+   "4 gousses d'ail",
+   "1 morceau de gingembre",
+   "2 cuillères à soupe de moutarde",
+   "1 cube de bouillon",
+   "1 piment",
+   "4 cuillères à soupe d'huile",
+   "2 tomates et 1 concombre pour servir",
+   "sel, poivre"
+  ],
+  "steps": [
+   "Mixer l'ail, le gingembre, un oignon, la moutarde, le bouillon, le piment et l'huile pour obtenir une marinade.",
+   "Ouvrir le poulet en crapaudine, l'entailler légèrement et l'enduire de marinade. Laisser reposer 2 heures au frais.",
+   "Cuire au four à 190 °C pendant 1 heure à 1 h 15 en arrosant souvent, ou au barbecue en retournant régulièrement.",
+   "Faire revenir les oignons restants émincés et les servir sur le poulet.",
+   "Accompagner de tomates, concombre, riz ou plantain frit."
+  ],
+  "notes": "Cuit en crapaudine, le poulet est plus rapide à cuire et le résultat est plus uniforme.",
+  "image_query": "Poulet entier braisé"
+ },
+ {
+  "slug": "poulet-tikka-masala",
+  "name": "Poulet tikka masala",
+  "region": "asiatique",
+  "origin": "Inde",
+  "category": "dinner",
+  "prep_time": 20,
+  "cook_time": 35,
+  "difficulty": 2,
+  "ingredient_access": 2,
+  "equipment": [
+   "poêle",
+   "casserole"
+  ],
+  "servings": 4,
+  "batch_friendly": true,
+  "keeps_days": 3,
+  "tags": [
+   "poulet",
+   "curry",
+   "crémeux",
+   "épicé"
+  ],
+  "ingredients": [
+   "600 g de blanc de poulet",
+   "150 g de yaourt nature",
+   "1 oignon",
+   "3 gousses d'ail",
+   "1 morceau de gingembre",
+   "400 g de tomates concassées",
+   "15 cl de crème",
+   "2 cuillères à café de garam masala",
+   "1 cuillère à café de paprika",
+   "1 cuillère à café de curcuma",
+   "2 cuillères à soupe d'huile",
+   "coriandre, sel"
+  ],
+  "steps": [
+   "Mariner le poulet coupé en dés avec le yaourt, la moitié des épices, l'ail et le gingembre pendant au moins 1 heure.",
+   "Faire dorer le poulet mariné à la poêle 5 minutes, puis réserver.",
+   "Faire revenir l'oignon, ajouter le reste des épices puis les tomates et laisser mijoter 15 minutes.",
+   "Mixer la sauce si on la préfère lisse, ajouter la crème et le poulet, et cuire encore 8 minutes.",
+   "Parsemer de coriandre et servir avec du riz basmati ou des naans."
+  ],
+  "notes": "Plus la marinade dure, plus le poulet est tendre. On peut la laisser toute une nuit.",
+  "image_query": "Poulet tikka masala"
+ },
+ {
+  "slug": "roti-de-porc-au-four",
+  "name": "Rôti de porc au four",
+  "region": "europeen",
+  "origin": "France",
+  "category": "dinner",
+  "prep_time": 15,
+  "cook_time": 75,
+  "difficulty": 1,
+  "ingredient_access": 1,
+  "equipment": [
+   "four"
+  ],
+  "servings": 5,
+  "batch_friendly": false,
+  "keeps_days": 3,
+  "tags": [
+   "porc",
+   "four",
+   "dimanche",
+   "facile"
+  ],
+  "ingredients": [
+   "1,2 kg de rôti de porc (échine ou filet)",
+   "3 gousses d'ail",
+   "1 branche de romarin",
+   "1 cuillère à soupe de moutarde",
+   "2 cuillères à soupe d'huile d'olive",
+   "20 cl de bouillon",
+   "2 oignons",
+   "sel, poivre"
+  ],
+  "steps": [
+   "Préchauffer le four à 200 °C. Sortir le rôti 30 minutes avant la cuisson.",
+   "Badigeonner le rôti de moutarde, le saler, le poivrer et y glisser des lamelles d'ail et du romarin.",
+   "Le saisir dans l'huile sur toutes les faces en cocotte ou dans un plat allant au four.",
+   "Ajouter les oignons en quartiers et le bouillon, puis enfourner 1 heure en arrosant régulièrement.",
+   "Laisser reposer 10 minutes sous une feuille d'aluminium avant de trancher.",
+   "Servir avec le jus de cuisson réduit."
+  ],
+  "notes": "Compter environ 50 minutes par kilo ; la température à cœur doit atteindre 68 à 70 °C.",
+  "image_query": "Rôti de porc au four"
+ },
+ {
+  "slug": "salade-lentilles-vertes",
+  "name": "Salade de lentilles vertes",
+  "region": "europeen",
+  "origin": "France",
+  "category": "lunch",
+  "prep_time": 15,
+  "cook_time": 25,
+  "difficulty": 1,
+  "ingredient_access": 1,
+  "equipment": [
+   "casserole"
+  ],
+  "servings": 4,
+  "batch_friendly": true,
+  "keeps_days": 3,
+  "tags": [
+   "salade",
+   "lentilles",
+   "végétarien",
+   "froid"
+  ],
+  "ingredients": [
+   "250 g de lentilles vertes",
+   "1 oignon rouge",
+   "100 g de fromage bleu ou de feta",
+   "1 petite poignée de basilic",
+   "3 cuillères à soupe d'huile d'olive",
+   "1 cuillère à soupe de vinaigre",
+   "1 cuillère à café de moutarde",
+   "sel, poivre"
+  ],
+  "steps": [
+   "Cuire les lentilles 20 à 25 minutes dans de l'eau non salée puis les égoutter et les laisser tiédir.",
+   "Émincer l'oignon rouge finement et le faire macérer 10 minutes dans le vinaigre.",
+   "Préparer la vinaigrette avec la moutarde, l'huile, le sel et le poivre.",
+   "Mélanger les lentilles, l'oignon, la vinaigrette, le fromage émietté et le basilic."
+  ],
+  "notes": "Meilleure après une heure au frais, les lentilles absorbent la vinaigrette.",
+  "image_query": "Salade de lentilles vertes"
+ },
+ {
+  "slug": "taro-gratine",
+  "name": "Taro gratiné",
+  "region": "antillais",
+  "origin": "Antilles",
+  "category": "dinner",
+  "prep_time": 20,
+  "cook_time": 45,
+  "difficulty": 2,
+  "ingredient_access": 2,
+  "equipment": [
+   "four",
+   "casserole"
+  ],
+  "servings": 4,
+  "batch_friendly": true,
+  "keeps_days": 3,
+  "tags": [
+   "gratin",
+   "taro",
+   "fromage",
+   "végétarien"
+  ],
+  "ingredients": [
+   "800 g de taro (dachine)",
+   "20 cl de crème",
+   "20 cl de lait",
+   "100 g de gruyère râpé",
+   "2 gousses d'ail",
+   "1 noix de muscade",
+   "1 noix de beurre",
+   "persil, sel, poivre"
+  ],
+  "steps": [
+   "Éplucher le taro avec des gants (il peut irriter la peau) et le couper en rondelles fines.",
+   "Le cuire 10 minutes à l'eau bouillante salée, puis l'égoutter.",
+   "Mélanger la crème, le lait, l'ail écrasé, la muscade, le sel et le poivre.",
+   "Disposer le taro dans un plat beurré, couvrir de sauce et de gruyère.",
+   "Gratiner 30 à 35 minutes à 190 °C jusqu'à ce que le dessus soit doré. Parsemer de persil."
+  ],
+  "notes": "Le taro doit être bien cuit avant d'être consommé ; ne jamais le manger cru.",
+  "image_query": "Taro gratiné"
+ }
+]
