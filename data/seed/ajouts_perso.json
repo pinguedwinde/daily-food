@@ -619,5 +619,50 @@
   ],
   "notes": "Cuire le magret démarré à froid dans la poêle permet de faire fondre la graisse et d'obtenir une peau croustillante.",
   "image_query": "Salade tiède de quinoa au magret de canard"
+ },
+ {
+  "slug": "poisson-braise-alloco",
+  "name": "Poisson braisé et alloco",
+  "region": "africain",
+  "origin": "Côte d'Ivoire",
+  "category": "dinner",
+  "prep_time": 20,
+  "cook_time": 30,
+  "difficulty": 2,
+  "ingredient_access": 2,
+  "equipment": [
+   "four",
+   "poêle"
+  ],
+  "servings": 3,
+  "batch_friendly": false,
+  "keeps_days": 1,
+  "tags": [
+   "poisson",
+   "braisé",
+   "plantain",
+   "gourmand"
+  ],
+  "ingredients": [
+   "3 dorades ou tilapias entiers (nettoyés)",
+   "3 bananes plantain bien mûres",
+   "3 oignons",
+   "3 tomates",
+   "2 gousses d'ail",
+   "1 piment",
+   "1 citron",
+   "50 cl d'huile de friture",
+   "3 cuillères à soupe d'huile",
+   "sel, poivre"
+  ],
+  "steps": [
+   "Mariner les poissons ciselés avec l'ail pilé, le jus de citron, le sel, le poivre et un peu d'huile pendant 30 minutes.",
+   "Cuire les poissons au four à 220 °C (ou au gril) 25 à 30 minutes en les retournant à mi-cuisson, jusqu'à ce que la peau soit grillée.",
+   "Éplucher les plantains, les couper en rondelles en biais et les frire 3 à 4 minutes par face dans l'huile chaude.",
+   "Préparer la sauce en faisant revenir oignons et tomates en dés avec le piment pendant 10 minutes.",
+   "Servir le poisson avec l'alloco et la sauce oignon-tomate."
+  ],
+  "notes": "Des plantains bien mûrs (jaunes tachés de noir) donnent un alloco caramélisé.",
+  "image_query": "Poisson braisé et alloco"
  }
 ]
