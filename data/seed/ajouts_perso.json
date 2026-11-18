@@ -664,5 +664,189 @@
   ],
   "notes": "Des plantains bien mûrs (jaunes tachés de noir) donnent un alloco caramélisé.",
   "image_query": "Poisson braisé et alloco"
+ },
+ {
+  "slug": "cocotte-poulet-legumes-rustique",
+  "name": "Cocotte de cuisses de poulet, pommes de terre et carottes",
+  "region": "europeen",
+  "origin": "France",
+  "category": "dinner",
+  "prep_time": 15,
+  "cook_time": 60,
+  "difficulty": 1,
+  "ingredient_access": 1,
+  "equipment": [
+   "cocotte"
+  ],
+  "servings": 4,
+  "batch_friendly": true,
+  "keeps_days": 3,
+  "tags": [
+   "poulet",
+   "au four",
+   "one pot",
+   "traditionnel",
+   "batch cooking"
+  ],
+  "ingredients": [
+   "4 hauts de cuisse de poulet",
+   "4 pilons de poulet",
+   "600 g de pommes de terre",
+   "4 carottes",
+   "2 oignons",
+   "3 gousses d'ail",
+   "20 cl de bouillon de volaille",
+   "2 brins de thym",
+   "2 feuilles de laurier",
+   "huile",
+   "persil",
+   "sel, poivre"
+  ],
+  "steps": [
+   "Préchauffer le four à 180 °C. Éplucher et couper pommes de terre et carottes en gros morceaux, émincer les oignons.",
+   "Saisir le poulet salé et poivré dans la cocotte huilée, 4 minutes par face, jusqu'à belle coloration. Réserver.",
+   "Faire revenir les oignons et l'ail 3 minutes dans la même cocotte, puis ajouter carottes et pommes de terre.",
+   "Remettre le poulet, ajouter thym, laurier et bouillon.",
+   "Couvrir et enfourner 45 minutes, puis cuire à découvert 15 minutes pour dorer la peau.",
+   "Parsemer de persil ciselé et servir dans la cocotte."
+  ],
+  "notes": "Les pilons peuvent être remplacés par des hauts de cuisse uniquement. Les restes se réchauffent très bien.",
+  "image_query": "Cocotte de cuisses de poulet, pommes de terre et carottes"
+ },
+ {
+  "slug": "cocotte-poulet-creme-estragon",
+  "name": "Cocotte de poulet à la crème et à l'estragon",
+  "region": "europeen",
+  "origin": "France",
+  "category": "dinner",
+  "prep_time": 15,
+  "cook_time": 50,
+  "difficulty": 2,
+  "ingredient_access": 1,
+  "equipment": [
+   "cocotte"
+  ],
+  "servings": 4,
+  "batch_friendly": false,
+  "keeps_days": 2,
+  "tags": [
+   "poulet",
+   "gourmand",
+   "one pot",
+   "traditionnel"
+  ],
+  "ingredients": [
+   "8 hauts de cuisse de poulet",
+   "600 g de pommes de terre grenaille",
+   "2 échalotes",
+   "2 gousses d'ail",
+   "15 cl de vin blanc sec",
+   "20 cl de crème liquide",
+   "1 cuillère à soupe de moutarde",
+   "1 bouquet d'estragon",
+   "beurre",
+   "sel, poivre"
+  ],
+  "steps": [
+   "Saler et poivrer le poulet, le dorer côté peau dans une cocotte avec une noix de beurre, 6 minutes, puis le retourner 2 minutes. Réserver.",
+   "Faire suer les échalotes et l'ail 3 minutes, déglacer au vin blanc et laisser réduire de moitié.",
+   "Ajouter les pommes de terre coupées en deux et remettre le poulet, peau vers le haut.",
+   "Couvrir et cuire à feu doux 30 minutes.",
+   "Mélanger crème et moutarde, verser dans la cocotte et poursuivre 10 minutes à découvert.",
+   "Parsemer d'estragon ciselé juste avant de servir."
+  ],
+  "notes": "À défaut d'estragon frais, utiliser de la ciboulette ou du persil plat.",
+  "image_query": "Cocotte de poulet à la crème et à l'estragon"
+ },
+ {
+  "slug": "couscous-poulet-merguez-legumes",
+  "name": "Couscous poulet, merguez et légumes",
+  "region": "africain",
+  "origin": "Maghreb",
+  "category": "dinner",
+  "prep_time": 30,
+  "cook_time": 60,
+  "difficulty": 2,
+  "ingredient_access": 1,
+  "equipment": [
+   "cocotte"
+  ],
+  "servings": 6,
+  "batch_friendly": true,
+  "keeps_days": 4,
+  "tags": [
+   "poulet",
+   "mijoté",
+   "festif",
+   "batch cooking",
+   "épicé"
+  ],
+  "ingredients": [
+   "6 cuisses de poulet",
+   "6 merguez",
+   "300 g de semoule moyenne",
+   "3 carottes",
+   "3 courgettes",
+   "2 navets",
+   "1 boîte de pois chiches",
+   "3 tomates",
+   "2 oignons",
+   "1 cuillère à soupe de concentré de tomate",
+   "2 cuillères à café de ras el hanout",
+   "harissa, sel, poivre"
+  ],
+  "steps": [
+   "Dorer le poulet avec les oignons émincés dans une grande cocotte huilée, puis ajouter le concentré de tomate et le ras el hanout.",
+   "Couvrir d'eau à hauteur, ajouter les tomates en dés, saler et cuire 20 minutes.",
+   "Ajouter carottes et navets en gros morceaux, cuire 15 minutes, puis les courgettes et les pois chiches 15 minutes de plus.",
+   "Cuire les merguez à la poêle ou au four 10 à 12 minutes, en les retournant.",
+   "Hydrater la semoule avec la même quantité d'eau bouillante salée, couvrir 5 minutes, puis égrener avec un filet d'huile.",
+   "Servir semoule, poulet, merguez et légumes arrosés de bouillon, harissa à part."
+  ],
+  "notes": "Le bouillon se conserve mieux séparé de la semoule pour un batch cooking.",
+  "image_query": "Couscous poulet, merguez et légumes"
+ },
+ {
+  "slug": "magret-canard-miel-choux-bruxelles",
+  "name": "Magret de canard au miel, choux de Bruxelles et pommes de terre rôties",
+  "region": "europeen",
+  "origin": "France",
+  "category": "dinner",
+  "prep_time": 15,
+  "cook_time": 30,
+  "difficulty": 2,
+  "ingredient_access": 1,
+  "equipment": [
+   "four"
+  ],
+  "servings": 2,
+  "batch_friendly": false,
+  "keeps_days": 1,
+  "tags": [
+   "festif",
+   "gourmand",
+   "au four"
+  ],
+  "ingredients": [
+   "2 magrets de canard",
+   "2 cuillères à soupe de miel",
+   "1 cuillère à soupe de vinaigre balsamique",
+   "300 g de choux de Bruxelles",
+   "400 g de pommes de terre",
+   "2 gousses d'ail",
+   "thym",
+   "huile d'olive",
+   "sel, poivre"
+  ],
+  "steps": [
+   "Préchauffer le four à 200 °C. Couper pommes de terre en quartiers et choux en deux, les enrober d'huile, ail, thym, sel et poivre.",
+   "Enfourner les légumes sur une plaque 30 minutes en remuant à mi-cuisson.",
+   "Quadriller la peau des magrets, saler, poivrer et les poser côté peau dans une poêle froide.",
+   "Cuire à feu moyen 8 minutes côté peau en retirant la graisse, puis 3 minutes côté chair.",
+   "Ajouter miel et vinaigre dans la poêle, enrober les magrets 1 minute, puis les laisser reposer 5 minutes sous papier alu.",
+   "Trancher les magrets et servir avec les légumes rôtis et le jus de cuisson."
+  ],
+  "notes": "Garder la graisse de canard pour rôtir des pommes de terre une prochaine fois.",
+  "image_query": "Magret de canard au miel, choux de Bruxelles et pommes de terre rôties"
  }
 ]
