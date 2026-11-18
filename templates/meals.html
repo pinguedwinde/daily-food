@@ -1,88 +1,89 @@
 {% extends "base.html" %}
-{% block title %}Mes plats{% endblock %}
+{% from "_macros.html" import photo, region_tag, meta_line, flags with context %}
+{% block title %}Recettes{% endblock %}
 {% block content %}
 
 <div class="page-header">
-    <h1>🍲 Mes plats</h1>
-    <p>{{ total }} plat(s) dans la base</p>
+    <h1>Recettes</h1>
+    <p id="meals-count">{{ meals|length }} recette(s) affichée(s) sur {{ total }}</p>
 </div>
 
-<div class="meals-toolbar">
-    <div class="search-bar">
-        <form method="GET" action="/meals" style="display:flex;gap:8px;flex:1;">
-            <input type="text" name="q" placeholder="Rechercher un plat, un ingrédient..." value="{{ query or '' }}">
-            <button type="submit" class="btn btn-primary btn-sm">🔍</button>
-        </form>
+<form id="filter-form" method="GET" action="/meals" class="meals-filters">
+    <div class="meals-toolbar">
+        <div class="search-bar">
+            <input type="search" name="q" autocomplete="off" placeholder="Rechercher un plat, un pays, un ingrédient…" value="{{ filters.q or '' }}">
+            <button type="submit" class="btn btn-primary">Chercher</button>
+        </div>
+        <select name="sort" aria-label="Tri">
+            <option value="region" {{ 'selected' if sort == 'region' }}>Cuisine préférée d'abord</option>
+            <option value="easy" {{ 'selected' if sort == 'easy' }}>Plus faciles d'abord</option>
+            <option value="quick" {{ 'selected' if sort == 'quick' }}>Plus rapides d'abord</option>
+            <option value="name" {{ 'selected' if sort == 'name' }}>A → Z</option>
+            <option value="recent" {{ 'selected' if sort == 'recent' }}>Récents</option>
+        </select>
+        <a href="/meals/add" class="btn btn-primary">+ Nouveau plat</a>
     </div>
-    <a href="/meals/add" class="btn btn-primary">+ Nouveau plat</a>
-</div>
 
-<div class="filter-chips">
-    <a href="/meals" class="chip {% if not active_category and not active_tag %}active{% endif %}">Tous</a>
-    {% for key, label in CATEGORY_LABELS.items() %}
-    <a href="/meals?category={{ key }}{% if query %}&q={{ query }}{% endif %}" class="chip {% if active_category == key %}active{% endif %}">{{ label }}</a>
-    {% endfor %}
-</div>
+    <div class="filter-chips" id="filter-chips">
+        <label class="chip {{ 'active' if not filters.region }}"><input type="radio" name="region" value="" {{ 'checked' if not filters.region }}>Toutes</label>
+        {% for key in REGION_ORDER %}{% if region_counts.get(key) %}
+        <label class="chip {{ 'active' if filters.region == key }}"><input type="radio" name="region" value="{{ key }}" {{ 'checked' if filters.region == key }}><span class="dot region-{{ key }}"></span>{{ REGION_LABELS[key] }} <small>{{ region_counts[key] }}</small></label>
+        {% endif %}{% endfor %}
+    </div>
 
-{% if common_tags %}
-<div class="filter-chips">
-    {% for tag in common_tags %}
-    <a href="/meals?tag={{ tag }}{% if query %}&q={{ query }}{% endif %}" class="chip tag-{{ tag }} {% if active_tag == tag %}active{% endif %}">#{{ tag }}</a>
-    {% endfor %}
-</div>
-{% endif %}
+    <div class="filter-row" id="filter-row">
+        <select name="category" aria-label="Type de repas">
+            <option value="">Tous les repas</option>
+            {% for key, label in CATEGORY_LABELS.items() %}<option value="{{ key }}" {{ 'selected' if filters.category == key }}>{{ label }}</option>{% endfor %}
+        </select>
+        <select name="tag" aria-label="Tag">
+            <option value="">Tous les tags</option>
+            {% for t in common_tags %}<option value="{{ t }}" {{ 'selected' if filters.tag == t }}>#{{ t }}</option>{% endfor %}
+        </select>
+        <label class="toggle"><input type="checkbox" name="max_difficulty" value="1" {{ 'checked' if filters.max_difficulty }}>Facile</label>
+        <label class="toggle"><input type="checkbox" name="max_access" value="1" {{ 'checked' if filters.max_access }}>Ingrédients courants</label>
+        <label class="toggle"><input type="checkbox" name="no_equipment" value="1" {{ 'checked' if filters.no_equipment }}>Sans matériel spécial</label>
+        <label class="toggle"><input type="checkbox" name="batch" value="1" {{ 'checked' if filters.batch }}>Batch cooking</label>
+        {% if filters %}<a href="/meals" class="btn btn-ghost btn-sm">Effacer</a>{% endif %}
+    </div>
+</form>
 
+<div id="meals-results">
 {% if meals %}
 <div class="meals-grid">
     {% for meal in meals %}
     <div class="meal-card">
         <a href="/meals/{{ meal.id }}" class="meal-card-link">
-            <div class="meal-card-top category-{{ meal.category }}"></div>
-            {% if meal.image_url %}
             <div class="meal-card-image">
-                <img src="{{ meal.image_url }}" alt="{{ meal.name }}" loading="lazy">
+                {% if ADMIN and not meal.image_url %}<span class="card-badge">Sans photo</span>{% endif %}
+                {{ photo(meal) }}
             </div>
-            {% endif %}
             <div class="meal-card-body">
+                {{ region_tag(meal) }}
                 <h3>{{ meal.name }}</h3>
-                <div class="meal-card-meta">
-                    <span class="meta-badge">{{ CATEGORY_LABELS[meal.category] }}</span>
-                    {% if meal.prep_time %}
-                    <span class="meta-badge">⏱️ {{ meal.prep_time }} min</span>
-                    {% endif %}
-                </div>
-                {% if meal.tags %}
-                <div class="meal-card-tags">
-                    {% for tag in meal.tags %}
-                    <span class="tag">{{ tag }}</span>
-                    {% endfor %}
-                </div>
-                {% endif %}
+                {{ meta_line(meal) }}
+                {{ flags(meal) }}
             </div>
         </a>
+        {% if ADMIN %}
         <div class="meal-card-footer">
-            <span>Ajouté par {{ meal.created_by or '?' }}</span>
+            <span>{{ CATEGORY_LABELS[meal.category] }}</span>
             <div class="meal-card-actions">
-                <a href="/meals/{{ meal.id }}/edit">✏️</a>
-                <form method="POST" action="/meals/{{ meal.id }}/delete" style="display:inline;" onsubmit="return confirm('Supprimer « {{ meal.name }} » ?')">
-                    <button type="submit" class="delete-btn" style="background:none;border:none;cursor:pointer;padding:4px 8px;font-size:0.8rem;color:var(--color-text-lighter);">🗑️</button>
-                </form>
+                <button type="button" data-image-edit="{{ meal.id }}" data-name="{{ meal.name }}" data-url="{{ meal.image_url or '' }}" data-region="{{ meal.region }}" title="Changer la photo">Photo</button>
+                <a href="/meals/{{ meal.id }}/edit">Éditer</a>
+                <form method="POST" action="/meals/{{ meal.id }}/delete" onsubmit="return confirm('Supprimer « {{ meal.name|replace("'", "’") }} » ?')" style="display:inline"><button class="danger">Suppr.</button></form>
             </div>
         </div>
+        {% endif %}
     </div>
     {% endfor %}
 </div>
 {% else %}
-<div style="text-align:center;padding:60px 24px;color:var(--color-text-lighter);">
-    <p style="font-size:1.1rem;margin-bottom:24px;">
-        {% if query or active_category %}
-        Aucun plat trouvé avec ces critères.
-        {% else %}
-        Aucun plat pour le moment. Ajoute ton premier plat !
-        {% endif %}
-    </p>
-    <a href="/meals/add" class="btn btn-primary">Ajouter un plat</a>
+<div class="empty-block">
+    <p>Aucun plat trouvé avec ces critères.</p>
+    <div><a href="/meals" class="btn btn-outline">Effacer les filtres</a> <a href="/meals/add" class="btn btn-primary">Ajouter un plat</a></div>
 </div>
 {% endif %}
+</div>
 
 {% endblock %}
