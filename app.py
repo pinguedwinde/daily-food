@@ -824,5 +824,6 @@ def import_data(
 # ---------- MAIN ----------
 
 if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 8000))
-    uvicorn.run("app:app", host="0.0.0.0", port=port, reload=False)
+    port = int(os.environ.get("PORT", 8421))
+    host = os.environ.get("HOST", "127.0.0.1")
+    uvicorn.run("app:app", host=host, port=port, reload=os.environ.get("RELOAD") == "1")
