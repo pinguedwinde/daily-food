@@ -1,0 +1,1089 @@
+[
+ {
+  "id": 1,
+  "name": "Riz Sauce Graine",
+  "category": "dinner",
+  "prep_time": 15,
+  "tags": [
+   "traditionnel",
+   "mijoté"
+  ],
+  "ingredients": [
+   "Riz blanc",
+   "Sauce graine (noix de palme)",
+   "Mouton ou boeuf",
+   "Oignon",
+   "Ail"
+  ],
+  "notes": "Riz parfumé à la sauce graine avec du mouton ou boeuf",
+  "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Riz-Sauce_Graine.JPG"
+ },
+ {
+  "id": 2,
+  "name": "Riz Sauce Feuille Patate douce",
+  "category": "lunch",
+  "prep_time": 30,
+  "tags": [
+   "traditionnel",
+   "poisson"
+  ],
+  "ingredients": [
+   "Riz blanc",
+   "Feuilles de patate douce",
+   "Poisson émiétté",
+   "Oignon",
+   "Piment"
+  ],
+  "notes": "Riz parfumé à la sauce de feuille de patates douces avec du poisson émiétté",
+  "image_url": null
+ },
+ {
+  "id": 3,
+  "name": "Riz Sauce Feuille Manioc douce",
+  "category": "dinner",
+  "prep_time": 30,
+  "tags": [
+   "traditionnel",
+   "poisson"
+  ],
+  "ingredients": [
+   "Riz blanc",
+   "Feuilles de manioc douces",
+   "Poisson émiétté",
+   "Huile de palme",
+   "Oignon"
+  ],
+  "notes": "Riz parfumé à la sauce de feuille de manioc douces avec du poisson émiétté",
+  "image_url": null
+ },
+ {
+  "id": 4,
+  "name": "Babenda",
+  "category": "dinner",
+  "prep_time": 10,
+  "tags": [
+   "traditionnel",
+   "légumes"
+  ],
+  "ingredients": [
+   "Feuilles vertes traditionnelles",
+   "Arachides pilées",
+   "Riz",
+   "Poisson fumé",
+   "Sel"
+  ],
+  "notes": "Babenda, ragoût traditionnel de feuilles et riz aux arachides",
+  "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Super_Babenda.jpg"
+ },
+ {
+  "id": 5,
+  "name": "Porc au four ou Porc croustillant",
+  "category": "lunch",
+  "prep_time": 20,
+  "tags": [
+   "au four",
+   "gourmand"
+  ],
+  "ingredients": [
+   "1kg de poitrine de porc",
+   "2 gousses d'ail",
+   "1 oignon émincé",
+   "Mélange d'épices (sel, poivre, paprika)",
+   "Accompagnement (riz ou salade)"
+  ],
+  "notes": "Porc au four simple ou croustillant avec garniture au choix comme du riz ou de la salade",
+  "image_url": null
+ },
+ {
+  "id": 6,
+  "name": "Poisson braisé à la salade",
+  "category": "dinner",
+  "prep_time": 20,
+  "tags": [
+   "poisson",
+   "rapide",
+   "léger"
+  ],
+  "ingredients": [
+   "1 poisson (tilapia, carpe ou chinchard)",
+   "1 oignon émincé",
+   "1 cuillère de moutarde",
+   "1 laitue lavée",
+   "1 tomate fraîche",
+   "1 concombre",
+   "Marinade aux épices locales"
+  ],
+  "notes": "Poisson chinchard/tilapia/carpe braisé accompagné de la salade",
+  "image_url": null
+ },
+ {
+  "id": 7,
+  "name": "Poulet braisé",
+  "category": "dinner",
+  "prep_time": 20,
+  "tags": [
+   "poulet",
+   "rapide"
+  ],
+  "ingredients": [
+   "1 poulet entier découpé",
+   "3 gousses d'ail hachées",
+   "1 oignon émincé",
+   "Jus de citron",
+   "Huile végétale",
+   "Mélange d'épices pour grillade"
+  ],
+  "notes": "Poulet braisé avec accompagnement au choix",
+  "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Poulet_brais%C3%A9_attiek%C3%A9.JPG"
+ },
+ {
+  "id": 8,
+  "name": "Fried Rice",
+  "category": "lunch",
+  "prep_time": 15,
+  "tags": [
+   "riz",
+   "rapide",
+   "one pot"
+  ],
+  "ingredients": [
+   "Riz cuit",
+   "Poulet",
+   "Crevettes",
+   "Œufs",
+   "Petits pois",
+   "Sauce soja"
+  ],
+  "notes": "Riz frit au poulet aux crevettes",
+  "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Yeung_Chow_Fried_Rice.jpg"
+ },
+ {
+  "id": 9,
+  "name": "Ragout de Pomme de terre",
+  "category": "dinner",
+  "prep_time": 20,
+  "tags": [
+   "mijoté",
+   "hiver",
+   "gourmand"
+  ],
+  "ingredients": [
+   "1kg de pommes de terre",
+   "600g de viande de mouton",
+   "150g de haricots verts",
+   "2 carottes en rondelles",
+   "1 oignon",
+   "2 tomates concentrées"
+  ],
+  "notes": "Ragout de Pomme de terre au mouton avec au choix du haricot vert et des légumes",
+  "image_url": null
+ },
+ {
+  "id": 10,
+  "name": "Ragout d'Igname",
+  "category": "dinner",
+  "prep_time": 25,
+  "tags": [
+   "mijoté",
+   "hiver",
+   "traditionnel"
+  ],
+  "ingredients": [
+   "1 tubercule d'igname",
+   "500g de viande de bœuf ou mouton",
+   "2 cuillères à soupe de concentré de tomate",
+   "1 oignon",
+   "Ail, sel, poivre et piment"
+  ],
+  "notes": "Ragout d'igname au boeuf ou mouton",
+  "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Rago%C3%BBt_d%27igname_%C3%A0_l%27africaine_servi_dans_un_bol_au_B%C3%A9nin.jpg"
+ },
+ {
+  "id": 11,
+  "name": "Boeuf bourguignon",
+  "category": "lunch",
+  "prep_time": 30,
+  "tags": [
+   "mijoté",
+   "gourmand",
+   "hiver"
+  ],
+  "ingredients": [
+   "Boeuf à braiser",
+   "Carottes",
+   "Champignons de Paris",
+   "Vin rouge",
+   "Oignons grelots"
+  ],
+  "notes": "Bœuf bourguignon traditionnel avec carottes et champignons",
+  "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Boeuf_bourguignon_servi_avec_des_p%C3%A2tes.jpg"
+ },
+ {
+  "id": 12,
+  "name": "Nouilles sautées",
+  "category": "dinner",
+  "prep_time": 15,
+  "tags": [
+   "rapide",
+   "one pot",
+   "pâtes"
+  ],
+  "ingredients": [
+   "Nouilles aux œufs",
+   "Crevettes",
+   "Champignons noirs réhydratés",
+   "Sauce soja",
+   "Huile de sésame"
+  ],
+  "notes": "Nouilles aux oeufs sautées aux champignons noires et crevettes",
+  "image_url": null
+ },
+ {
+  "id": 13,
+  "name": "Nems",
+  "category": "snack",
+  "prep_time": 40,
+  "tags": [
+   "frit",
+   "entrée",
+   "rapide"
+  ],
+  "ingredients": [
+   "24 galettes de riz",
+   "300g de porc ou poulet haché",
+   "50g de vermicelles",
+   "30g de champignons noirs réhydratés",
+   "1 carotte râpée",
+   "1 œuf"
+  ],
+  "notes": "Nems de poulet/porc",
+  "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Nems,_Le_Cambodge,_2_Rue_Leriche,_75015_Paris,_France_001.jpg"
+ },
+ {
+  "id": 14,
+  "name": "Riz cantonais",
+  "category": "lunch",
+  "prep_time": 15,
+  "tags": [
+   "riz",
+   "rapide",
+   "one pot"
+  ],
+  "ingredients": [
+   "Riz cuit",
+   "Dés de jambon",
+   "Crevettes",
+   "Œufs brouillés",
+   "Petits pois"
+  ],
+  "notes": "Riz cantonais",
+  "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Riz_cantonais.jpg"
+ },
+ {
+  "id": 15,
+  "name": "Gonré de haricot",
+  "category": "dinner",
+  "prep_time": 30,
+  "tags": [
+   "traditionnel",
+   "végétarien",
+   "sans gluten"
+  ],
+  "ingredients": [
+   "Haricots",
+   "Gnon de blé",
+   "Mil ou maïs",
+   "Sel",
+   "Eau"
+  ],
+  "notes": "Gonré de haricot lisse ou pas avec du gnon de blé ou petit de mil ou de mais",
+  "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Gonr%C3%A9.jpg"
+ },
+ {
+  "id": 16,
+  "name": "Haricot blanc oeil noir",
+  "category": "dinner",
+  "prep_time": 20,
+  "tags": [
+   "traditionnel",
+   "végétarien"
+  ],
+  "ingredients": [
+   "Haricots blancs œil noir",
+   "Riz",
+   "Oignon",
+   "Tomate",
+   "Huile"
+  ],
+  "notes": "Haricot blanc oeil noir au riz ou couscous de maïs ou attiéké",
+  "image_url": null
+ },
+ {
+  "id": 17,
+  "name": "Polenta",
+  "category": "lunch",
+  "prep_time": 10,
+  "tags": [
+   "rapide",
+   "végétarien",
+   "sans gluten"
+  ],
+  "ingredients": [
+   "Farine de maïs",
+   "Eau",
+   "Beurre",
+   "Sel",
+   "Parmesan"
+  ],
+  "notes": "Polenta",
+  "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Polenta_avant_cuisson.jpg"
+ },
+ {
+  "id": 18,
+  "name": "Riz Sauce Curry",
+  "category": "dinner",
+  "prep_time": 15,
+  "tags": [
+   "riz",
+   "rapide"
+  ],
+  "ingredients": [
+   "300g de riz blanc",
+   "400g de poulet",
+   "200ml de lait de coco",
+   "2 cuillères à soupe de curry",
+   "1 oignon"
+  ],
+  "notes": "Riz Sauce Curry",
+  "image_url": null
+ },
+ {
+  "id": 19,
+  "name": "Poulet croustillant à la citronnelle",
+  "category": "dinner",
+  "prep_time": 25,
+  "tags": [
+   "poulet",
+   "frit",
+   "gourmand"
+  ],
+  "ingredients": [
+   "Poulet",
+   "Citronnelle",
+   "Farine",
+   "Huile de friture",
+   "Épices"
+  ],
+  "notes": "Poulet frit à la citronnelle",
+  "image_url": null
+ },
+ {
+  "id": 20,
+  "name": "Poulet au four",
+  "category": "lunch",
+  "prep_time": 25,
+  "tags": [
+   "poulet",
+   "au four"
+  ],
+  "ingredients": [
+   "1 poulet entier",
+   "Ail",
+   "Herbes de Provence",
+   "Huile d'olive",
+   "Sel et poivre"
+  ],
+  "notes": "Poulet farci au four",
+  "image_url": null
+ },
+ {
+  "id": 21,
+  "name": "Attiéké au poisson braisé",
+  "category": "dinner",
+  "prep_time": 20,
+  "tags": [
+   "poisson",
+   "rapide",
+   "traditionnel"
+  ],
+  "ingredients": [
+   "Attiéké",
+   "Poisson braisé (tilapia)",
+   "Tomate",
+   "Oignon",
+   "Huile"
+  ],
+  "notes": "Attiéké au poisson braisé",
+  "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Attieke_serves_with_fried_carp.jpg"
+ },
+ {
+  "id": 22,
+  "name": "Doukounou poisson frit",
+  "category": "dinner",
+  "prep_time": 30,
+  "tags": [
+   "traditionnel",
+   "poisson",
+   "frit"
+  ],
+  "ingredients": [
+   "Pâte de maïs fermentée (pour doukounou)",
+   "4 poissons moyens",
+   "4 tomates fraîches",
+   "2 oignons émincés",
+   "Huile de friture"
+  ],
+  "notes": "Doukounou à la sauce tomate crue et poisson frit",
+  "image_url": null
+ },
+ {
+  "id": 23,
+  "name": "Tô sauce Gombo",
+  "category": "lunch",
+  "prep_time": 20,
+  "tags": [
+   "traditionnel",
+   "poisson",
+   "sans gluten"
+  ],
+  "ingredients": [
+   "Farine de mil ou maïs",
+   "Gombos frais",
+   "Poisson fumé",
+   "Huile de palme",
+   "Sel"
+  ],
+  "notes": "Tô sauce Gombo au poisson fumé",
+  "image_url": null
+ },
+ {
+  "id": 24,
+  "name": "Tô sauce feuille d'oseille",
+  "category": "dinner",
+  "prep_time": 20,
+  "tags": [
+   "traditionnel",
+   "sans gluten"
+  ],
+  "ingredients": [
+   "Farine de mil ou maïs",
+   "300g de feuilles d'oseille",
+   "300g de mouton",
+   "1 oignon",
+   "Huile de friture"
+  ],
+  "notes": "Tô sauce feuille d'oseille au mouton frit",
+  "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Le_t%C3%B4_%C3%A0_la_sauce_d%C3%A2h.JPG"
+ },
+ {
+  "id": 25,
+  "name": "Tô sauce feuille de boulvanka",
+  "category": "dinner",
+  "prep_time": 20,
+  "tags": [
+   "traditionnel",
+   "sans gluten",
+   "légumes"
+  ],
+  "ingredients": [
+   "Farine de mil ou maïs",
+   "Feuilles de boulvanka",
+   "Poisson fumé",
+   "Huile de palme",
+   "Sel"
+  ],
+  "notes": "Tô sauce feuille de boulvanka",
+  "image_url": null
+ },
+ {
+  "id": 26,
+  "name": "Riz Soumbala au Poulet",
+  "category": "lunch",
+  "prep_time": 20,
+  "tags": [
+   "riz",
+   "poulet",
+   "traditionnel"
+  ],
+  "ingredients": [
+   "300g de riz blanc",
+   "500g de poulet",
+   "3 cuillères à soupe de soumbala",
+   "1 oignon",
+   "Piment"
+  ],
+  "notes": "Riz Soumbala au Poulet",
+  "image_url": null
+ },
+ {
+  "id": 27,
+  "name": "Spaghetti Soumbala Poulet",
+  "category": "dinner",
+  "prep_time": 15,
+  "tags": [
+   "pâtes",
+   "poulet",
+   "traditionnel"
+  ],
+  "ingredients": [
+   "400g de spaghetti",
+   "500g de poulet",
+   "3 cuillères à soupe de soumbala",
+   "1 oignon émincé",
+   "Huile"
+  ],
+  "notes": "Spaghetti Soumbala Poulet",
+  "image_url": null
+ },
+ {
+  "id": 28,
+  "name": "Pâtes à la crème aux champignons",
+  "category": "dinner",
+  "prep_time": 10,
+  "tags": [
+   "pâtes",
+   "rapide",
+   "gourmand"
+  ],
+  "ingredients": [
+   "400g de pâtes (tagliatelles)",
+   "250g de champignons",
+   "20cl de crème fraîche",
+   "1 gousse d'ail",
+   "Parmesan"
+  ],
+  "notes": "Pâtes à la crème fraiche aux champignons avec ou sans escalope",
+  "image_url": null
+ },
+ {
+  "id": 29,
+  "name": "Riz Sauce Pâte d'arachide",
+  "category": "lunch",
+  "prep_time": 20,
+  "tags": [
+   "riz",
+   "traditionnel",
+   "mijoté"
+  ],
+  "ingredients": [
+   "300g de riz blanc",
+   "200g de pâte d'arachide",
+   "500g de viande de bœuf",
+   "2 carottes",
+   "1 cuillère de concentré de tomate"
+  ],
+  "notes": "Riz Sauce Pâte d'arachide",
+  "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Maf%C3%A9_au_poulet_pan%C3%A9.jpg"
+ },
+ {
+  "id": 30,
+  "name": "Poulet DG attiéké",
+  "category": "dinner",
+  "prep_time": 30,
+  "tags": [
+   "poulet",
+   "traditionnel",
+   "gourmand"
+  ],
+  "ingredients": [
+   "500g de poulet",
+   "2 bananes plantains mûres",
+   "200g d'attiéké",
+   "1 carotte",
+   "Poivron, oignon"
+  ],
+  "notes": "Poulet DG à l'attiéké",
+  "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Poulet_DG_servi_%C3%A0_Paris_(1).jpg"
+ },
+ {
+  "id": 31,
+  "name": "Gratin de pommes de terre",
+  "category": "dinner",
+  "prep_time": 25,
+  "tags": [
+   "au four",
+   "gourmand",
+   "hiver"
+  ],
+  "ingredients": [
+   "Pommes de terre",
+   "Viande hachée",
+   "Crème fraîche",
+   "Fromage râpé",
+   "Ail"
+  ],
+  "notes": "Gratin de pommes de terre à la viande hachée",
+  "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Gratin_dauphinois,_Le_Caf%C3%A9_Fran%C3%A7ais_(Bourg-en-Bresse),_janvier_2024.JPG"
+ },
+ {
+  "id": 32,
+  "name": "Lasagnes",
+  "category": "lunch",
+  "prep_time": 30,
+  "tags": [
+   "au four",
+   "gourmand",
+   "pâtes"
+  ],
+  "ingredients": [
+   "12 plaques de lasagnes",
+   "500g de bœuf haché",
+   "500ml de sauce béchamel",
+   "400g de sauce tomate",
+   "100g de fromage râpé"
+  ],
+  "notes": "Lasagnes",
+  "image_url": null
+ },
+ {
+  "id": 33,
+  "name": "Couscous sauce tomate",
+  "category": "dinner",
+  "prep_time": 15,
+  "tags": [
+   "rapide",
+   "végétarien",
+   "été"
+  ],
+  "ingredients": [
+   "300g de semoule de couscous",
+   "1 boîte de tomates concassées",
+   "1 courgette",
+   "1 carotte",
+   "Pois chiches"
+  ],
+  "notes": "Couscous sauce tomate",
+  "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Couscous_marocain_avec_des_legumes.jpg"
+ },
+ {
+  "id": 34,
+  "name": "Placali sauce gombo ou sauce claire",
+  "category": "dinner",
+  "prep_time": 25,
+  "tags": [
+   "traditionnel",
+   "sans gluten"
+  ],
+  "ingredients": [
+   "500g de pâte de manioc fermentée",
+   "150g de gombo frais",
+   "200g de viande ou poisson",
+   "Eau",
+   "Huile de palme"
+  ],
+  "notes": "Placali sauce gombo ou sauce claire",
+  "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Placali_-_Sauce_C%C3%B4p%C3%AA.jpg"
+ },
+ {
+  "id": 35,
+  "name": "Fufu sauce claire ou sauce graine",
+  "category": "lunch",
+  "prep_time": 30,
+  "tags": [
+   "traditionnel",
+   "sans gluten",
+   "végétarien"
+  ],
+  "ingredients": [
+   "Banane plantain",
+   "Igname",
+   "Sauce graine",
+   "Eau",
+   "Sel"
+  ],
+  "notes": "Fufu de banane plantin à l'igname à la sauce graine ou sauce claire",
+  "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Fufu_in_groundnut_soup_with_fish.jpg"
+ },
+ {
+  "id": 36,
+  "name": "Mouton au four",
+  "category": "dinner",
+  "prep_time": 15,
+  "tags": [
+   "au four",
+   "gourmand"
+  ],
+  "ingredients": [
+   "Gigot ou épaule de mouton",
+   "Ail",
+   "Romarin",
+   "Huile d'olive",
+   "Sel et poivre"
+  ],
+  "notes": "Mouton au four",
+  "image_url": null
+ },
+ {
+  "id": 37,
+  "name": "Pâtes à la viande hachée aux champignons",
+  "category": "dinner",
+  "prep_time": 15,
+  "tags": [
+   "pâtes",
+   "rapide"
+  ],
+  "ingredients": [
+   "350g de tagliatelles",
+   "300g de bœuf haché",
+   "200g de champignons de Paris",
+   "1 boîte de purée de tomates",
+   "1 oignon",
+   "Ail, sel, poivre"
+  ],
+  "notes": "Pâtes à la viande hachée aux champignons",
+  "image_url": null
+ },
+ {
+  "id": 38,
+  "name": "Pâtes sauce bolognaise",
+  "category": "lunch",
+  "prep_time": 15,
+  "tags": [
+   "pâtes",
+   "rapide",
+   "gourmand"
+  ],
+  "ingredients": [
+   "400g de spaghetti",
+   "400g de bœuf haché",
+   "1 boîte de tomates concassées",
+   "1 carotte",
+   "1 oignon",
+   "Ail, poivre, basilic"
+  ],
+  "notes": "Pâtes sauce bolognaise",
+  "image_url": null
+ },
+ {
+  "id": 39,
+  "name": "Salade de nouilles & canette à l'asiatique",
+  "category": "dinner",
+  "prep_time": 20,
+  "tags": [
+   "rapide",
+   "nouilles",
+   "asiatique",
+   "salade"
+  ],
+  "ingredients": [
+   "250g de nouilles de blé",
+   "200g de filets de canette cuits",
+   "1/4 de chou émincé",
+   "1 carotte râpée",
+   "50g de cacahuètes concassées",
+   "3 cuillères à soupe de sauce soja"
+  ],
+  "notes": "Nouilles, canette, chou-carotte, cacahuètes. Sauce asiatique.",
+  "image_url": null
+ },
+ {
+  "id": 40,
+  "name": "One pot crevettes & orzo à la toscane",
+  "category": "dinner",
+  "prep_time": 15,
+  "tags": [
+   "one pot",
+   "rapide",
+   "pâtes",
+   "été"
+  ],
+  "ingredients": [
+   "250g de pâtes orzo",
+   "300g de crevettes décortiquées",
+   "100g de pousses d'épinards",
+   "60g de tomates séchées",
+   "20cl de crème liquide",
+   "50cl de bouillon de légumes"
+  ],
+  "notes": "Orzo, crevettes, épinards, tomates séchées, crème.",
+  "image_url": null
+ },
+ {
+  "id": 41,
+  "name": "Penne & bœuf haché aux saveurs mexicaines",
+  "category": "dinner",
+  "prep_time": 15,
+  "tags": [
+   "pâtes",
+   "rapide",
+   "gourmand"
+  ],
+  "ingredients": [
+   "350g de penne",
+   "400g de bœuf haché",
+   "150g de cheddar râpé",
+   "15cl de crème fraîche",
+   "1 oignon",
+   "2 cuillères à soupe d'épices mexicaines"
+  ],
+  "notes": "Penne, bœuf haché, crème, cheddar, épices mexicaines.",
+  "image_url": null
+ },
+ {
+  "id": 42,
+  "name": "Dahl Bowl : lentilles corail, coco & curry",
+  "category": "dinner",
+  "prep_time": 15,
+  "tags": [
+   "végétarien",
+   "rapide",
+   "curry",
+   "léger"
+  ],
+  "ingredients": [
+   "Lentilles corail",
+   "Lait de coco",
+   "Curry en pâte",
+   "Riz basmati",
+   "Oignon"
+  ],
+  "notes": "Lentilles corail, lait de coco, curry, riz.",
+  "image_url": null
+ },
+ {
+  "id": 43,
+  "name": "Pavé de bœuf sauce au poivre maison",
+  "category": "dinner",
+  "prep_time": 20,
+  "tags": [
+   "gourmand",
+   "viande",
+   "hiver"
+  ],
+  "ingredients": [
+   "2 pavés de bœuf",
+   "2 cuillères à café de poivre noir concassé",
+   "10cl de crème liquide",
+   "Potatoes maison",
+   "2 poireaux émincés"
+  ],
+  "notes": "Pavé de bœuf, sauce au poivre, potatoes, fondue de poireaux.",
+  "image_url": null
+ },
+ {
+  "id": 44,
+  "name": "Tajine de poulet aux olives",
+  "category": "dinner",
+  "prep_time": 25,
+  "tags": [
+   "mijoté",
+   "marocain",
+   "poulet",
+   "hiver"
+  ],
+  "ingredients": [
+   "4 hauts de cuisse de poulet",
+   "150g d'olives vertes dénoyautées",
+   "1 citron confit",
+   "2 oignons émincés",
+   "Gingembre et curcuma"
+  ],
+  "notes": "Tajine de poulet aux olives, citron confit.",
+  "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tajine_de_poulet_aux_olives_(Maroc).jpg"
+ },
+ {
+  "id": 45,
+  "name": "Sauté de bœuf haché à la marocaine",
+  "category": "dinner",
+  "prep_time": 20,
+  "tags": [
+   "mijoté",
+   "marocain",
+   "viande"
+  ],
+  "ingredients": [
+   "400g de bœuf haché",
+   "2 navets en dés",
+   "200g de pois chiches cuits",
+   "1 oignon",
+   "Cumin, paprika et persil"
+  ],
+  "notes": "Bœuf haché, navets, pois chiches, épices marocaines.",
+  "image_url": null
+ },
+ {
+  "id": 46,
+  "name": "Soupe de quinoa à l'avocat et cheddar râpé",
+  "category": "dinner",
+  "prep_time": 15,
+  "tags": [
+   "soupe",
+   "végétarien",
+   "rapide",
+   "hiver"
+  ],
+  "ingredients": [
+   "150g de quinoa rincé",
+   "1 avocat en dés",
+   "80g de cheddar râpé",
+   "1 litre de bouillon de légumes",
+   "1 boîte de tomates concassées"
+  ],
+  "notes": "Soupe de quinoa, avocat, cheddar râpé.",
+  "image_url": null
+ },
+ {
+  "id": 47,
+  "name": "Bowl de lentilles, chou pak choy et kimchi",
+  "category": "dinner",
+  "prep_time": 15,
+  "tags": [
+   "végétarien",
+   "bowl",
+   "asiatique",
+   "léger"
+  ],
+  "ingredients": [
+   "Lentilles vertes",
+   "Chou pak choy",
+   "Kimchi",
+   "Riz",
+   "Sauce soja"
+  ],
+  "notes": "Lentilles, chou pak choy, kimchi, riz.",
+  "image_url": null
+ },
+ {
+  "id": 48,
+  "name": "Salade de saumon et sauce à l'estragon",
+  "category": "dinner",
+  "prep_time": 15,
+  "tags": [
+   "poisson",
+   "salade",
+   "rapide",
+   "léger"
+  ],
+  "ingredients": [
+   "Pavé de saumon",
+   "Salade mélangée",
+   "Estragon frais",
+   "Huile d'olive",
+   "Citron"
+  ],
+  "notes": "Saumon, salade, sauce à l'estragon.",
+  "image_url": null
+ },
+ {
+  "id": 49,
+  "name": "Pizza savoyarde végétarienne au reblochon",
+  "category": "dinner",
+  "prep_time": 20,
+  "tags": [
+   "végétarien",
+   "au four",
+   "gourmand",
+   "hiver"
+  ],
+  "ingredients": [
+   "1 pâte à pizza",
+   "200g de reblochon",
+   "2 pommes de terre cuites",
+   "1 oignon émincé",
+   "Crème fraîche"
+  ],
+  "notes": "Pizza, reblochon, pommes de terre, oignons.",
+  "image_url": null
+ },
+ {
+  "id": 50,
+  "name": "Salade tiède de quinoa à la poitrine fumée",
+  "category": "lunch",
+  "prep_time": 15,
+  "tags": [
+   "salade",
+   "été",
+   "léger"
+  ],
+  "ingredients": [
+   "150g de quinoa",
+   "100g de poitrine fumée grillée",
+   "80g de tomme de Franche-Comté",
+   "30g de noisettes"
+  ],
+  "notes": "Quinoa, poitrine fumée, tomme de Franche-Comté, noisettes.",
+  "image_url": null
+ },
+ {
+  "id": 51,
+  "name": "Cocotte de hauts de cuisse de poulet à la burrata",
+  "category": "dinner",
+  "prep_time": 20,
+  "tags": [
+   "au four",
+   "poulet",
+   "gourmand",
+   "été"
+  ],
+  "ingredients": [
+   "4 hauts de cuisse de poulet",
+   "1 boule de burrata",
+   "400g de tomates concassées",
+   "Herbes fraîches"
+  ],
+  "notes": "Hauts de cuisse de poulet, burrata, tomates.",
+  "image_url": null
+ },
+ {
+  "id": 52,
+  "name": "Quiche jurassienne au morbier et poireaux",
+  "category": "dinner",
+  "prep_time": 25,
+  "tags": [
+   "au four",
+   "végétarien",
+   "hiver"
+  ],
+  "ingredients": [
+   "1 pâte brisée",
+   "150g de morbier",
+   "2 poireaux émincés",
+   "3 œufs",
+   "20cl de crème"
+  ],
+  "notes": "Quiche au morbier, poireaux, pâte brisée.",
+  "image_url": null
+ },
+ {
+  "id": 53,
+  "name": "Gratin de crozets au poireau et à la raclette",
+  "category": "dinner",
+  "prep_time": 20,
+  "tags": [
+   "au four",
+   "gourmand",
+   "hiver",
+   "pâtes"
+  ],
+  "ingredients": [
+   "Crozets",
+   "Poireaux",
+   "Raclette",
+   "Crème fraîche",
+   "Sel et poivre"
+  ],
+  "notes": "Crozets, poireaux, raclette, crème.",
+  "image_url": null
+ },
+ {
+  "id": 54,
+  "name": "Brochettes de poulet teriyaki et nouilles sautées",
+  "category": "dinner",
+  "prep_time": 25,
+  "tags": [
+   "asiatique",
+   "poulet",
+   "rapide",
+   "nouilles"
+  ],
+  "ingredients": [
+   "400g de blancs de poulet en dés",
+   "15cl de sauce teriyaki",
+   "250g de nouilles sautées",
+   "2 choux pak choy émincés",
+   "Graines de sésame"
+  ],
+  "notes": "Poulet teriyaki, nouilles sautées, chou pak choy.",
+  "image_url": null
+ }
+]
