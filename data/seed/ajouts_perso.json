@@ -1,852 +1,1294 @@
 [
- {
-  "slug": "lentilles-mijotees-tomate",
-  "name": "Lentilles mijotées à la tomate",
-  "region": "monde",
-  "origin": "Cuisine du monde",
-  "category": "dinner",
-  "prep_time": 15,
-  "cook_time": 30,
-  "difficulty": 1,
-  "ingredient_access": 1,
-  "equipment": [
-   "casserole"
-  ],
-  "servings": 4,
-  "batch_friendly": true,
-  "keeps_days": 4,
-  "tags": [
-   "mijoté",
-   "végétarien",
-   "lentilles",
-   "économique"
-  ],
-  "ingredients": [
-   "300 g de lentilles vertes ou brunes",
-   "1 oignon",
-   "2 gousses d'ail",
-   "400 g de tomates concassées",
-   "1 poivron rouge",
-   "2 cuillères à soupe d'huile d'olive",
-   "1 cuillère à café de paprika",
-   "2 feuilles de laurier",
-   "sel, poivre"
-  ],
-  "steps": [
-   "Rincer les lentilles. Émincer l'oignon, l'ail et couper le poivron en petits dés.",
-   "Faire revenir l'oignon et le poivron dans l'huile 5 minutes, ajouter l'ail et le paprika 1 minute.",
-   "Ajouter les tomates, les lentilles, le laurier et 50 cl d'eau.",
-   "Laisser mijoter à couvert 25 minutes à feu doux jusqu'à ce que les lentilles soient tendres et la sauce épaisse.",
-   "Saler, poivrer en fin de cuisson et servir avec du riz ou du pain."
-  ],
-  "notes": "Ne pas saler trop tôt : le sel durcit les lentilles. Se garde bien et s'améliore le lendemain.",
-  "image_query": "Lentilles mijotées à la tomate"
- },
- {
-  "slug": "alloco-garni-attieke-choukouya-porc",
-  "name": "Alloco garni, attiéké et choukouya de porc",
-  "region": "africain",
-  "origin": "Côte d'Ivoire",
-  "category": "dinner",
-  "prep_time": 25,
-  "cook_time": 35,
-  "difficulty": 2,
-  "ingredient_access": 2,
-  "equipment": [
-   "four",
-   "poêle"
-  ],
-  "servings": 4,
-  "batch_friendly": false,
-  "keeps_days": 2,
-  "tags": [
-   "porc",
-   "plantain",
-   "attiéké",
-   "festif"
-  ],
-  "ingredients": [
-   "600 g d'échine de porc",
-   "4 bananes plantain bien mûres",
-   "500 g d'attiéké",
-   "2 oignons",
-   "1 cuillère à soupe de moutarde",
-   "1 cuillère à café de gingembre en poudre",
-   "2 gousses d'ail",
-   "1 tomate",
-   "1 concombre",
-   "1 carotte",
-   "1 citron vert",
-   "huile de friture, sel, piment"
-  ],
-  "steps": [
-   "Mariner le porc en cubes avec la moutarde, l'ail, le gingembre, un oignon haché, le sel et le piment pendant 1 heure.",
-   "Cuire le porc au four à 200 °C pendant 30 minutes en le retournant à mi-cuisson pour obtenir le côté grillé du choukouya.",
-   "Éplucher les plantains, les couper en rondelles obliques et les frire 3 minutes par face jusqu'à dorure.",
-   "Réhydrater l'attiéké selon les instructions du paquet et l'aérer à la fourchette.",
-   "Préparer la garniture : tomate, concombre, carotte râpée et oignon émincé assaisonnés au citron vert.",
-   "Dresser l'attiéké, l'alloco, le porc et la garniture sur le même plat."
-  ],
-  "notes": "Les plantains doivent être très mûrs (peau bien tachetée) pour un alloco moelleux et sucré.",
-  "image_query": "Alloco garni, attiéké et choukouya de porc"
- },
- {
-  "slug": "attieke-poulet-braise",
-  "name": "Attiéké au poulet braisé",
-  "region": "africain",
-  "origin": "Côte d'Ivoire",
-  "category": "dinner",
-  "prep_time": 20,
-  "cook_time": 45,
-  "difficulty": 2,
-  "ingredient_access": 2,
-  "equipment": [
-   "four",
-   "grill"
-  ],
-  "servings": 4,
-  "batch_friendly": false,
-  "keeps_days": 2,
-  "tags": [
-   "poulet",
-   "attiéké",
-   "grillé",
-   "traditionnel"
-  ],
-  "ingredients": [
-   "4 cuisses de poulet",
-   "500 g d'attiéké",
-   "3 oignons",
-   "1 cuillère à soupe de moutarde",
-   "2 gousses d'ail",
-   "1 cube de bouillon",
-   "2 tomates",
-   "1 laitue",
-   "1 piment",
-   "3 cuillères à soupe d'huile",
-   "sel, poivre"
-  ],
-  "steps": [
-   "Mariner le poulet avec l'ail, un oignon mixé, la moutarde, le bouillon émietté, l'huile, le sel et le poivre pendant au moins 1 heure.",
-   "Cuire le poulet au four à 200 °C ou au grill pendant 40 minutes, en le retournant et en l'arrosant régulièrement.",
-   "Faire revenir 2 oignons émincés à la poêle avec un peu de marinade jusqu'à ce qu'ils soient fondants.",
-   "Réhydrater l'attiéké, l'aérer, puis préparer une salade de laitue et de tomates.",
-   "Servir le poulet sur l'attiéké avec les oignons et la salade."
-  ],
-  "notes": "Une marinade de la veille donne un poulet beaucoup plus parfumé.",
-  "image_query": "Attiéké au poulet braisé"
- },
- {
-  "slug": "cari-lentilles-creole-rougail-saucisses",
-  "name": "Cari de lentilles créole et rougail saucisses",
-  "region": "antillais",
-  "origin": "La Réunion",
-  "category": "dinner",
-  "prep_time": 20,
-  "cook_time": 45,
-  "difficulty": 2,
-  "ingredient_access": 1,
-  "equipment": [
-   "cocotte",
-   "casserole"
-  ],
-  "servings": 4,
-  "batch_friendly": true,
-  "keeps_days": 3,
-  "tags": [
-   "mijoté",
-   "lentilles",
-   "saucisse",
-   "réunionnais"
-  ],
-  "ingredients": [
-   "250 g de lentilles vertes",
-   "4 saucisses fumées ou de Toulouse",
-   "4 tomates",
-   "2 oignons",
-   "3 gousses d'ail",
-   "1 morceau de gingembre",
-   "1 cuillère à café de curcuma",
-   "1 branche de thym",
-   "1 piment",
-   "2 cuillères à soupe d'huile",
-   "riz blanc pour servir",
-   "sel, poivre"
-  ],
-  "steps": [
-   "Cuire les lentilles 25 minutes dans de l'eau avec le thym et une gousse d'ail, puis les égoutter en gardant un peu de jus.",
-   "Préparer le rougail : faire dorer les saucisses coupées en tronçons, ajouter un oignon, les tomates concassées, l'ail, le gingembre et le piment, et laisser mijoter 20 minutes.",
-   "Faire revenir l'autre oignon avec le curcuma, ajouter les lentilles et un peu de jus de cuisson, laisser mijoter 10 minutes.",
-   "Rectifier l'assaisonnement et servir les lentilles avec le riz et le rougail saucisses."
-  ],
-  "notes": "Le cari de lentilles se prépare la veille sans souci et se réchauffe très bien.",
-  "image_query": "Cari de lentilles créole et rougail saucisses"
- },
- {
-  "slug": "cuisses-poulet-braisees-pommes-de-terre",
-  "name": "Cuisses de poulet braisées aux pommes de terre",
-  "region": "monde",
-  "origin": "Cuisine du monde",
-  "category": "dinner",
-  "prep_time": 15,
-  "cook_time": 50,
-  "difficulty": 1,
-  "ingredient_access": 1,
-  "equipment": [
-   "four"
-  ],
-  "servings": 4,
-  "batch_friendly": false,
-  "keeps_days": 3,
-  "tags": [
-   "poulet",
-   "four",
-   "pommes de terre",
-   "facile"
-  ],
-  "ingredients": [
-   "4 cuisses de poulet",
-   "600 g de pommes de terre grenaille",
-   "3 gousses d'ail",
-   "1 cuillère à café de paprika fumé",
-   "1 cuillère à café de thym",
-   "2 cuillères à soupe d'huile d'olive",
-   "1 citron vert",
-   "sel, poivre"
-  ],
-  "steps": [
-   "Préchauffer le four à 210 °C.",
-   "Mélanger l'huile, le paprika, le thym, l'ail écrasé, le sel et le poivre, et masser les cuisses avec cette marinade.",
-   "Disposer le poulet et les pommes de terre coupées en deux sur une plaque.",
-   "Enfourner 45 à 50 minutes en retournant à mi-cuisson, jusqu'à ce que la peau soit bien dorée.",
-   "Servir avec des quartiers de citron vert."
-  ],
-  "notes": "Piquer les cuisses à la fourchette avant de mariner pour que les épices pénètrent mieux.",
-  "image_query": "Cuisses de poulet braisées aux pommes de terre"
- },
- {
-  "slug": "lentilles-vertes-a-l-ancienne",
-  "name": "Lentilles vertes à l'ancienne",
-  "region": "europeen",
-  "origin": "France",
-  "category": "dinner",
-  "prep_time": 15,
-  "cook_time": 40,
-  "difficulty": 1,
-  "ingredient_access": 1,
-  "equipment": [
-   "casserole"
-  ],
-  "servings": 4,
-  "batch_friendly": true,
-  "keeps_days": 4,
-  "tags": [
-   "lentilles",
-   "lardons",
-   "mijoté",
-   "traditionnel"
-  ],
-  "ingredients": [
-   "300 g de lentilles vertes",
-   "150 g de poitrine fumée en tranches",
-   "1 oignon",
-   "2 carottes",
-   "1 clou de girofle",
-   "1 bouquet garni",
-   "2 gousses d'ail",
-   "1 cuillère à soupe de vinaigre",
-   "sel, poivre"
-  ],
-  "steps": [
-   "Rincer les lentilles sans les faire tremper.",
-   "Piquer l'oignon avec le clou de girofle et couper les carottes en dés.",
-   "Mettre lentilles, oignon, carottes, ail et bouquet garni dans une casserole, couvrir d'eau froide et porter à ébullition.",
-   "Laisser cuire 30 à 35 minutes à frémissement, en ajoutant de l'eau si besoin.",
-   "Faire dorer la poitrine fumée à la poêle puis la déposer sur les lentilles égouttées.",
-   "Assaisonner avec le vinaigre, le sel et le poivre juste avant de servir."
-  ],
-  "notes": "Un filet de vinaigre en fin de cuisson relève toute la saveur des lentilles.",
-  "image_query": "Lentilles vertes à l'ancienne"
- },
- {
-  "slug": "poulet-entier-braise",
-  "name": "Poulet entier braisé",
-  "region": "africain",
-  "origin": "Afrique de l'Ouest",
-  "category": "dinner",
-  "prep_time": 20,
-  "cook_time": 75,
-  "difficulty": 2,
-  "ingredient_access": 1,
-  "equipment": [
-   "four",
-   "grill"
-  ],
-  "servings": 5,
-  "batch_friendly": false,
-  "keeps_days": 3,
-  "tags": [
-   "poulet",
-   "grillé",
-   "convivial",
-   "marinade"
-  ],
-  "ingredients": [
-   "1 poulet entier de 1,5 kg",
-   "3 oignons",
-   "4 gousses d'ail",
-   "1 morceau de gingembre",
-   "2 cuillères à soupe de moutarde",
-   "1 cube de bouillon",
-   "1 piment",
-   "4 cuillères à soupe d'huile",
-   "2 tomates et 1 concombre pour servir",
-   "sel, poivre"
-  ],
-  "steps": [
-   "Mixer l'ail, le gingembre, un oignon, la moutarde, le bouillon, le piment et l'huile pour obtenir une marinade.",
-   "Ouvrir le poulet en crapaudine, l'entailler légèrement et l'enduire de marinade. Laisser reposer 2 heures au frais.",
-   "Cuire au four à 190 °C pendant 1 heure à 1 h 15 en arrosant souvent, ou au barbecue en retournant régulièrement.",
-   "Faire revenir les oignons restants émincés et les servir sur le poulet.",
-   "Accompagner de tomates, concombre, riz ou plantain frit."
-  ],
-  "notes": "Cuit en crapaudine, le poulet est plus rapide à cuire et le résultat est plus uniforme.",
-  "image_query": "Poulet entier braisé"
- },
- {
-  "slug": "poulet-tikka-masala",
-  "name": "Poulet tikka masala",
-  "region": "asiatique",
-  "origin": "Inde",
-  "category": "dinner",
-  "prep_time": 20,
-  "cook_time": 35,
-  "difficulty": 2,
-  "ingredient_access": 2,
-  "equipment": [
-   "poêle",
-   "casserole"
-  ],
-  "servings": 4,
-  "batch_friendly": true,
-  "keeps_days": 3,
-  "tags": [
-   "poulet",
-   "curry",
-   "crémeux",
-   "épicé"
-  ],
-  "ingredients": [
-   "600 g de blanc de poulet",
-   "150 g de yaourt nature",
-   "1 oignon",
-   "3 gousses d'ail",
-   "1 morceau de gingembre",
-   "400 g de tomates concassées",
-   "15 cl de crème",
-   "2 cuillères à café de garam masala",
-   "1 cuillère à café de paprika",
-   "1 cuillère à café de curcuma",
-   "2 cuillères à soupe d'huile",
-   "coriandre, sel"
-  ],
-  "steps": [
-   "Mariner le poulet coupé en dés avec le yaourt, la moitié des épices, l'ail et le gingembre pendant au moins 1 heure.",
-   "Faire dorer le poulet mariné à la poêle 5 minutes, puis réserver.",
-   "Faire revenir l'oignon, ajouter le reste des épices puis les tomates et laisser mijoter 15 minutes.",
-   "Mixer la sauce si on la préfère lisse, ajouter la crème et le poulet, et cuire encore 8 minutes.",
-   "Parsemer de coriandre et servir avec du riz basmati ou des naans."
-  ],
-  "notes": "Plus la marinade dure, plus le poulet est tendre. On peut la laisser toute une nuit.",
-  "image_query": "Poulet tikka masala"
- },
- {
-  "slug": "roti-de-porc-au-four",
-  "name": "Rôti de porc au four",
-  "region": "europeen",
-  "origin": "France",
-  "category": "dinner",
-  "prep_time": 15,
-  "cook_time": 75,
-  "difficulty": 1,
-  "ingredient_access": 1,
-  "equipment": [
-   "four"
-  ],
-  "servings": 5,
-  "batch_friendly": false,
-  "keeps_days": 3,
-  "tags": [
-   "porc",
-   "four",
-   "dimanche",
-   "facile"
-  ],
-  "ingredients": [
-   "1,2 kg de rôti de porc (échine ou filet)",
-   "3 gousses d'ail",
-   "1 branche de romarin",
-   "1 cuillère à soupe de moutarde",
-   "2 cuillères à soupe d'huile d'olive",
-   "20 cl de bouillon",
-   "2 oignons",
-   "sel, poivre"
-  ],
-  "steps": [
-   "Préchauffer le four à 200 °C. Sortir le rôti 30 minutes avant la cuisson.",
-   "Badigeonner le rôti de moutarde, le saler, le poivrer et y glisser des lamelles d'ail et du romarin.",
-   "Le saisir dans l'huile sur toutes les faces en cocotte ou dans un plat allant au four.",
-   "Ajouter les oignons en quartiers et le bouillon, puis enfourner 1 heure en arrosant régulièrement.",
-   "Laisser reposer 10 minutes sous une feuille d'aluminium avant de trancher.",
-   "Servir avec le jus de cuisson réduit."
-  ],
-  "notes": "Compter environ 50 minutes par kilo ; la température à cœur doit atteindre 68 à 70 °C.",
-  "image_query": "Rôti de porc au four"
- },
- {
-  "slug": "salade-lentilles-vertes",
-  "name": "Salade de lentilles vertes",
-  "region": "europeen",
-  "origin": "France",
-  "category": "lunch",
-  "prep_time": 15,
-  "cook_time": 25,
-  "difficulty": 1,
-  "ingredient_access": 1,
-  "equipment": [
-   "casserole"
-  ],
-  "servings": 4,
-  "batch_friendly": true,
-  "keeps_days": 3,
-  "tags": [
-   "salade",
-   "lentilles",
-   "végétarien",
-   "froid"
-  ],
-  "ingredients": [
-   "250 g de lentilles vertes",
-   "1 oignon rouge",
-   "100 g de fromage bleu ou de feta",
-   "1 petite poignée de basilic",
-   "3 cuillères à soupe d'huile d'olive",
-   "1 cuillère à soupe de vinaigre",
-   "1 cuillère à café de moutarde",
-   "sel, poivre"
-  ],
-  "steps": [
-   "Cuire les lentilles 20 à 25 minutes dans de l'eau non salée puis les égoutter et les laisser tiédir.",
-   "Émincer l'oignon rouge finement et le faire macérer 10 minutes dans le vinaigre.",
-   "Préparer la vinaigrette avec la moutarde, l'huile, le sel et le poivre.",
-   "Mélanger les lentilles, l'oignon, la vinaigrette, le fromage émietté et le basilic."
-  ],
-  "notes": "Meilleure après une heure au frais, les lentilles absorbent la vinaigrette.",
-  "image_query": "Salade de lentilles vertes"
- },
- {
-  "slug": "taro-gratine",
-  "name": "Taro gratiné",
-  "region": "antillais",
-  "origin": "Antilles",
-  "category": "dinner",
-  "prep_time": 20,
-  "cook_time": 45,
-  "difficulty": 2,
-  "ingredient_access": 2,
-  "equipment": [
-   "four",
-   "casserole"
-  ],
-  "servings": 4,
-  "batch_friendly": true,
-  "keeps_days": 3,
-  "tags": [
-   "gratin",
-   "taro",
-   "fromage",
-   "végétarien"
-  ],
-  "ingredients": [
-   "800 g de taro (dachine)",
-   "20 cl de crème",
-   "20 cl de lait",
-   "100 g de gruyère râpé",
-   "2 gousses d'ail",
-   "1 noix de muscade",
-   "1 noix de beurre",
-   "persil, sel, poivre"
-  ],
-  "steps": [
-   "Éplucher le taro avec des gants (il peut irriter la peau) et le couper en rondelles fines.",
-   "Le cuire 10 minutes à l'eau bouillante salée, puis l'égoutter.",
-   "Mélanger la crème, le lait, l'ail écrasé, la muscade, le sel et le poivre.",
-   "Disposer le taro dans un plat beurré, couvrir de sauce et de gruyère.",
-   "Gratiner 30 à 35 minutes à 190 °C jusqu'à ce que le dessus soit doré. Parsemer de persil."
-  ],
-  "notes": "Le taro doit être bien cuit avant d'être consommé ; ne jamais le manger cru.",
-  "image_query": "Taro gratiné"
- },
- {
-  "slug": "foufou-sauce-gombo",
-  "name": "Foufou et sauce gombo",
-  "region": "africain",
-  "origin": "Côte d'Ivoire",
-  "category": "dinner",
-  "prep_time": 30,
-  "cook_time": 50,
-  "difficulty": 2,
-  "ingredient_access": 2,
-  "equipment": [
-   "marmite",
-   "pilon ou robot"
-  ],
-  "servings": 4,
-  "batch_friendly": false,
-  "keeps_days": 2,
-  "tags": [
-   "gombo",
-   "fufu",
-   "viande",
-   "poisson",
-   "traditionnel"
-  ],
-  "ingredients": [
-   "500 g de gombo frais",
-   "500 g de viande de bœuf ou de mouton en morceaux",
-   "200 g de poisson fumé",
-   "2 crabes ou crevettes (facultatif)",
-   "1 oignon",
-   "2 tomates",
-   "1 piment",
-   "1 cube de bouillon",
-   "2 cuillères à soupe d'huile de palme",
-   "800 g de banane plantain et d'igname pour le foufou",
-   "sel"
-  ],
-  "steps": [
-   "Faire cuire la viande 30 minutes dans de l'eau avec l'oignon, le cube et le sel.",
-   "Laver et couper le gombo en rondelles fines, puis le hacher ou le mixer grossièrement pour obtenir une texture gluante.",
-   "Ajouter dans la marmite le gombo, les tomates mixées, le poisson fumé, le piment entier et l'huile de palme, et laisser mijoter 15 à 20 minutes.",
-   "Pour le foufou, faire bouillir les plantains et l'igname épluchés jusqu'à tendreté, puis les piler ou les mixer en pâte lisse et élastique.",
-   "Former des boules de foufou et les servir dans la sauce bien chaude."
-  ],
-  "notes": "Ne pas trop cuire le gombo pour qu'il garde sa couleur verte et son onctuosité. Le piment entier parfume sans trop épicer.",
-  "image_query": "Foufou et sauce gombo"
- },
- {
-  "slug": "salade-quinoa-saumon-fume-avocat",
-  "name": "Salade de quinoa, saumon fumé et avocat",
-  "region": "europeen",
-  "origin": "France",
-  "category": "lunch",
-  "prep_time": 15,
-  "cook_time": 15,
-  "difficulty": 1,
-  "ingredient_access": 1,
-  "equipment": [
-   "casserole"
-  ],
-  "servings": 2,
-  "batch_friendly": false,
-  "keeps_days": 2,
-  "tags": [
-   "salade",
-   "quinoa",
-   "saumon",
-   "avocat",
-   "frais"
-  ],
-  "ingredients": [
-   "150 g de quinoa",
-   "4 tranches de saumon fumé",
-   "1 avocat mûr",
-   "100 g de jeunes pousses d'épinards",
-   "1 citron",
-   "2 cuillères à soupe d'huile d'olive",
-   "1 cuillère à soupe de graines de courge ou de sésame",
-   "aneth, sel, poivre"
-  ],
-  "steps": [
-   "Rincer le quinoa et le cuire 12 minutes dans 2 fois son volume d'eau salée, puis le laisser tiédir.",
-   "Préparer la vinaigrette avec le jus de citron, l'huile, le sel et le poivre.",
-   "Dresser les épinards et le quinoa dans des assiettes.",
-   "Ajouter l'avocat en tranches et le saumon fumé roulé.",
-   "Arroser de vinaigrette et parsemer de graines et d'aneth."
-  ],
-  "notes": "Arroser l'avocat de citron pour éviter qu'il noircisse si la salade est préparée à l'avance.",
-  "image_query": "Salade de quinoa, saumon fumé et avocat"
- },
- {
-  "slug": "salade-tiede-quinoa-magret-canard",
-  "name": "Salade tiède de quinoa au magret de canard",
-  "region": "europeen",
-  "origin": "France",
-  "category": "dinner",
-  "prep_time": 15,
-  "cook_time": 20,
-  "difficulty": 2,
-  "ingredient_access": 1,
-  "equipment": [
-   "poêle",
-   "casserole"
-  ],
-  "servings": 2,
-  "batch_friendly": false,
-  "keeps_days": 2,
-  "tags": [
-   "salade",
-   "quinoa",
-   "canard",
-   "tiède"
-  ],
-  "ingredients": [
-   "150 g de quinoa",
-   "1 magret de canard",
-   "150 g de tomates cerises",
-   "1 petite laitue ou de la roquette",
-   "1 concombre",
-   "1 cuillère à soupe de vinaigre balsamique",
-   "2 cuillères à soupe d'huile d'olive",
-   "persil, sel, poivre"
-  ],
-  "steps": [
-   "Cuire le quinoa 12 minutes dans de l'eau salée, l'égoutter et le laisser tiédir.",
-   "Quadriller la peau du magret, le saler et le poivrer. Le cuire côté peau 8 minutes à feu moyen, puis 3 à 4 minutes côté chair.",
-   "Laisser reposer le magret 5 minutes sous une feuille d'aluminium, puis le trancher finement.",
-   "Mélanger le quinoa, les tomates coupées en deux, le concombre en dés et la salade avec le balsamique et l'huile.",
-   "Disposer les tranches de magret sur la salade et parsemer de persil."
-  ],
-  "notes": "Cuire le magret démarré à froid dans la poêle permet de faire fondre la graisse et d'obtenir une peau croustillante.",
-  "image_query": "Salade tiède de quinoa au magret de canard"
- },
- {
-  "slug": "poisson-braise-alloco",
-  "name": "Poisson braisé et alloco",
-  "region": "africain",
-  "origin": "Côte d'Ivoire",
-  "category": "dinner",
-  "prep_time": 20,
-  "cook_time": 30,
-  "difficulty": 2,
-  "ingredient_access": 2,
-  "equipment": [
-   "four",
-   "poêle"
-  ],
-  "servings": 3,
-  "batch_friendly": false,
-  "keeps_days": 1,
-  "tags": [
-   "poisson",
-   "braisé",
-   "plantain",
-   "gourmand"
-  ],
-  "ingredients": [
-   "3 dorades ou tilapias entiers (nettoyés)",
-   "3 bananes plantain bien mûres",
-   "3 oignons",
-   "3 tomates",
-   "2 gousses d'ail",
-   "1 piment",
-   "1 citron",
-   "50 cl d'huile de friture",
-   "3 cuillères à soupe d'huile",
-   "sel, poivre"
-  ],
-  "steps": [
-   "Mariner les poissons ciselés avec l'ail pilé, le jus de citron, le sel, le poivre et un peu d'huile pendant 30 minutes.",
-   "Cuire les poissons au four à 220 °C (ou au gril) 25 à 30 minutes en les retournant à mi-cuisson, jusqu'à ce que la peau soit grillée.",
-   "Éplucher les plantains, les couper en rondelles en biais et les frire 3 à 4 minutes par face dans l'huile chaude.",
-   "Préparer la sauce en faisant revenir oignons et tomates en dés avec le piment pendant 10 minutes.",
-   "Servir le poisson avec l'alloco et la sauce oignon-tomate."
-  ],
-  "notes": "Des plantains bien mûrs (jaunes tachés de noir) donnent un alloco caramélisé.",
-  "image_query": "Poisson braisé et alloco"
- },
- {
-  "slug": "cocotte-poulet-legumes-rustique",
-  "name": "Cocotte de cuisses de poulet, pommes de terre et carottes",
-  "region": "europeen",
-  "origin": "France",
-  "category": "dinner",
-  "prep_time": 15,
-  "cook_time": 60,
-  "difficulty": 1,
-  "ingredient_access": 1,
-  "equipment": [
-   "cocotte"
-  ],
-  "servings": 4,
-  "batch_friendly": true,
-  "keeps_days": 3,
-  "tags": [
-   "poulet",
-   "au four",
-   "one pot",
-   "traditionnel",
-   "batch cooking"
-  ],
-  "ingredients": [
-   "4 hauts de cuisse de poulet",
-   "4 pilons de poulet",
-   "600 g de pommes de terre",
-   "4 carottes",
-   "2 oignons",
-   "3 gousses d'ail",
-   "20 cl de bouillon de volaille",
-   "2 brins de thym",
-   "2 feuilles de laurier",
-   "huile",
-   "persil",
-   "sel, poivre"
-  ],
-  "steps": [
-   "Préchauffer le four à 180 °C. Éplucher et couper pommes de terre et carottes en gros morceaux, émincer les oignons.",
-   "Saisir le poulet salé et poivré dans la cocotte huilée, 4 minutes par face, jusqu'à belle coloration. Réserver.",
-   "Faire revenir les oignons et l'ail 3 minutes dans la même cocotte, puis ajouter carottes et pommes de terre.",
-   "Remettre le poulet, ajouter thym, laurier et bouillon.",
-   "Couvrir et enfourner 45 minutes, puis cuire à découvert 15 minutes pour dorer la peau.",
-   "Parsemer de persil ciselé et servir dans la cocotte."
-  ],
-  "notes": "Les pilons peuvent être remplacés par des hauts de cuisse uniquement. Les restes se réchauffent très bien.",
-  "image_query": "Cocotte de cuisses de poulet, pommes de terre et carottes"
- },
- {
-  "slug": "cocotte-poulet-creme-estragon",
-  "name": "Cocotte de poulet à la crème et à l'estragon",
-  "region": "europeen",
-  "origin": "France",
-  "category": "dinner",
-  "prep_time": 15,
-  "cook_time": 50,
-  "difficulty": 2,
-  "ingredient_access": 1,
-  "equipment": [
-   "cocotte"
-  ],
-  "servings": 4,
-  "batch_friendly": false,
-  "keeps_days": 2,
-  "tags": [
-   "poulet",
-   "gourmand",
-   "one pot",
-   "traditionnel"
-  ],
-  "ingredients": [
-   "8 hauts de cuisse de poulet",
-   "600 g de pommes de terre grenaille",
-   "2 échalotes",
-   "2 gousses d'ail",
-   "15 cl de vin blanc sec",
-   "20 cl de crème liquide",
-   "1 cuillère à soupe de moutarde",
-   "1 bouquet d'estragon",
-   "beurre",
-   "sel, poivre"
-  ],
-  "steps": [
-   "Saler et poivrer le poulet, le dorer côté peau dans une cocotte avec une noix de beurre, 6 minutes, puis le retourner 2 minutes. Réserver.",
-   "Faire suer les échalotes et l'ail 3 minutes, déglacer au vin blanc et laisser réduire de moitié.",
-   "Ajouter les pommes de terre coupées en deux et remettre le poulet, peau vers le haut.",
-   "Couvrir et cuire à feu doux 30 minutes.",
-   "Mélanger crème et moutarde, verser dans la cocotte et poursuivre 10 minutes à découvert.",
-   "Parsemer d'estragon ciselé juste avant de servir."
-  ],
-  "notes": "À défaut d'estragon frais, utiliser de la ciboulette ou du persil plat.",
-  "image_query": "Cocotte de poulet à la crème et à l'estragon"
- },
- {
-  "slug": "couscous-poulet-merguez-legumes",
-  "name": "Couscous poulet, merguez et légumes",
-  "region": "africain",
-  "origin": "Maghreb",
-  "category": "dinner",
-  "prep_time": 30,
-  "cook_time": 60,
-  "difficulty": 2,
-  "ingredient_access": 1,
-  "equipment": [
-   "cocotte"
-  ],
-  "servings": 6,
-  "batch_friendly": true,
-  "keeps_days": 4,
-  "tags": [
-   "poulet",
-   "mijoté",
-   "festif",
-   "batch cooking",
-   "épicé"
-  ],
-  "ingredients": [
-   "6 cuisses de poulet",
-   "6 merguez",
-   "300 g de semoule moyenne",
-   "3 carottes",
-   "3 courgettes",
-   "2 navets",
-   "1 boîte de pois chiches",
-   "3 tomates",
-   "2 oignons",
-   "1 cuillère à soupe de concentré de tomate",
-   "2 cuillères à café de ras el hanout",
-   "harissa, sel, poivre"
-  ],
-  "steps": [
-   "Dorer le poulet avec les oignons émincés dans une grande cocotte huilée, puis ajouter le concentré de tomate et le ras el hanout.",
-   "Couvrir d'eau à hauteur, ajouter les tomates en dés, saler et cuire 20 minutes.",
-   "Ajouter carottes et navets en gros morceaux, cuire 15 minutes, puis les courgettes et les pois chiches 15 minutes de plus.",
-   "Cuire les merguez à la poêle ou au four 10 à 12 minutes, en les retournant.",
-   "Hydrater la semoule avec la même quantité d'eau bouillante salée, couvrir 5 minutes, puis égrener avec un filet d'huile.",
-   "Servir semoule, poulet, merguez et légumes arrosés de bouillon, harissa à part."
-  ],
-  "notes": "Le bouillon se conserve mieux séparé de la semoule pour un batch cooking.",
-  "image_query": "Couscous poulet, merguez et légumes"
- },
- {
-  "slug": "magret-canard-miel-choux-bruxelles",
-  "name": "Magret de canard au miel, choux de Bruxelles et pommes de terre rôties",
-  "region": "europeen",
-  "origin": "France",
-  "category": "dinner",
-  "prep_time": 15,
-  "cook_time": 30,
-  "difficulty": 2,
-  "ingredient_access": 1,
-  "equipment": [
-   "four"
-  ],
-  "servings": 2,
-  "batch_friendly": false,
-  "keeps_days": 1,
-  "tags": [
-   "festif",
-   "gourmand",
-   "au four"
-  ],
-  "ingredients": [
-   "2 magrets de canard",
-   "2 cuillères à soupe de miel",
-   "1 cuillère à soupe de vinaigre balsamique",
-   "300 g de choux de Bruxelles",
-   "400 g de pommes de terre",
-   "2 gousses d'ail",
-   "thym",
-   "huile d'olive",
-   "sel, poivre"
-  ],
-  "steps": [
-   "Préchauffer le four à 200 °C. Couper pommes de terre en quartiers et choux en deux, les enrober d'huile, ail, thym, sel et poivre.",
-   "Enfourner les légumes sur une plaque 30 minutes en remuant à mi-cuisson.",
-   "Quadriller la peau des magrets, saler, poivrer et les poser côté peau dans une poêle froide.",
-   "Cuire à feu moyen 8 minutes côté peau en retirant la graisse, puis 3 minutes côté chair.",
-   "Ajouter miel et vinaigre dans la poêle, enrober les magrets 1 minute, puis les laisser reposer 5 minutes sous papier alu.",
-   "Trancher les magrets et servir avec les légumes rôtis et le jus de cuisson."
-  ],
-  "notes": "Garder la graisse de canard pour rôtir des pommes de terre une prochaine fois.",
-  "image_query": "Magret de canard au miel, choux de Bruxelles et pommes de terre rôties"
- }
+  {
+    "slug": "lentilles-mijotees-tomate",
+    "name": "Lentilles mijotées à la tomate",
+    "region": "monde",
+    "origin": "Cuisine du monde",
+    "category": "dinner",
+    "prep_time": 15,
+    "cook_time": 30,
+    "difficulty": 1,
+    "ingredient_access": 1,
+    "equipment": [
+      "casserole"
+    ],
+    "servings": 4,
+    "batch_friendly": true,
+    "keeps_days": 4,
+    "tags": [
+      "mijoté",
+      "végétarien",
+      "lentilles",
+      "économique"
+    ],
+    "ingredients": [
+      "300 g de lentilles vertes ou brunes",
+      "1 oignon",
+      "2 gousses d'ail",
+      "400 g de tomates concassées",
+      "1 poivron rouge",
+      "2 cuillères à soupe d'huile d'olive",
+      "1 cuillère à café de paprika",
+      "2 feuilles de laurier",
+      "sel, poivre"
+    ],
+    "steps": [
+      "Rincer les lentilles. Émincer l'oignon, l'ail et couper le poivron en petits dés.",
+      "Faire revenir l'oignon et le poivron dans l'huile 5 minutes, ajouter l'ail et le paprika 1 minute.",
+      "Ajouter les tomates, les lentilles, le laurier et 50 cl d'eau.",
+      "Laisser mijoter à couvert 25 minutes à feu doux jusqu'à ce que les lentilles soient tendres et la sauce épaisse.",
+      "Saler, poivrer en fin de cuisson et servir avec du riz ou du pain."
+    ],
+    "notes": "Ne pas saler trop tôt : le sel durcit les lentilles. Se garde bien et s'améliore le lendemain.",
+    "image_query": "Lentilles mijotées à la tomate"
+  },
+  {
+    "slug": "alloco-garni-attieke-choukouya-porc",
+    "name": "Alloco garni, attiéké et choukouya de porc",
+    "region": "africain",
+    "origin": "Côte d'Ivoire",
+    "category": "dinner",
+    "prep_time": 25,
+    "cook_time": 35,
+    "difficulty": 2,
+    "ingredient_access": 2,
+    "equipment": [
+      "four",
+      "poêle"
+    ],
+    "servings": 4,
+    "batch_friendly": false,
+    "keeps_days": 2,
+    "tags": [
+      "porc",
+      "plantain",
+      "attiéké",
+      "festif"
+    ],
+    "ingredients": [
+      "600 g d'échine de porc",
+      "4 bananes plantain bien mûres",
+      "500 g d'attiéké",
+      "2 oignons",
+      "1 cuillère à soupe de moutarde",
+      "1 cuillère à café de gingembre en poudre",
+      "2 gousses d'ail",
+      "1 tomate",
+      "1 concombre",
+      "1 carotte",
+      "1 citron vert",
+      "huile de friture, sel, piment"
+    ],
+    "steps": [
+      "Mariner le porc en cubes avec la moutarde, l'ail, le gingembre, un oignon haché, le sel et le piment pendant 1 heure.",
+      "Cuire le porc au four à 200 °C pendant 30 minutes en le retournant à mi-cuisson pour obtenir le côté grillé du choukouya.",
+      "Éplucher les plantains, les couper en rondelles obliques et les frire 3 minutes par face jusqu'à dorure.",
+      "Réhydrater l'attiéké selon les instructions du paquet et l'aérer à la fourchette.",
+      "Préparer la garniture : tomate, concombre, carotte râpée et oignon émincé assaisonnés au citron vert.",
+      "Dresser l'attiéké, l'alloco, le porc et la garniture sur le même plat."
+    ],
+    "notes": "Les plantains doivent être très mûrs (peau bien tachetée) pour un alloco moelleux et sucré.",
+    "image_query": "Alloco garni, attiéké et choukouya de porc"
+  },
+  {
+    "slug": "attieke-poulet-braise",
+    "name": "Attiéké au poulet braisé",
+    "region": "africain",
+    "origin": "Côte d'Ivoire",
+    "category": "dinner",
+    "prep_time": 20,
+    "cook_time": 45,
+    "difficulty": 2,
+    "ingredient_access": 2,
+    "equipment": [
+      "four",
+      "grill"
+    ],
+    "servings": 4,
+    "batch_friendly": false,
+    "keeps_days": 2,
+    "tags": [
+      "poulet",
+      "attiéké",
+      "grillé",
+      "traditionnel"
+    ],
+    "ingredients": [
+      "4 cuisses de poulet",
+      "500 g d'attiéké",
+      "3 oignons",
+      "1 cuillère à soupe de moutarde",
+      "2 gousses d'ail",
+      "1 cube de bouillon",
+      "2 tomates",
+      "1 laitue",
+      "1 piment",
+      "3 cuillères à soupe d'huile",
+      "sel, poivre"
+    ],
+    "steps": [
+      "Mariner le poulet avec l'ail, un oignon mixé, la moutarde, le bouillon émietté, l'huile, le sel et le poivre pendant au moins 1 heure.",
+      "Cuire le poulet au four à 200 °C ou au grill pendant 40 minutes, en le retournant et en l'arrosant régulièrement.",
+      "Faire revenir 2 oignons émincés à la poêle avec un peu de marinade jusqu'à ce qu'ils soient fondants.",
+      "Réhydrater l'attiéké, l'aérer, puis préparer une salade de laitue et de tomates.",
+      "Servir le poulet sur l'attiéké avec les oignons et la salade."
+    ],
+    "notes": "Une marinade de la veille donne un poulet beaucoup plus parfumé.",
+    "image_query": "Attiéké au poulet braisé"
+  },
+  {
+    "slug": "cari-lentilles-creole-rougail-saucisses",
+    "name": "Cari de lentilles créole et rougail saucisses",
+    "region": "antillais",
+    "origin": "La Réunion",
+    "category": "dinner",
+    "prep_time": 20,
+    "cook_time": 45,
+    "difficulty": 2,
+    "ingredient_access": 1,
+    "equipment": [
+      "cocotte",
+      "casserole"
+    ],
+    "servings": 4,
+    "batch_friendly": true,
+    "keeps_days": 3,
+    "tags": [
+      "mijoté",
+      "lentilles",
+      "saucisse",
+      "réunionnais"
+    ],
+    "ingredients": [
+      "250 g de lentilles vertes",
+      "4 saucisses fumées ou de Toulouse",
+      "4 tomates",
+      "2 oignons",
+      "3 gousses d'ail",
+      "1 morceau de gingembre",
+      "1 cuillère à café de curcuma",
+      "1 branche de thym",
+      "1 piment",
+      "2 cuillères à soupe d'huile",
+      "riz blanc pour servir",
+      "sel, poivre"
+    ],
+    "steps": [
+      "Cuire les lentilles 25 minutes dans de l'eau avec le thym et une gousse d'ail, puis les égoutter en gardant un peu de jus.",
+      "Préparer le rougail : faire dorer les saucisses coupées en tronçons, ajouter un oignon, les tomates concassées, l'ail, le gingembre et le piment, et laisser mijoter 20 minutes.",
+      "Faire revenir l'autre oignon avec le curcuma, ajouter les lentilles et un peu de jus de cuisson, laisser mijoter 10 minutes.",
+      "Rectifier l'assaisonnement et servir les lentilles avec le riz et le rougail saucisses."
+    ],
+    "notes": "Le cari de lentilles se prépare la veille sans souci et se réchauffe très bien.",
+    "image_query": "Cari de lentilles créole et rougail saucisses"
+  },
+  {
+    "slug": "cuisses-poulet-braisees-pommes-de-terre",
+    "name": "Cuisses de poulet braisées aux pommes de terre",
+    "region": "monde",
+    "origin": "Cuisine du monde",
+    "category": "dinner",
+    "prep_time": 15,
+    "cook_time": 50,
+    "difficulty": 1,
+    "ingredient_access": 1,
+    "equipment": [
+      "four"
+    ],
+    "servings": 4,
+    "batch_friendly": false,
+    "keeps_days": 3,
+    "tags": [
+      "poulet",
+      "four",
+      "pommes de terre",
+      "facile"
+    ],
+    "ingredients": [
+      "4 cuisses de poulet",
+      "600 g de pommes de terre grenaille",
+      "3 gousses d'ail",
+      "1 cuillère à café de paprika fumé",
+      "1 cuillère à café de thym",
+      "2 cuillères à soupe d'huile d'olive",
+      "1 citron vert",
+      "sel, poivre"
+    ],
+    "steps": [
+      "Préchauffer le four à 210 °C.",
+      "Mélanger l'huile, le paprika, le thym, l'ail écrasé, le sel et le poivre, et masser les cuisses avec cette marinade.",
+      "Disposer le poulet et les pommes de terre coupées en deux sur une plaque.",
+      "Enfourner 45 à 50 minutes en retournant à mi-cuisson, jusqu'à ce que la peau soit bien dorée.",
+      "Servir avec des quartiers de citron vert."
+    ],
+    "notes": "Piquer les cuisses à la fourchette avant de mariner pour que les épices pénètrent mieux.",
+    "image_query": "Cuisses de poulet braisées aux pommes de terre"
+  },
+  {
+    "slug": "lentilles-vertes-a-l-ancienne",
+    "name": "Lentilles vertes à l'ancienne",
+    "region": "europeen",
+    "origin": "France",
+    "category": "dinner",
+    "prep_time": 15,
+    "cook_time": 40,
+    "difficulty": 1,
+    "ingredient_access": 1,
+    "equipment": [
+      "casserole"
+    ],
+    "servings": 4,
+    "batch_friendly": true,
+    "keeps_days": 4,
+    "tags": [
+      "lentilles",
+      "lardons",
+      "mijoté",
+      "traditionnel"
+    ],
+    "ingredients": [
+      "300 g de lentilles vertes",
+      "150 g de poitrine fumée en tranches",
+      "1 oignon",
+      "2 carottes",
+      "1 clou de girofle",
+      "1 bouquet garni",
+      "2 gousses d'ail",
+      "1 cuillère à soupe de vinaigre",
+      "sel, poivre"
+    ],
+    "steps": [
+      "Rincer les lentilles sans les faire tremper.",
+      "Piquer l'oignon avec le clou de girofle et couper les carottes en dés.",
+      "Mettre lentilles, oignon, carottes, ail et bouquet garni dans une casserole, couvrir d'eau froide et porter à ébullition.",
+      "Laisser cuire 30 à 35 minutes à frémissement, en ajoutant de l'eau si besoin.",
+      "Faire dorer la poitrine fumée à la poêle puis la déposer sur les lentilles égouttées.",
+      "Assaisonner avec le vinaigre, le sel et le poivre juste avant de servir."
+    ],
+    "notes": "Un filet de vinaigre en fin de cuisson relève toute la saveur des lentilles.",
+    "image_query": "Lentilles vertes à l'ancienne"
+  },
+  {
+    "slug": "poulet-entier-braise",
+    "name": "Poulet entier braisé",
+    "region": "africain",
+    "origin": "Afrique de l'Ouest",
+    "category": "dinner",
+    "prep_time": 20,
+    "cook_time": 75,
+    "difficulty": 2,
+    "ingredient_access": 1,
+    "equipment": [
+      "four",
+      "grill"
+    ],
+    "servings": 5,
+    "batch_friendly": false,
+    "keeps_days": 3,
+    "tags": [
+      "poulet",
+      "grillé",
+      "convivial",
+      "marinade"
+    ],
+    "ingredients": [
+      "1 poulet entier de 1,5 kg",
+      "3 oignons",
+      "4 gousses d'ail",
+      "1 morceau de gingembre",
+      "2 cuillères à soupe de moutarde",
+      "1 cube de bouillon",
+      "1 piment",
+      "4 cuillères à soupe d'huile",
+      "2 tomates et 1 concombre pour servir",
+      "sel, poivre"
+    ],
+    "steps": [
+      "Mixer l'ail, le gingembre, un oignon, la moutarde, le bouillon, le piment et l'huile pour obtenir une marinade.",
+      "Ouvrir le poulet en crapaudine, l'entailler légèrement et l'enduire de marinade. Laisser reposer 2 heures au frais.",
+      "Cuire au four à 190 °C pendant 1 heure à 1 h 15 en arrosant souvent, ou au barbecue en retournant régulièrement.",
+      "Faire revenir les oignons restants émincés et les servir sur le poulet.",
+      "Accompagner de tomates, concombre, riz ou plantain frit."
+    ],
+    "notes": "Cuit en crapaudine, le poulet est plus rapide à cuire et le résultat est plus uniforme.",
+    "image_query": "Poulet entier braisé"
+  },
+  {
+    "slug": "poulet-tikka-masala",
+    "name": "Poulet tikka masala",
+    "region": "asiatique",
+    "origin": "Inde",
+    "category": "dinner",
+    "prep_time": 20,
+    "cook_time": 35,
+    "difficulty": 2,
+    "ingredient_access": 2,
+    "equipment": [
+      "poêle",
+      "casserole"
+    ],
+    "servings": 4,
+    "batch_friendly": true,
+    "keeps_days": 3,
+    "tags": [
+      "poulet",
+      "curry",
+      "crémeux",
+      "épicé"
+    ],
+    "ingredients": [
+      "600 g de blanc de poulet",
+      "150 g de yaourt nature",
+      "1 oignon",
+      "3 gousses d'ail",
+      "1 morceau de gingembre",
+      "400 g de tomates concassées",
+      "15 cl de crème",
+      "2 cuillères à café de garam masala",
+      "1 cuillère à café de paprika",
+      "1 cuillère à café de curcuma",
+      "2 cuillères à soupe d'huile",
+      "coriandre, sel"
+    ],
+    "steps": [
+      "Mariner le poulet coupé en dés avec le yaourt, la moitié des épices, l'ail et le gingembre pendant au moins 1 heure.",
+      "Faire dorer le poulet mariné à la poêle 5 minutes, puis réserver.",
+      "Faire revenir l'oignon, ajouter le reste des épices puis les tomates et laisser mijoter 15 minutes.",
+      "Mixer la sauce si on la préfère lisse, ajouter la crème et le poulet, et cuire encore 8 minutes.",
+      "Parsemer de coriandre et servir avec du riz basmati ou des naans."
+    ],
+    "notes": "Plus la marinade dure, plus le poulet est tendre. On peut la laisser toute une nuit.",
+    "image_query": "Poulet tikka masala"
+  },
+  {
+    "slug": "roti-de-porc-au-four",
+    "name": "Rôti de porc au four",
+    "region": "europeen",
+    "origin": "France",
+    "category": "dinner",
+    "prep_time": 15,
+    "cook_time": 75,
+    "difficulty": 1,
+    "ingredient_access": 1,
+    "equipment": [
+      "four"
+    ],
+    "servings": 5,
+    "batch_friendly": false,
+    "keeps_days": 3,
+    "tags": [
+      "porc",
+      "four",
+      "dimanche",
+      "facile"
+    ],
+    "ingredients": [
+      "1,2 kg de rôti de porc (échine ou filet)",
+      "3 gousses d'ail",
+      "1 branche de romarin",
+      "1 cuillère à soupe de moutarde",
+      "2 cuillères à soupe d'huile d'olive",
+      "20 cl de bouillon",
+      "2 oignons",
+      "sel, poivre"
+    ],
+    "steps": [
+      "Préchauffer le four à 200 °C. Sortir le rôti 30 minutes avant la cuisson.",
+      "Badigeonner le rôti de moutarde, le saler, le poivrer et y glisser des lamelles d'ail et du romarin.",
+      "Le saisir dans l'huile sur toutes les faces en cocotte ou dans un plat allant au four.",
+      "Ajouter les oignons en quartiers et le bouillon, puis enfourner 1 heure en arrosant régulièrement.",
+      "Laisser reposer 10 minutes sous une feuille d'aluminium avant de trancher.",
+      "Servir avec le jus de cuisson réduit."
+    ],
+    "notes": "Compter environ 50 minutes par kilo ; la température à cœur doit atteindre 68 à 70 °C.",
+    "image_query": "Rôti de porc au four"
+  },
+  {
+    "slug": "salade-lentilles-vertes",
+    "name": "Salade de lentilles vertes",
+    "region": "europeen",
+    "origin": "France",
+    "category": "lunch",
+    "prep_time": 15,
+    "cook_time": 25,
+    "difficulty": 1,
+    "ingredient_access": 1,
+    "equipment": [
+      "casserole"
+    ],
+    "servings": 4,
+    "batch_friendly": true,
+    "keeps_days": 3,
+    "tags": [
+      "salade",
+      "lentilles",
+      "végétarien",
+      "froid"
+    ],
+    "ingredients": [
+      "250 g de lentilles vertes",
+      "1 oignon rouge",
+      "100 g de fromage bleu ou de feta",
+      "1 petite poignée de basilic",
+      "3 cuillères à soupe d'huile d'olive",
+      "1 cuillère à soupe de vinaigre",
+      "1 cuillère à café de moutarde",
+      "sel, poivre"
+    ],
+    "steps": [
+      "Cuire les lentilles 20 à 25 minutes dans de l'eau non salée puis les égoutter et les laisser tiédir.",
+      "Émincer l'oignon rouge finement et le faire macérer 10 minutes dans le vinaigre.",
+      "Préparer la vinaigrette avec la moutarde, l'huile, le sel et le poivre.",
+      "Mélanger les lentilles, l'oignon, la vinaigrette, le fromage émietté et le basilic."
+    ],
+    "notes": "Meilleure après une heure au frais, les lentilles absorbent la vinaigrette.",
+    "image_query": "Salade de lentilles vertes"
+  },
+  {
+    "slug": "taro-gratine",
+    "name": "Taro gratiné",
+    "region": "antillais",
+    "origin": "Antilles",
+    "category": "dinner",
+    "prep_time": 20,
+    "cook_time": 45,
+    "difficulty": 2,
+    "ingredient_access": 2,
+    "equipment": [
+      "four",
+      "casserole"
+    ],
+    "servings": 4,
+    "batch_friendly": true,
+    "keeps_days": 3,
+    "tags": [
+      "gratin",
+      "taro",
+      "fromage",
+      "végétarien"
+    ],
+    "ingredients": [
+      "800 g de taro (dachine)",
+      "20 cl de crème",
+      "20 cl de lait",
+      "100 g de gruyère râpé",
+      "2 gousses d'ail",
+      "1 noix de muscade",
+      "1 noix de beurre",
+      "persil, sel, poivre"
+    ],
+    "steps": [
+      "Éplucher le taro avec des gants (il peut irriter la peau) et le couper en rondelles fines.",
+      "Le cuire 10 minutes à l'eau bouillante salée, puis l'égoutter.",
+      "Mélanger la crème, le lait, l'ail écrasé, la muscade, le sel et le poivre.",
+      "Disposer le taro dans un plat beurré, couvrir de sauce et de gruyère.",
+      "Gratiner 30 à 35 minutes à 190 °C jusqu'à ce que le dessus soit doré. Parsemer de persil."
+    ],
+    "notes": "Le taro doit être bien cuit avant d'être consommé ; ne jamais le manger cru.",
+    "image_query": "Taro gratiné"
+  },
+  {
+    "slug": "foufou-sauce-gombo",
+    "name": "Foufou et sauce gombo",
+    "region": "africain",
+    "origin": "Côte d'Ivoire",
+    "category": "dinner",
+    "prep_time": 30,
+    "cook_time": 50,
+    "difficulty": 2,
+    "ingredient_access": 2,
+    "equipment": [
+      "marmite",
+      "pilon ou robot"
+    ],
+    "servings": 4,
+    "batch_friendly": false,
+    "keeps_days": 2,
+    "tags": [
+      "gombo",
+      "fufu",
+      "viande",
+      "poisson",
+      "traditionnel"
+    ],
+    "ingredients": [
+      "500 g de gombo frais",
+      "500 g de viande de bœuf ou de mouton en morceaux",
+      "200 g de poisson fumé",
+      "2 crabes ou crevettes (facultatif)",
+      "1 oignon",
+      "2 tomates",
+      "1 piment",
+      "1 cube de bouillon",
+      "2 cuillères à soupe d'huile de palme",
+      "800 g de banane plantain et d'igname pour le foufou",
+      "sel"
+    ],
+    "steps": [
+      "Faire cuire la viande 30 minutes dans de l'eau avec l'oignon, le cube et le sel.",
+      "Laver et couper le gombo en rondelles fines, puis le hacher ou le mixer grossièrement pour obtenir une texture gluante.",
+      "Ajouter dans la marmite le gombo, les tomates mixées, le poisson fumé, le piment entier et l'huile de palme, et laisser mijoter 15 à 20 minutes.",
+      "Pour le foufou, faire bouillir les plantains et l'igname épluchés jusqu'à tendreté, puis les piler ou les mixer en pâte lisse et élastique.",
+      "Former des boules de foufou et les servir dans la sauce bien chaude."
+    ],
+    "notes": "Ne pas trop cuire le gombo pour qu'il garde sa couleur verte et son onctuosité. Le piment entier parfume sans trop épicer.",
+    "image_query": "Foufou et sauce gombo"
+  },
+  {
+    "slug": "salade-quinoa-saumon-fume-avocat",
+    "name": "Salade de quinoa, saumon fumé et avocat",
+    "region": "europeen",
+    "origin": "France",
+    "category": "lunch",
+    "prep_time": 15,
+    "cook_time": 15,
+    "difficulty": 1,
+    "ingredient_access": 1,
+    "equipment": [
+      "casserole"
+    ],
+    "servings": 2,
+    "batch_friendly": false,
+    "keeps_days": 2,
+    "tags": [
+      "salade",
+      "quinoa",
+      "saumon",
+      "avocat",
+      "frais"
+    ],
+    "ingredients": [
+      "150 g de quinoa",
+      "4 tranches de saumon fumé",
+      "1 avocat mûr",
+      "100 g de jeunes pousses d'épinards",
+      "1 citron",
+      "2 cuillères à soupe d'huile d'olive",
+      "1 cuillère à soupe de graines de courge ou de sésame",
+      "aneth, sel, poivre"
+    ],
+    "steps": [
+      "Rincer le quinoa et le cuire 12 minutes dans 2 fois son volume d'eau salée, puis le laisser tiédir.",
+      "Préparer la vinaigrette avec le jus de citron, l'huile, le sel et le poivre.",
+      "Dresser les épinards et le quinoa dans des assiettes.",
+      "Ajouter l'avocat en tranches et le saumon fumé roulé.",
+      "Arroser de vinaigrette et parsemer de graines et d'aneth."
+    ],
+    "notes": "Arroser l'avocat de citron pour éviter qu'il noircisse si la salade est préparée à l'avance.",
+    "image_query": "Salade de quinoa, saumon fumé et avocat"
+  },
+  {
+    "slug": "salade-tiede-quinoa-magret-canard",
+    "name": "Salade tiède de quinoa au magret de canard",
+    "region": "europeen",
+    "origin": "France",
+    "category": "dinner",
+    "prep_time": 15,
+    "cook_time": 20,
+    "difficulty": 2,
+    "ingredient_access": 1,
+    "equipment": [
+      "poêle",
+      "casserole"
+    ],
+    "servings": 2,
+    "batch_friendly": false,
+    "keeps_days": 2,
+    "tags": [
+      "salade",
+      "quinoa",
+      "canard",
+      "tiède"
+    ],
+    "ingredients": [
+      "150 g de quinoa",
+      "1 magret de canard",
+      "150 g de tomates cerises",
+      "1 petite laitue ou de la roquette",
+      "1 concombre",
+      "1 cuillère à soupe de vinaigre balsamique",
+      "2 cuillères à soupe d'huile d'olive",
+      "persil, sel, poivre"
+    ],
+    "steps": [
+      "Cuire le quinoa 12 minutes dans de l'eau salée, l'égoutter et le laisser tiédir.",
+      "Quadriller la peau du magret, le saler et le poivrer. Le cuire côté peau 8 minutes à feu moyen, puis 3 à 4 minutes côté chair.",
+      "Laisser reposer le magret 5 minutes sous une feuille d'aluminium, puis le trancher finement.",
+      "Mélanger le quinoa, les tomates coupées en deux, le concombre en dés et la salade avec le balsamique et l'huile.",
+      "Disposer les tranches de magret sur la salade et parsemer de persil."
+    ],
+    "notes": "Cuire le magret démarré à froid dans la poêle permet de faire fondre la graisse et d'obtenir une peau croustillante.",
+    "image_query": "Salade tiède de quinoa au magret de canard"
+  },
+  {
+    "slug": "poisson-braise-alloco",
+    "name": "Poisson braisé et alloco",
+    "region": "africain",
+    "origin": "Côte d'Ivoire",
+    "category": "dinner",
+    "prep_time": 20,
+    "cook_time": 30,
+    "difficulty": 2,
+    "ingredient_access": 2,
+    "equipment": [
+      "four",
+      "poêle"
+    ],
+    "servings": 3,
+    "batch_friendly": false,
+    "keeps_days": 1,
+    "tags": [
+      "poisson",
+      "braisé",
+      "plantain",
+      "gourmand"
+    ],
+    "ingredients": [
+      "3 dorades ou tilapias entiers (nettoyés)",
+      "3 bananes plantain bien mûres",
+      "3 oignons",
+      "3 tomates",
+      "2 gousses d'ail",
+      "1 piment",
+      "1 citron",
+      "50 cl d'huile de friture",
+      "3 cuillères à soupe d'huile",
+      "sel, poivre"
+    ],
+    "steps": [
+      "Mariner les poissons ciselés avec l'ail pilé, le jus de citron, le sel, le poivre et un peu d'huile pendant 30 minutes.",
+      "Cuire les poissons au four à 220 °C (ou au gril) 25 à 30 minutes en les retournant à mi-cuisson, jusqu'à ce que la peau soit grillée.",
+      "Éplucher les plantains, les couper en rondelles en biais et les frire 3 à 4 minutes par face dans l'huile chaude.",
+      "Préparer la sauce en faisant revenir oignons et tomates en dés avec le piment pendant 10 minutes.",
+      "Servir le poisson avec l'alloco et la sauce oignon-tomate."
+    ],
+    "notes": "Des plantains bien mûrs (jaunes tachés de noir) donnent un alloco caramélisé.",
+    "image_query": "Poisson braisé et alloco"
+  },
+  {
+    "slug": "dokounou-kom-poisson-frit-shitto",
+    "name": "Dokounou (kom ou kenkey) avec poisson frit et shitto",
+    "region": "africain",
+    "origin": "Côte d'Ivoire / Burkina Faso / Ghana",
+    "category": "dinner",
+    "prep_time": 30,
+    "cook_time": 90,
+    "difficulty": 3,
+    "ingredient_access": 3,
+    "equipment": [
+      "grande casserole",
+      "poêle"
+    ],
+    "servings": 4,
+    "batch_friendly": false,
+    "keeps_days": 1,
+    "tags": [
+      "poisson",
+      "frit",
+      "maïs",
+      "pimenté",
+      "traditionnel"
+    ],
+    "ingredients": [
+      "500 g de pâte de maïs fermentée (dokounou / kom du commerce, ou farine de maïs fermentée)",
+      "4 tilapias ou carpes entiers (nettoyés, ciselés)",
+      "1 citron",
+      "2 gousses d'ail",
+      "50 cl d'huile de friture",
+      "4 cuillères à soupe de shitto (sauce pimentée noire aux crevettes et poisson fumé)",
+      "2 oignons rouges",
+      "3 tomates",
+      "2 piments verts frais",
+      "sel, poivre"
+    ],
+    "steps": [
+      "Former des boules de pâte de maïs fermentée, les envelopper serrées dans du film alimentaire ou des feuilles de maïs/bananier.",
+      "Les cuire 1 h 15 à 1 h 30 à l'eau bouillante, bien immergées, jusqu'à ce que la pâte soit ferme et lisse.",
+      "Mariner les poissons ciselés avec l'ail pilé, le citron, le sel et le poivre pendant 20 minutes.",
+      "Frire les poissons 6 à 8 minutes par face dans l'huile chaude jusqu'à ce que la peau soit dorée et croustillante.",
+      "Écraser les piments verts avec un peu de sel pour une sauce pilée fraîche ; émincer les oignons et les tomates en salade.",
+      "Servir le dokounou tiède avec le poisson frit, le shitto, la sauce pimentée verte et la salade d'oignons-tomates."
+    ],
+    "notes": "Le dokounou (Côte d'Ivoire) s'appelle aussi kom au Burkina Faso ; c'est une pâte de maïs fermentée cuite en boules, proche du kenkey ghanéen. Se mange avec les doigts, en trempant dans le shitto. Le dokounou, kom ou kenkey est la même pâte de maïs fermentée, consommée au Togo, Bénin, Ghana, Côte d'Ivoire et Burkina Faso.",
+    "image_query": "Dokounou kom poisson frit shitto"
+  },
+  {
+    "slug": "cocotte-poulet-legumes-rustique",
+    "name": "Cocotte de cuisses de poulet, pommes de terre et carottes",
+    "region": "europeen",
+    "origin": "France",
+    "category": "dinner",
+    "prep_time": 15,
+    "cook_time": 60,
+    "difficulty": 1,
+    "ingredient_access": 1,
+    "equipment": [
+      "cocotte"
+    ],
+    "servings": 4,
+    "batch_friendly": true,
+    "keeps_days": 3,
+    "tags": [
+      "poulet",
+      "au four",
+      "one pot",
+      "traditionnel",
+      "batch cooking"
+    ],
+    "ingredients": [
+      "4 hauts de cuisse de poulet",
+      "4 pilons de poulet",
+      "600 g de pommes de terre",
+      "4 carottes",
+      "2 oignons",
+      "3 gousses d'ail",
+      "20 cl de bouillon de volaille",
+      "2 brins de thym",
+      "2 feuilles de laurier",
+      "huile",
+      "persil",
+      "sel, poivre"
+    ],
+    "steps": [
+      "Préchauffer le four à 180 °C. Éplucher et couper pommes de terre et carottes en gros morceaux, émincer les oignons.",
+      "Saisir le poulet salé et poivré dans la cocotte huilée, 4 minutes par face, jusqu'à belle coloration. Réserver.",
+      "Faire revenir les oignons et l'ail 3 minutes dans la même cocotte, puis ajouter carottes et pommes de terre.",
+      "Remettre le poulet, ajouter thym, laurier et bouillon.",
+      "Couvrir et enfourner 45 minutes, puis cuire à découvert 15 minutes pour dorer la peau.",
+      "Parsemer de persil ciselé et servir dans la cocotte."
+    ],
+    "notes": "Les pilons peuvent être remplacés par des hauts de cuisse uniquement. Les restes se réchauffent très bien.",
+    "image_query": "Cocotte de cuisses de poulet, pommes de terre et carottes"
+  },
+  {
+    "slug": "cocotte-poulet-creme-estragon",
+    "name": "Cocotte de poulet à la crème et à l'estragon",
+    "region": "europeen",
+    "origin": "France",
+    "category": "dinner",
+    "prep_time": 15,
+    "cook_time": 50,
+    "difficulty": 2,
+    "ingredient_access": 1,
+    "equipment": [
+      "cocotte"
+    ],
+    "servings": 4,
+    "batch_friendly": false,
+    "keeps_days": 2,
+    "tags": [
+      "poulet",
+      "gourmand",
+      "one pot",
+      "traditionnel"
+    ],
+    "ingredients": [
+      "8 hauts de cuisse de poulet",
+      "600 g de pommes de terre grenaille",
+      "2 échalotes",
+      "2 gousses d'ail",
+      "15 cl de vin blanc sec",
+      "20 cl de crème liquide",
+      "1 cuillère à soupe de moutarde",
+      "1 bouquet d'estragon",
+      "beurre",
+      "sel, poivre"
+    ],
+    "steps": [
+      "Saler et poivrer le poulet, le dorer côté peau dans une cocotte avec une noix de beurre, 6 minutes, puis le retourner 2 minutes. Réserver.",
+      "Faire suer les échalotes et l'ail 3 minutes, déglacer au vin blanc et laisser réduire de moitié.",
+      "Ajouter les pommes de terre coupées en deux et remettre le poulet, peau vers le haut.",
+      "Couvrir et cuire à feu doux 30 minutes.",
+      "Mélanger crème et moutarde, verser dans la cocotte et poursuivre 10 minutes à découvert.",
+      "Parsemer d'estragon ciselé juste avant de servir."
+    ],
+    "notes": "À défaut d'estragon frais, utiliser de la ciboulette ou du persil plat.",
+    "image_query": "Cocotte de poulet à la crème et à l'estragon"
+  },
+  {
+    "slug": "couscous-poulet-merguez-legumes",
+    "name": "Couscous poulet, merguez et légumes",
+    "region": "africain",
+    "origin": "Maghreb",
+    "category": "dinner",
+    "prep_time": 30,
+    "cook_time": 60,
+    "difficulty": 2,
+    "ingredient_access": 1,
+    "equipment": [
+      "cocotte"
+    ],
+    "servings": 6,
+    "batch_friendly": true,
+    "keeps_days": 4,
+    "tags": [
+      "poulet",
+      "mijoté",
+      "festif",
+      "batch cooking",
+      "épicé"
+    ],
+    "ingredients": [
+      "6 cuisses de poulet",
+      "6 merguez",
+      "300 g de semoule moyenne",
+      "3 carottes",
+      "3 courgettes",
+      "2 navets",
+      "1 boîte de pois chiches",
+      "3 tomates",
+      "2 oignons",
+      "1 cuillère à soupe de concentré de tomate",
+      "2 cuillères à café de ras el hanout",
+      "harissa, sel, poivre"
+    ],
+    "steps": [
+      "Dorer le poulet avec les oignons émincés dans une grande cocotte huilée, puis ajouter le concentré de tomate et le ras el hanout.",
+      "Couvrir d'eau à hauteur, ajouter les tomates en dés, saler et cuire 20 minutes.",
+      "Ajouter carottes et navets en gros morceaux, cuire 15 minutes, puis les courgettes et les pois chiches 15 minutes de plus.",
+      "Cuire les merguez à la poêle ou au four 10 à 12 minutes, en les retournant.",
+      "Hydrater la semoule avec la même quantité d'eau bouillante salée, couvrir 5 minutes, puis égrener avec un filet d'huile.",
+      "Servir semoule, poulet, merguez et légumes arrosés de bouillon, harissa à part."
+    ],
+    "notes": "Le bouillon se conserve mieux séparé de la semoule pour un batch cooking.",
+    "image_query": "Couscous poulet, merguez et légumes"
+  },
+  {
+    "slug": "magret-canard-miel-choux-bruxelles",
+    "name": "Magret de canard au miel, choux de Bruxelles et pommes de terre rôties",
+    "region": "europeen",
+    "origin": "France",
+    "category": "dinner",
+    "prep_time": 15,
+    "cook_time": 30,
+    "difficulty": 2,
+    "ingredient_access": 1,
+    "equipment": [
+      "four"
+    ],
+    "servings": 2,
+    "batch_friendly": false,
+    "keeps_days": 1,
+    "tags": [
+      "festif",
+      "gourmand",
+      "au four"
+    ],
+    "ingredients": [
+      "2 magrets de canard",
+      "2 cuillères à soupe de miel",
+      "1 cuillère à soupe de vinaigre balsamique",
+      "300 g de choux de Bruxelles",
+      "400 g de pommes de terre",
+      "2 gousses d'ail",
+      "thym",
+      "huile d'olive",
+      "sel, poivre"
+    ],
+    "steps": [
+      "Préchauffer le four à 200 °C. Couper pommes de terre en quartiers et choux en deux, les enrober d'huile, ail, thym, sel et poivre.",
+      "Enfourner les légumes sur une plaque 30 minutes en remuant à mi-cuisson.",
+      "Quadriller la peau des magrets, saler, poivrer et les poser côté peau dans une poêle froide.",
+      "Cuire à feu moyen 8 minutes côté peau en retirant la graisse, puis 3 minutes côté chair.",
+      "Ajouter miel et vinaigre dans la poêle, enrober les magrets 1 minute, puis les laisser reposer 5 minutes sous papier alu.",
+      "Trancher les magrets et servir avec les légumes rôtis et le jus de cuisson."
+    ],
+    "notes": "Garder la graisse de canard pour rôtir des pommes de terre une prochaine fois.",
+    "image_query": "Magret de canard au miel, choux de Bruxelles et pommes de terre rôties"
+  },
+  {
+    "slug": "poulet-mafe",
+    "name": "Mafé de poulet (sauce arachide)",
+    "region": "africain",
+    "origin": "Mali / Sénégal",
+    "category": "dinner",
+    "prep_time": 20,
+    "cook_time": 50,
+    "difficulty": 1,
+    "ingredient_access": 1,
+    "equipment": [],
+    "servings": 4,
+    "batch_friendly": true,
+    "keeps_days": 4,
+    "tags": [
+      "poulet",
+      "mijoté",
+      "batch cooking",
+      "pas cher"
+    ],
+    "ingredients": [
+      "4 cuisses de poulet",
+      "3 cuillères à soupe de pâte d'arachide",
+      "2 oignons",
+      "3 cuillères à soupe de concentré de tomate",
+      "2 carottes",
+      "2 patates douces",
+      "1 piment",
+      "2 gousses d'ail",
+      "huile",
+      "sel, poivre"
+    ],
+    "steps": [
+      "Faire dorer les cuisses de poulet salées et poivrées dans l'huile 8 minutes, puis les réserver.",
+      "Faire revenir les oignons émincés et l'ail 5 minutes dans la même cocotte.",
+      "Ajouter le concentré de tomate et cuire 3 minutes en remuant.",
+      "Délayer la pâte d'arachide dans 500 ml d'eau chaude et verser dans la cocotte avec le piment entier.",
+      "Remettre le poulet, couvrir et laisser mijoter 25 minutes à feu doux.",
+      "Ajouter les carottes et patates douces en morceaux, poursuivre 20 minutes jusqu'à ce que la sauce épaississe et que de l'huile remonte.",
+      "Servir avec du riz blanc."
+    ],
+    "notes": "Utiliser de la pâte d'arachide 100 % cacahuète, sans sucre. Remplacer le poulet par du bœuf pour la version classique.",
+    "image_query": "Mafé de poulet (sauce arachide)"
+  },
+  {
+    "slug": "mouton-braise-camerounais",
+    "name": "Mouton braisé à la camerounaise",
+    "region": "africain",
+    "origin": "Cameroun",
+    "category": "dinner",
+    "prep_time": 20,
+    "cook_time": 90,
+    "difficulty": 2,
+    "ingredient_access": 2,
+    "equipment": [
+      "cocotte"
+    ],
+    "servings": 4,
+    "batch_friendly": false,
+    "keeps_days": 3,
+    "tags": [
+      "mijoté",
+      "épicé",
+      "festif",
+      "traditionnel"
+    ],
+    "ingredients": [
+      "1 kg d'épaule ou de collier de mouton",
+      "3 oignons",
+      "4 gousses d'ail",
+      "1 morceau de gingembre",
+      "2 tomates",
+      "1 piment",
+      "2 cubes de bouillon",
+      "persil",
+      "huile",
+      "sel, poivre"
+    ],
+    "steps": [
+      "Couper le mouton en morceaux et le mariner 1 heure avec ail, gingembre, la moitié des oignons mixés, sel et poivre.",
+      "Faire dorer la viande dans la cocotte avec un peu d'huile, 10 minutes, en la retournant.",
+      "Ajouter le reste des oignons émincés, les tomates concassées et le piment.",
+      "Verser 300 ml d'eau avec les cubes de bouillon émiettés, couvrir.",
+      "Laisser braiser 1 h 15 à feu doux jusqu'à ce que la viande soit tendre, en retournant à mi-cuisson.",
+      "Rectifier l'assaisonnement, parsemer de persil et servir avec plantain frit, bâton de manioc ou riz."
+    ],
+    "notes": "Le mouton peut être remplacé par de l'agneau. Une cuisson à l'étouffée donne une viande très tendre.",
+    "image_query": "Mouton braisé à la camerounaise"
+  },
+  {
+    "slug": "placali-sauce-graine",
+    "name": "Placali sauce graine",
+    "region": "africain",
+    "origin": "Côte d'Ivoire",
+    "category": "dinner",
+    "prep_time": 25,
+    "cook_time": 60,
+    "difficulty": 2,
+    "ingredient_access": 2,
+    "equipment": [
+      "mixeur"
+    ],
+    "servings": 4,
+    "batch_friendly": true,
+    "keeps_days": 3,
+    "tags": [
+      "traditionnel",
+      "mijoté",
+      "gourmand"
+    ],
+    "ingredients": [
+      "800 g de pulpe de noix de palme (ou 1 boîte de sauce graine)",
+      "500 g de poisson fumé ou de viande de bœuf",
+      "2 oignons",
+      "2 tomates",
+      "1 piment",
+      "2 gousses d'ail",
+      "sel",
+      "placali ou semoule de manioc (attiéké) pour accompagner"
+    ],
+    "steps": [
+      "Si la pulpe est surgelée, la décongeler, puis la verser dans une casserole avec 500 ml d'eau.",
+      "Faire cuire 20 minutes et mixer pour extraire la pulpe, puis filtrer pour obtenir un jus épais.",
+      "Faire revenir les oignons, l'ail et les tomates mixés dans un peu d'huile 5 minutes.",
+      "Ajouter le jus de graine, le piment entier et la viande ou le poisson fumé.",
+      "Laisser mijoter 30 à 40 minutes à feu doux en remuant jusqu'à ce que la sauce épaississe et que l'huile rouge remonte.",
+      "Servir la sauce graine bien chaude avec le placali (pâte de manioc fermenté) ou de l'attiéké."
+    ],
+    "notes": "Les boîtes de sauce graine (épicerie africaine) font gagner beaucoup de temps. À défaut de placali, utiliser du riz ou de l'attiéké.",
+    "image_query": "Placali sauce graine"
+  },
+  {
+    "slug": "poisson-braise-camerounais-sauce-piment",
+    "name": "Poisson braisé camerounais sauce piment",
+    "region": "africain",
+    "origin": "Cameroun",
+    "category": "dinner",
+    "prep_time": 25,
+    "cook_time": 35,
+    "difficulty": 2,
+    "ingredient_access": 2,
+    "equipment": [
+      "four"
+    ],
+    "servings": 4,
+    "batch_friendly": false,
+    "keeps_days": 1,
+    "tags": [
+      "poisson",
+      "épicé",
+      "au four",
+      "traditionnel"
+    ],
+    "ingredients": [
+      "2 poissons entiers (bar, dorade ou maquereau)",
+      "1 oignon",
+      "4 gousses d'ail",
+      "1 morceau de gingembre",
+      "2 piments",
+      "1 citron",
+      "2 cuillères à soupe de moutarde",
+      "persil",
+      "huile",
+      "sel, poivre"
+    ],
+    "steps": [
+      "Mixer ail, gingembre, piments, oignon, persil, moutarde, jus de citron et huile pour obtenir une marinade épicée.",
+      "Inciser les poissons des deux côtés, les saler et les enduire généreusement de marinade, dedans comme dehors.",
+      "Laisser mariner 1 heure au frais.",
+      "Préchauffer le four à 220 °C (grill).",
+      "Cuire les poissons 15 à 20 minutes sur une plaque huilée en les retournant à mi-cuisson.",
+      "Servir avec le reste de marinade crue ou chauffée comme sauce piment, accompagné de bâton de manioc, plantain ou frites."
+    ],
+    "notes": "Contrairement à la version sauce tomate, la sauce est ici uniquement à base de piment, ail et gingembre. Réduire les piments pour une version plus douce.",
+    "image_query": "Poisson braisé camerounais sauce piment"
+  },
+  {
+    "slug": "ragout-boeuf-carottes-pommes-de-terre",
+    "name": "Ragoût de bœuf aux carottes et pommes de terre",
+    "region": "europeen",
+    "origin": "France",
+    "category": "dinner",
+    "prep_time": 20,
+    "cook_time": 120,
+    "difficulty": 1,
+    "ingredient_access": 1,
+    "equipment": [
+      "cocotte"
+    ],
+    "servings": 4,
+    "batch_friendly": true,
+    "keeps_days": 4,
+    "tags": [
+      "boeuf",
+      "mijoté",
+      "batch cooking",
+      "traditionnel",
+      "pas cher"
+    ],
+    "ingredients": [
+      "800 g de bœuf à braiser",
+      "4 carottes",
+      "600 g de pommes de terre",
+      "2 oignons",
+      "2 gousses d'ail",
+      "2 cuillères à soupe de concentré de tomate",
+      "1 cuillère à soupe de farine",
+      "bouquet garni",
+      "huile",
+      "sel, poivre"
+    ],
+    "steps": [
+      "Couper le bœuf en gros cubes, saler et poivrer, puis le faire dorer par lots dans la cocotte avec de l'huile.",
+      "Ajouter les oignons émincés et l'ail, cuire 5 minutes.",
+      "Saupoudrer de farine, ajouter le concentré de tomate et mélanger 1 minute.",
+      "Couvrir d'eau à hauteur, ajouter le bouquet garni et laisser mijoter 1 heure à couvert.",
+      "Ajouter les carottes en rondelles et les pommes de terre en morceaux.",
+      "Poursuivre 45 minutes jusqu'à ce que la viande soit fondante, rectifier l'assaisonnement et servir."
+    ],
+    "notes": "Meilleur réchauffé le lendemain. Se congèle très bien.",
+    "image_query": "Ragoût de bœuf aux carottes et pommes de terre"
+  },
+  {
+    "slug": "nouilles-sautees-legumes",
+    "name": "Nouilles sautées aux légumes",
+    "region": "asiatique",
+    "origin": "Chine",
+    "category": "lunch",
+    "prep_time": 15,
+    "cook_time": 10,
+    "difficulty": 1,
+    "ingredient_access": 2,
+    "equipment": [
+      "wok"
+    ],
+    "servings": 2,
+    "batch_friendly": false,
+    "keeps_days": 2,
+    "tags": [
+      "rapide",
+      "végétarien",
+      "léger"
+    ],
+    "ingredients": [
+      "200 g de nouilles chinoises",
+      "1 carotte",
+      "1 poivron",
+      "100 g de pois gourmands ou de chou",
+      "2 gousses d'ail",
+      "3 cuillères à soupe de sauce soja",
+      "1 cuillère à soupe de sauce huître (ou soja)",
+      "1 cuillère à café d'huile de sésame",
+      "huile",
+      "oignon vert"
+    ],
+    "steps": [
+      "Cuire les nouilles selon le paquet, les égoutter et les rincer à l'eau froide.",
+      "Couper tous les légumes en fines lanières.",
+      "Faire chauffer l'huile à feu vif dans un wok et saisir ail puis légumes 4 minutes en remuant.",
+      "Ajouter les nouilles, la sauce soja, la sauce huître et l'huile de sésame.",
+      "Sauter 2 minutes pour bien enrober.",
+      "Parsemer d'oignon vert et servir aussitôt."
+    ],
+    "notes": "Ajouter des œufs brouillés, du tofu ou du poulet pour une version plus complète.",
+    "image_query": "Nouilles sautées aux légumes"
+  },
+  {
+    "slug": "gratin-pommes-de-terre-cancoillotte",
+    "name": "Gratin de pommes de terre à la cancoillotte",
+    "region": "europeen",
+    "origin": "France (Franche-Comté)",
+    "category": "dinner",
+    "prep_time": 15,
+    "cook_time": 45,
+    "difficulty": 1,
+    "ingredient_access": 1,
+    "equipment": [
+      "four"
+    ],
+    "servings": 4,
+    "batch_friendly": true,
+    "keeps_days": 3,
+    "tags": [
+      "végétarien",
+      "au four",
+      "gourmand",
+      "pas cher"
+    ],
+    "ingredients": [
+      "1 kg de pommes de terre",
+      "250 g de cancoillotte",
+      "1 oignon",
+      "20 cl de crème",
+      "1 gousse d'ail",
+      "noix de muscade",
+      "beurre",
+      "sel, poivre"
+    ],
+    "steps": [
+      "Préchauffer le four à 190 °C. Éplucher et couper les pommes de terre en fines rondelles.",
+      "Faire fondre la cancoillotte avec la crème, l'ail écrasé, la muscade, sel et poivre.",
+      "Beurrer un plat à gratin, y disposer les pommes de terre et l'oignon émincé en couches.",
+      "Verser la sauce à la cancoillotte sur le tout.",
+      "Couvrir de papier alu et cuire 30 minutes.",
+      "Retirer l'alu et poursuivre 15 minutes pour dorer."
+    ],
+    "notes": "À défaut de cancoillotte, utiliser du fromage fondu ou du maroilles.",
+    "image_query": "Gratin de pommes de terre à la cancoillotte"
+  },
+  {
+    "slug": "penne-boeuf-hache-portobellos",
+    "name": "Penne au bœuf haché et champignons portobello",
+    "region": "europeen",
+    "origin": "Italie",
+    "category": "dinner",
+    "prep_time": 10,
+    "cook_time": 20,
+    "difficulty": 1,
+    "ingredient_access": 1,
+    "equipment": [],
+    "servings": 2,
+    "batch_friendly": false,
+    "keeps_days": 2,
+    "tags": [
+      "rapide",
+      "pâtes",
+      "boeuf",
+      "enfant"
+    ],
+    "ingredients": [
+      "250 g de penne",
+      "250 g de bœuf haché",
+      "200 g de champignons portobello (ou de Paris)",
+      "1 oignon",
+      "2 gousses d'ail",
+      "200 g de coulis de tomate",
+      "fromage râpé",
+      "huile d'olive",
+      "sel, poivre"
+    ],
+    "steps": [
+      "Cuire les penne dans l'eau bouillante salée selon le paquet.",
+      "Faire revenir l'oignon et l'ail émincés dans l'huile d'olive 3 minutes.",
+      "Ajouter les champignons en lamelles et cuire 5 minutes à feu vif.",
+      "Ajouter le bœuf haché et le faire dorer 5 minutes en l'émiettant.",
+      "Verser le coulis de tomate, saler, poivrer et mijoter 5 minutes.",
+      "Mélanger les pâtes égouttées à la sauce et servir avec du fromage râpé."
+    ],
+    "notes": "Garder un peu d'eau de cuisson des pâtes pour détendre la sauce.",
+    "image_query": "Penne au bœuf haché et champignons portobello"
+  },
+  {
+    "slug": "gonre-foure-oeufs-de-caille",
+    "name": "Gonré fourré aux œufs de caille",
+    "region": "africain",
+    "origin": "Burkina Faso",
+    "category": "snack",
+    "prep_time": 30,
+    "cook_time": 90,
+    "difficulty": 2,
+    "ingredient_access": 2,
+    "equipment": [
+      "mixeur"
+    ],
+    "servings": 6,
+    "batch_friendly": true,
+    "keeps_days": 3,
+    "tags": [
+      "traditionnel",
+      "végétarien",
+      "sans gluten",
+      "festif"
+    ],
+    "ingredients": [
+      "300 g de haricots niébé (blancs à oeil noir)",
+      "200 g de gros mil, de maïs concassé ou de boulgour",
+      "12 œufs de caille (ou 4 œufs de poule)",
+      "1 oignon",
+      "2 c. à soupe d'huile",
+      "1 piment",
+      "1 c. à café de sel",
+      "feuilles de bananier ou film alimentaire"
+    ],
+    "steps": [
+      "Faire tremper les haricots et la céréale séparément 8 heures ou une nuit.",
+      "Cuire les œufs 4 minutes (caille) ou 10 minutes (poule) à l'eau bouillante, refroidir et écaler.",
+      "Cuire les haricots 40 minutes, ajouter la céréale égouttée, l'oignon et le piment, puis cuire encore 45 minutes jusqu'à ce que tout soit très tendre.",
+      "Mixer ou écraser longuement en une pâte lisse et épaisse, saler et ajouter l'huile.",
+      "Étaler une portion de pâte sur du film ou une feuille de bananier, poser une rangée d'œufs au centre et rouler en boudin serré en enfermant les œufs.",
+      "Laisser refroidir et raffermir 30 minutes au frais puis couper en tranches épaisses.",
+      "Servir tiède ou froid, avec une sauce pimentée."
+    ],
+    "notes": "Variante fourrée du gonré lisse : la pâte doit être bien lisse et assez ferme pour tenir en rouleau. Les œufs de poule se coupent en quartiers avant de rouler.",
+    "image_query": "Gonré fourré aux œufs de caille"
+  }
 ]
