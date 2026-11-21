@@ -1,0 +1,45 @@
+{% macro photo(meal, cls='') %}
+{% if meal.image_url %}
+<img class="photo {{ cls }}" src="{{ meal.image_url }}" alt="{{ meal.name }}" loading="lazy"
+     onerror="this.outerHTML='<div class=&quot;photo photo-fallback region-{{ meal.region }} {{ cls }}&quot;><span>{{ meal.name[0]|upper }}</span></div>'">
+{% else %}
+<div class="photo photo-fallback region-{{ meal.region }} {{ cls }}"><span>{{ meal.name[0]|upper }}</span></div>
+{% endif %}
+{% endmacro %}
+
+{% macro region_tag(meal) %}
+<span class="region-tag region-{{ meal.region }}"><i></i>{{ REGION_LABELS[meal.region] }}{% if meal.origin %} <em>· {{ meal.origin }}</em>{% endif %}</span>
+{% endmacro %}
+
+{% macro difficulty(level) %}
+<span class="diff diff-{{ level }}" title="Difficulté : {{ DIFFICULTY_LABELS[level] }}">
+    {% for i in range(1, 4) %}<i class="{{ 'on' if i <= level else '' }}"></i>{% endfor %}
+    {{ DIFFICULTY_LABELS[level] }}
+</span>
+{% endmacro %}
+
+{% macro meta_line(meal) %}
+<div class="meta-line">
+    {% if meal.total_time %}<span>{{ meal.total_time }} min</span>{% endif %}
+    <span>{{ difficulty(meal.difficulty) }}</span>
+    {% if meal.servings %}<span>{{ meal.servings }} pers.</span>{% endif %}
+</div>
+{% endmacro %}
+
+{% macro flags(meal) %}
+{% if meal.ingredient_access > 1 or meal.equipment or meal.batch_friendly %}
+<div class="flags">
+    {% if meal.ingredient_access > 1 %}<span class="flag warn" title="{{ ACCESS_LABELS[meal.ingredient_access] }}">Épicerie spécialisée</span>{% endif %}
+    {% if meal.equipment %}<span class="flag warn">Matériel : {{ meal.equipment|join(', ') }}</span>{% endif %}
+    {% if meal.batch_friendly %}<span class="flag good">Batch cooking</span>{% endif %}
+</div>
+{% endif %}
+{% endmacro %}
+
+{% macro badges(meal) %}
+{{ region_tag(meal) }}
+{{ meta_line(meal) }}
+{{ flags(meal) }}
+{% endmacro %}
+
+{% macro stars(rating) %}{{ '★' * (rating or 0) }}{{ '☆' * (5 - (rating or 0)) }}{% endmacro %}

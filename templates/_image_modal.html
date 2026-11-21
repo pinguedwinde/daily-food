@@ -1,0 +1,41 @@
+<div id="img-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="img-title">
+    <div class="modal wide">
+        <div class="modal-header"><h3 id="img-title">Photo</h3><button type="button" class="modal-close" data-img-close aria-label="Fermer">&times;</button></div>
+        <div class="modal-body">
+            <div class="img-current">
+                <div class="preview" id="img-preview"></div>
+                <div>
+                    <strong id="img-name"></strong>
+                    <p class="hint" id="img-state"></p>
+                    <button type="button" class="btn btn-outline btn-sm" id="img-clear">Retirer la photo</button>
+                </div>
+            </div>
+            <div class="img-tabs">
+                <button type="button" class="chip active" data-pane="search">Chercher sur Wikimedia</button>
+                <button type="button" class="chip" data-pane="url">Depuis un lien</button>
+                <button type="button" class="chip" data-pane="file">Depuis mon ordinateur</button>
+            </div>
+            <div class="img-pane active" data-pane="search">
+                <form id="img-search-form" class="inline-form" style="width:100%">
+                    <input type="search" id="img-query" placeholder="Nom du plat…" style="flex:1">
+                    <button class="btn btn-primary">Chercher</button>
+                </form>
+                <p class="hint">Photos libres de droits. Celle que tu choisis est copiée sur ton ordinateur.</p>
+                <div class="img-results" id="img-results"></div>
+            </div>
+            <div class="img-pane" data-pane="url">
+                <form id="img-url-form" class="inline-form" style="width:100%">
+                    <input type="url" id="img-url" placeholder="https://… (lien direct vers une image)" style="flex:1" required>
+                    <button class="btn btn-primary">Utiliser</button>
+                </form>
+                <label class="toggle" style="margin-top:12px"><input type="checkbox" id="img-url-download" checked>Copier l'image en local (recommandé)</label>
+            </div>
+            <div class="img-pane" data-pane="file">
+                <div class="dropzone" id="img-drop">
+                    <p>Glisse une image ici ou</p>
+                    <input type="file" id="img-file" accept="image/*" style="margin-top:10px">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

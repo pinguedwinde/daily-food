@@ -3,101 +3,124 @@
 {% block content %}
 
 <div class="page-header">
-    <h1>{{ '✏️ Modifier' if meal else '➕ Ajouter' }} un plat</h1>
-    <p>{{ 'Modifie les informations du plat' if meal else 'Ajoute un nouveau plat à ta base' }}</p>
+    <h1>{{ 'Modifier' if meal else 'Ajouter' }} un plat</h1>
+    <p>{{ 'Modifie la recette' if meal else 'Ajoute une nouvelle recette à ta base' }}</p>
 </div>
 
 <div class="form-container">
     <form method="POST" action="{{ '/meals/' ~ meal.id ~ '/edit' if meal else '/meals/add' }}" enctype="multipart/form-data">
         <div class="form-group">
             <label for="name">Nom du plat *</label>
-            <input type="text" id="name" name="name" value="{{ meal.name if meal else '' }}" required placeholder="Ex: Poulet rôti, Pâtes carbonara...">
+            <input type="text" id="name" name="name" value="{{ meal.name if meal else '' }}" required placeholder="Ex : Poulet yassa">
         </div>
 
         <div class="form-row">
             <div class="form-group">
-                <label for="category">Catégorie *</label>
-                <select id="category" name="category" required>
-                    {% for key, label in CATEGORY_LABELS.items() %}
-                    <option value="{{ key }}" {% if meal and meal.category == key %}selected{% endif %}>{{ label }}</option>
-                    {% endfor %}
+                <label for="region">Cuisine</label>
+                <select id="region" name="region">
+                    {% for key in REGION_ORDER %}<option value="{{ key }}" {{ 'selected' if meal and meal.region == key }}>{{ REGION_LABELS[key] }}</option>{% endfor %}
                 </select>
             </div>
             <div class="form-group">
-                <label for="prep_time">Temps de préparation (minutes)</label>
-                <input type="number" id="prep_time" name="prep_time" value="{{ meal.prep_time if meal else '' }}" placeholder="Ex: 30" min="0">
+                <label for="origin">Origine (pays / région)</label>
+                <input type="text" id="origin" name="origin" value="{{ meal.origin or '' if meal else '' }}" placeholder="Ex : Sénégal">
+            </div>
+            <div class="form-group">
+                <label for="category">Type de repas *</label>
+                <select id="category" name="category" required>
+                    {% for key, label in CATEGORY_LABELS.items() %}<option value="{{ key }}" {{ 'selected' if (meal and meal.category == key) or (not meal and key == 'dinner') }}>{{ label }}</option>{% endfor %}
+                </select>
             </div>
         </div>
 
-        {% if meal %}
-        {% set meal_tags = meal.tags|join(',') if meal.tags else '' %}
-        {% else %}
-        {% set meal_tags = '' %}
-        {% endif %}
+        <div class="form-row">
+            <div class="form-group"><label for="prep_time">Préparation (min)</label>
+                <input type="number" id="prep_time" name="prep_time" min="0" value="{{ meal.prep_time if meal and meal.prep_time is not none else '' }}"></div>
+            <div class="form-group"><label for="cook_time">Cuisson (min)</label>
+                <input type="number" id="cook_time" name="cook_time" min="0" value="{{ meal.cook_time if meal and meal.cook_time is not none else '' }}"></div>
+            <div class="form-group"><label for="servings">Portions</label>
+                <input type="number" id="servings" name="servings" min="1" value="{{ meal.servings if meal and meal.servings else '' }}"></div>
+            <div class="form-group"><label for="keeps_days">Se conserve (jours)</label>
+                <input type="number" id="keeps_days" name="keeps_days" min="0" value="{{ meal.keeps_days if meal and meal.keeps_days is not none else '' }}"></div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label for="difficulty">Facilité de cuisine</label>
+                <select id="difficulty" name="difficulty">
+                    {% for k, l in DIFFICULTY_LABELS.items() %}<option value="{{ k }}" {{ 'selected' if (meal and meal.difficulty == k) or (not meal and k == 1) }}>{{ l }}</option>{% endfor %}
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="ingredient_access">Ingrédients à trouver</label>
+                <select id="ingredient_access" name="ingredient_access">
+                    {% for k, l in ACCESS_LABELS.items() %}<option value="{{ k }}" {{ 'selected' if meal and meal.ingredient_access == k }}>{{ l }}</option>{% endfor %}
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="equipment">Matériel spécial (séparé par des virgules)</label>
+                <input type="text" id="equipment" name="equipment" value="{{ meal.equipment|join(', ') if meal else '' }}" placeholder="Ex : wok, cocotte, mixeur">
+            </div>
+        </div>
+
+        <label class="toggle" style="margin-bottom:20px;"><input type="checkbox" name="batch_friendly" value="1" {{ 'checked' if meal and meal.batch_friendly }}> Se prête au batch cooking (grosse quantité, se conserve / se congèle)</label>
 
         <div class="form-group">
             <label>Tags</label>
             <div class="tags-input-container" id="tags-container">
-                <input type="text" id="tags-input" placeholder="Tape un tag et appuie sur Entrée...">
+                <input type="text" id="tags-input" placeholder="Tape un tag et appuie sur Entrée…">
             </div>
-            <input type="hidden" id="tags-hidden" name="tags" value="{{ meal_tags }}">
+            <input type="hidden" id="tags-hidden" name="tags" value="{{ meal.tags|join(',') if meal else '' }}">
             <div class="tags-suggestions">
-                {% for tag in COMMON_TAGS %}
-                <span class="tag-suggestion" data-tag="{{ tag }}">+ {{ tag }}</span>
-                {% endfor %}
+                {% for tag in COMMON_TAGS %}<span class="tag-suggestion" data-tag="{{ tag }}">+ {{ tag }}</span>{% endfor %}
             </div>
         </div>
 
         <div class="form-group">
             <label>Ingrédients</label>
             <div class="ingredients-list" id="ingredients-list">
-                {% if meal and meal.ingredients %}
-                    {% for ingredient in meal.ingredients %}
-                    <div class="ingredient-row">
-                        <input type="text" name="ingredients" value="{{ ingredient }}" class="ingredient-input" placeholder="Ex: 200g de pâtes">
-                        <button type="button" class="remove-ingredient" onclick="this.parentElement.remove()">&times;</button>
-                    </div>
-                    {% endfor %}
-                {% else %}
+                {% for ingredient in (meal.ingredients if meal and meal.ingredients else ['']) %}
                 <div class="ingredient-row">
-                    <input type="text" name="ingredients" class="ingredient-input" placeholder="Ex: 200g de pâtes">
-                    <button type="button" class="remove-ingredient" onclick="this.parentElement.remove()">&times;</button>
+                    <input type="text" name="ingredients" value="{{ ingredient }}" class="ingredient-input" placeholder="Ex : 200 g de riz">
+                    <button type="button" class="remove-ingredient" onclick="this.parentElement.remove()" aria-label="Retirer">&times;</button>
                 </div>
-                {% endif %}
+                {% endfor %}
             </div>
             <button type="button" id="add-ingredient-btn" class="add-ingredient-btn">+ Ajouter un ingrédient</button>
         </div>
 
         <div class="form-group">
-            <label>📷 Photo</label>
-            <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
-                <div>
-                    <label for="image_url" style="font-size:0.85rem;font-weight:400;margin-bottom:4px;">URL distante</label>
-                    <input type="text" id="image_url" name="image_url" value="{{ meal.image_url if meal and meal.image_url else '' }}" placeholder="https://...">
+            <label>Étapes de préparation</label>
+            <div class="ingredients-list" id="steps-list">
+                {% for step in (meal.steps if meal and meal.steps else ['']) %}
+                <div class="ingredient-row step-row">
+                    <textarea name="steps" rows="2" placeholder="Décris l'étape…">{{ step }}</textarea>
+                    <button type="button" class="remove-ingredient" onclick="this.parentElement.remove()" aria-label="Retirer">&times;</button>
                 </div>
-                <div>
-                    <label for="image_file" style="font-size:0.85rem;font-weight:400;margin-bottom:4px;">Ou fichier local</label>
-                    <input type="file" id="image_file" name="image_file" accept="image/*">
-                </div>
+                {% endfor %}
             </div>
-            {% if meal and meal.image_url %}
-            <div class="image-preview" style="margin-top:8px;">
-                <label style="font-size:0.85rem;font-weight:400;color:var(--color-text-light);">Aperçu :</label>
-                <img src="{{ meal.image_url }}" alt="" style="max-width:200px;max-height:120px;border-radius:8px;display:block;margin-top:4px;object-fit:cover;">
-            </div>
-            {% endif %}
+            <button type="button" id="add-step-btn" class="add-ingredient-btn">+ Ajouter une étape</button>
         </div>
 
         <div class="form-group">
-            <label for="notes">Notes / Instructions</label>
-            <textarea id="notes" name="notes" placeholder="Astuces, accompagnements, variantes...">{{ meal.notes if meal else '' }}</textarea>
+            <label>Photo</label>
+            <div class="form-row">
+                <div><label for="image_url" class="sublabel">URL distante</label>
+                    <input type="text" id="image_url" name="image_url" value="{{ meal.image_url if meal and meal.image_url else '' }}" placeholder="https://… ou /static/…"></div>
+                <div><label for="image_file" class="sublabel">Ou fichier local</label>
+                    <input type="file" id="image_file" name="image_file" accept="image/*"></div>
+            </div>
+            {% if meal and meal.image_url %}<img src="{{ meal.image_url }}" alt="" class="form-preview">{% endif %}
+        </div>
+
+        <div class="form-group">
+            <label for="notes">Notes / astuces</label>
+            <textarea id="notes" name="notes" placeholder="Astuces, accompagnements, variantes, substituts…">{{ meal.notes if meal and meal.notes else '' }}</textarea>
         </div>
 
         <div class="form-actions">
-            <button type="submit" class="btn btn-primary btn-lg">
-                {{ 'Enregistrer les modifications' if meal else 'Ajouter le plat' }}
-            </button>
-            <a href="/meals" class="btn btn-outline btn-lg">Annuler</a>
+            <button type="submit" class="btn btn-primary btn-lg">{{ 'Enregistrer' if meal else 'Ajouter le plat' }}</button>
+            <a href="{{ '/meals/' ~ meal.id if meal else '/meals' }}" class="btn btn-outline btn-lg">Annuler</a>
         </div>
     </form>
 </div>

@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}On mange quoi ?{% endblock %}</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍽️</text></svg>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/static/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css?v={{ ASSET_V }}">
 </head>
 <body>
     {% if user %}
@@ -15,17 +16,20 @@
         <div class="nav-inner">
             <a href="/" class="nav-brand">🍽️ On mange quoi</a>
             <ul class="nav-links">
-                <li><a href="/" class="{% if request.url.path == '/' %}active{% endif %}">Aujourd'hui</a></li>
-                <li><a href="/meals" class="{% if request.url.path.startswith('/meals') %}active{% endif %}">Plats</a></li>
-                <li><a href="/planner" class="{% if request.url.path.startswith('/planner') %}active{% endif %}">Planning</a></li>
-                <li><a href="/history" class="{% if request.url.path == '/history' %}active{% endif %}">Historique</a></li>
-                <li><a href="/shopping" class="{% if request.url.path == '/shopping' %}active{% endif %}">Courses</a></li>
-                <li><a href="/export" class="{% if request.url.path == '/export' %}active{% endif %}">Export</a></li>
+                <li><a href="/" class="{{ 'active' if PAGE == 'home' }}">Aujourd'hui</a></li>
+                <li><a href="/meals" class="{{ 'active' if PAGE == 'meals' }}">Recettes</a></li>
+                <li><a href="/planner" class="{{ 'active' if PAGE == 'planner' }}">Planning</a></li>
+                <li><a href="/batch" class="{{ 'active' if PAGE == 'batch' }}">Batch cooking</a></li>
+                <li><a href="/shopping" class="{{ 'active' if PAGE == 'shopping' }}">Courses</a></li>
+                <li><a href="/history" class="{{ 'active' if PAGE == 'history' }}">Historique</a></li>
+                <li><a href="/export" class="{{ 'active' if PAGE == 'export' }}">Export</a></li>
+                <li><a href="/admin" class="admin-link {{ 'active' if PAGE == 'admin' }}">{{ 'Gestion' if ADMIN else 'Admin' }}</a></li>
             </ul>
-            <div class="nav-user">
+            <a class="nav-user" href="/logout" title="Changer d'utilisateur">
                 <span class="user-avatar">{{ user[0]|upper }}</span>
                 <span>{{ user }}</span>
-            </div>
+                {% if ADMIN %}<span class="admin-badge">admin</span>{% endif %}
+            </a>
         </div>
     </nav>
     {% endif %}
@@ -34,6 +38,7 @@
         {% block content %}{% endblock %}
     </main>
 
-    <script src="/static/script.js"></script>
+    {% if ADMIN %}{% include "_image_modal.html" %}{% endif %}
+    <script src="/static/script.js?v={{ ASSET_V }}"></script>
 </body>
 </html>

@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block title %}Mode admin{% endblock %}
+{% block content %}
+<div class="page-header">
+    <h1>Mode admin</h1>
+    <p>Un tableau de gestion pour éditer vite : changer les photos, renommer, corriger les cuisines, supprimer en masse et fusionner les doublons.</p>
+</div>
+<form method="POST" action="/admin/toggle"><button class="btn btn-primary btn-lg">Activer le mode admin</button></form>
+{% endblock %}

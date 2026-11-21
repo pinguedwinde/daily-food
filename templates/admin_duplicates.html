@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% from "_macros.html" import photo, meta_line with context %}
+{% block title %}Doublons{% endblock %}
+{% block content %}
+
+<div class="admin-head">
+    <div class="page-header" style="margin:0">
+        <h1>Doublons possibles</h1>
+        <p>Repérés par nom, ingrédients ou photo identique. Choisis la recette à garder : les autres sont supprimées et leur planning / historique sont rattachés à celle-ci.</p>
+    </div>
+    <a href="/admin" class="btn btn-outline btn-sm">← Retour à la gestion</a>
+</div>
+
+{% for g in groups %}
+<section class="dup-group">
+    <div class="dup-reasons">{% for r in g.reasons %}<span class="pill warn">{{ r }}</span>{% endfor %}</div>
+    <form method="POST" action="/admin/duplicates/merge" id="merge-{{ loop.index }}" class="dup-form">
+        <div class="dup-items">
+            {% for m in g.meals %}
+            <div class="dup-item {{ 'keep' if loop.first }}">
+                <div class="dup-photo">{{ photo(m) }}</div>
+                <div class="dup-item-body">
+                    <strong>{{ m.name }}</strong>
+                    <span>{{ REGION_LABELS[m.region] }} · {{ CATEGORY_LABELS[m.category] }}</span>
+                    <span>{{ m.ingredients|length }} ingrédients · {{ m.steps|length }} étapes</span>
+                    <span><a href="/meals/{{ m.id }}" target="_blank" style="font-size:.8rem">Voir la recette ↗</a> · <button type="button" class="btn-ghost" style="font-size:.8rem;padding:0;cursor:pointer;border:none;background:none;text-decoration:underline" data-image-edit="{{ m.id }}" data-name="{{ m.name }}" data-url="{{ m.image_url or '' }}" data-region="{{ m.region }}">Changer la photo</button></span>
+                    <input type="checkbox" name="remove" value="{{ m.id }}" class="dup-remove" hidden {{ 'checked' if not loop.first }}>
+                    <label><input type="radio" name="keep" value="{{ m.id }}" {{ 'checked' if loop.first }}> Garder celle-ci</label>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </form>
+    <div class="dup-actions">
+        <button form="merge-{{ loop.index }}" class="btn btn-primary" onclick="return confirm('Supprimer les autres recettes de ce groupe ?')">Fusionner dans la recette gardée</button>
+        <form method="POST" action="/admin/duplicates/ignore" style="display:inline">
+            {% for m in g.meals %}<input type="hidden" name="ids" value="{{ m.id }}">{% endfor %}
+            <button class="btn btn-outline">Ce ne sont pas des doublons</button>
+        </form>
+    </div>
+</section>
+{% else %}
+<div class="empty-block"><p>Aucun doublon détecté.</p><a href="/admin" class="btn btn-primary">Retour</a></div>
+{% endfor %}
+
+{% endblock %}

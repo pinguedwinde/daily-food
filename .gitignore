@@ -3,3 +3,5 @@ __pycache__/
 venv/
 daily_food.db
 static/uploads/
+.DS_Store
+.pytest_cache/

@@ -1,69 +1,97 @@
 {% extends "base.html" %}
+{% from "_macros.html" import photo, region_tag, meta_line, flags with context %}
 {% block title %}{{ meal.name }}{% endblock %}
 {% block content %}
 
 <div class="page-header">
-    <a href="/meals" class="btn btn-outline btn-sm">← Retour aux plats</a>
+    <a href="/meals" class="btn btn-outline btn-sm">← Retour aux recettes</a>
 </div>
 
-<div class="detail-card">
-    <div class="detail-card-top category-{{ meal.category }}"></div>
-
-    {% if meal.image_url %}
-    <div class="detail-card-image">
-        <img src="{{ meal.image_url }}" alt="{{ meal.name }}">
+<article class="detail-card">
+    <div class="detail-hero" style="position:relative;">{{ photo(meal) }}
+        {% if ADMIN %}<button type="button" class="btn btn-outline btn-sm" style="position:absolute;right:14px;top:14px;" data-image-edit="{{ meal.id }}" data-name="{{ meal.name }}" data-url="{{ meal.image_url or '' }}" data-region="{{ meal.region }}">Changer la photo</button>{% endif %}
     </div>
-    {% endif %}
+    {% if meal.image_credit %}<div class="photo-credit">{{ meal.image_credit }}</div>{% endif %}
 
     <div class="detail-card-body">
         <div class="detail-card-header">
+            {{ region_tag(meal) }}
             <h1>{{ meal.name }}</h1>
-            <div class="detail-card-meta">
-                <span class="meta-badge">{{ CATEGORY_LABELS[meal.category] }}</span>
-                {% if meal.prep_time %}
-                <span class="meta-badge">⏱️ {{ meal.prep_time }} min</span>
-                {% endif %}
-            </div>
+            {{ meta_line(meal) }}
+            <div style="margin-top:10px">{{ flags(meal) }}</div>
+        </div>
+
+        <div class="facts">
+            <div><span>Préparation</span><strong>{{ meal.prep_time or '—' }}{% if meal.prep_time %} min{% endif %}</strong></div>
+            <div><span>Cuisson</span><strong>{{ meal.cook_time or '—' }}{% if meal.cook_time %} min{% endif %}</strong></div>
+            <div><span>Portions</span><strong>{{ meal.servings or '—' }}</strong></div>
+            <div><span>Se conserve</span><strong>{% if meal.keeps_days %}{{ meal.keeps_days }} j{% else %}—{% endif %}</strong></div>
+            <div><span>Mangé</span><strong>{{ eaten.c }}×{% if eaten.r %} · {{ '%.1f'|format(eaten.r) }}★{% endif %}</strong></div>
         </div>
 
         {% if meal.tags %}
-        <div class="detail-card-section">
-            <div class="detail-card-tags">
-                {% for tag in meal.tags %}
-                <span class="tag">{{ tag }}</span>
-                {% endfor %}
-            </div>
-        </div>
+        <div class="detail-card-tags">{% for tag in meal.tags %}<a class="tag" href="/meals?tag={{ tag|urlencode }}">{{ tag }}</a>{% endfor %}</div>
         {% endif %}
 
-        {% if meal.ingredients %}
-        <div class="detail-card-section">
-            <h3>Ingrédients</h3>
-            <ul class="detail-ingredients">
-                {% for ingredient in meal.ingredients %}
-                <li>{{ ingredient }}</li>
-                {% endfor %}
-            </ul>
+        <div class="detail-actions-bar">
+            <form method="POST" action="/history/add" class="inline-form">
+                <input type="hidden" name="meal_id" value="{{ meal.id }}">
+                <input type="hidden" name="eaten_date" value="{{ today }}">
+                <select name="meal_slot" aria-label="Créneau">{% for key, label in SLOT_LABELS.items() %}<option value="{{ key }}" {{ 'selected' if key == 'dinner' }}>{{ label }}</option>{% endfor %}</select>
+                <button class="btn btn-primary">Je mange ça</button>
+            </form>
+            <form method="POST" action="/planner/assign" class="inline-form">
+                <input type="hidden" name="meal_id" value="{{ meal.id }}">
+                <input type="date" name="plan_date" value="{{ today }}" required aria-label="Date">
+                <select name="meal_slot" aria-label="Créneau">{% for key, label in SLOT_LABELS.items() %}<option value="{{ key }}" {{ 'selected' if key == 'dinner' }}>{{ label }}</option>{% endfor %}</select>
+                <button class="btn btn-outline">Planifier</button>
+            </form>
         </div>
-        {% endif %}
+
+        <div class="detail-columns">
+            {% if meal.ingredients %}
+            <div class="detail-card-section">
+                <h3>Ingrédients{% if meal.servings %} <small>({{ meal.servings }} pers.)</small>{% endif %}</h3>
+                <ul class="detail-ingredients">{% for i in meal.ingredients %}<li>{{ i }}</li>{% endfor %}</ul>
+                {% if meal.equipment %}<p class="equipment">Matériel : {{ meal.equipment|join(', ') }}</p>{% endif %}
+            </div>
+            {% endif %}
+            {% if meal.steps %}
+            <div class="detail-card-section">
+                <h3>Préparation</h3>
+                <ol class="steps">{% for s in meal.steps %}<li>{{ s }}</li>{% endfor %}</ol>
+            </div>
+            {% endif %}
+        </div>
 
         {% if meal.notes %}
-        <div class="detail-card-section">
-            <h3>Notes</h3>
-            <p class="detail-notes">{{ meal.notes }}</p>
-        </div>
+        <div class="detail-card-section note-box"><h3>À savoir</h3><p class="detail-notes">{{ meal.notes }}</p></div>
         {% endif %}
 
         <div class="detail-card-footer">
-            <span>Ajouté par {{ meal.created_by or '?' }}</span>
+            <span>{% if meal.created_by in ('seed', "Recettes d'origine") %}Recette d'origine{% else %}Ajouté par {{ meal.created_by or '?' }}{% endif %}</span>
             <div class="detail-card-actions">
-                <a href="/meals/{{ meal.id }}/edit" class="btn btn-primary btn-sm">✏️ Modifier</a>
-                <form method="POST" action="/meals/{{ meal.id }}/delete" style="display:inline;" onsubmit="return confirm('Supprimer « {{ meal.name }} » ?')">
-                    <button type="submit" class="btn btn-outline btn-sm">🗑️ Supprimer</button>
+                <a href="/meals/{{ meal.id }}/edit" class="btn btn-primary btn-sm">Modifier</a>
+                <form method="POST" action="/meals/{{ meal.id }}/delete" style="display:inline;" onsubmit="return confirm('Supprimer « {{ meal.name|replace("'", "’") }} » ?')">
+                    <button type="submit" class="btn btn-outline btn-sm">Supprimer</button>
                 </form>
             </div>
         </div>
     </div>
-</div>
+</article>
+
+{% if similar %}
+<section class="similar">
+    <h2>Dans la même veine</h2>
+    <div class="meals-grid">
+        {% for m in similar %}
+        <div class="meal-card"><a href="/meals/{{ m.id }}" class="meal-card-link">
+            <div class="meal-card-image">{{ photo(m) }}</div>
+            <div class="meal-card-body">{{ region_tag(m) }}<h3>{{ m.name }}</h3></div>
+        </a></div>
+        {% endfor %}
+    </div>
+</section>
+{% endif %}
 
 {% endblock %}

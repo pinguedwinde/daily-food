@@ -1,125 +1,103 @@
 {% extends "base.html" %}
+{% from "_macros.html" import photo, region_tag, meta_line, flags with context %}
 {% block title %}On mange quoi aujourd'hui ?{% endblock %}
 {% block content %}
 
-<div class="hero-section">
-    <h1>On mange quoi aujourd'hui ? 🤔</h1>
-    <p class="subtitle">
-        {% if suggestion %}
-            {{ user }}, j'ai une idée pour toi !
-        {% else %}
-            {{ user }}, ta base de plats est vide. Ajoute tes premiers plats !
-        {% endif %}
-    </p>
-</div>
+<header class="dash-hero">
+    <div class="eyebrow">{{ WEEKDAYS[today_date.weekday()] }} {{ fr_date(today_date, False) }}</div>
+    <h1>On mange quoi ?</h1>
+    <p>{% if suggestion %}Une idée à la fois, jamais deux fois la même tant qu'il en reste ({{ candidates_count }} possibilités avec tes critères).{% else %}Aucun plat ne correspond à ces critères.{% endif %}</p>
+</header>
 
-{% if suggestion %}
-<div class="suggestion-card">
-    <div class="suggestion-card-header category-{{ suggestion.category }}">
-        {{ CATEGORY_LABELS[suggestion.category] }}
-    </div>
-    <div class="suggestion-card-body">
-        <h2 class="suggestion-name">{{ suggestion.name }}</h2>
-
-        {% if suggestion.image_url %}
-        <div class="suggestion-image">
-            <img src="{{ suggestion.image_url }}" alt="{{ suggestion.name }}" loading="lazy">
-        </div>
-        {% endif %}
-
-        <div class="suggestion-meta">
-            {% if suggestion.prep_time %}
-            <span class="meta-item">⏱️ {{ suggestion.prep_time }} min</span>
-            {% endif %}
-        </div>
-
-        {% if suggestion.tags %}
-        <div class="suggestion-tags">
-            {% for tag in suggestion.tags %}
-            <span class="tag">{{ tag }}</span>
-            {% endfor %}
-        </div>
-        {% endif %}
-
-        {% if suggestion.ingredients %}
-        <div class="suggestion-ingredients">
-            <h4>Ingrédients</h4>
-            <ul>
-                {% for ingredient in suggestion.ingredients %}
-                <li>{{ ingredient }}</li>
-                {% endfor %}
-            </ul>
-        </div>
-        {% endif %}
-
-        {% if suggestion.notes %}
-        <div class="suggestion-notes">{{ suggestion.notes }}</div>
-        {% endif %}
-
-        <div class="suggestion-actions">
-            <form method="GET" action="/" style="display:inline;">
-                {% if filter_category %}<input type="hidden" name="category" value="{{ filter_category }}">{% endif %}
-                {% if filter_max_time %}<input type="hidden" name="max_time" value="{{ filter_max_time }}">{% endif %}
-                <button type="submit" class="btn btn-outline btn-lg">🎲 Je veux autre chose</button>
-            </form>
-            <form method="POST" action="/planner/assign" style="display:inline;">
-                <input type="hidden" name="meal_id" value="{{ suggestion.id }}">
-                <input type="hidden" name="plan_date" value="{{ today }}">
-                <input type="hidden" name="meal_slot" value="dinner">
-                <button type="submit" class="btn btn-primary btn-lg">✅ Je mange ça ce soir !</button>
-            </form>
-        </div>
-    </div>
-</div>
-
-<form id="filter-form" method="GET" action="/" class="filters-bar">
-    <select name="category">
-        <option value="">Tous les types</option>
-        {% for key, label in CATEGORY_LABELS.items() %}
-        <option value="{{ key }}" {% if filter_category == key %}selected{% endif %}>{{ label }}</option>
+<form id="filter-form" method="GET" action="/" class="picker">
+    <div class="picker-row">
+        <span class="picker-label">Cuisine</span>
+        <label class="chip {{ 'active' if not filters.region }}"><input type="radio" name="region" value="" {{ 'checked' if not filters.region }}>Surprise</label>
+        {% for key in REGION_ORDER %}
+        <label class="chip {{ 'active' if filters.region == key }}"><input type="radio" name="region" value="{{ key }}" {{ 'checked' if filters.region == key }}><span class="dot region-{{ key }}"></span>{{ REGION_LABELS[key] }}</label>
         {% endfor %}
-    </select>
-    <select name="max_time">
-        <option value="">Temps de prép.</option>
-        <option value="15" {% if filter_max_time == '15' %}selected{% endif %}>≤ 15 min</option>
-        <option value="30" {% if filter_max_time == '30' %}selected{% endif %}>≤ 30 min</option>
-        <option value="60" {% if filter_max_time == '60' %}selected{% endif %}>≤ 1 heure</option>
-    </select>
-    <button type="submit" class="btn btn-primary btn-sm">Filtrer</button>
-    {% if filter_category or filter_max_time %}
-    <a href="/" class="btn btn-outline btn-sm">Effacer les filtres</a>
-    {% endif %}
+    </div>
+    <div class="picker-row">
+        <span class="picker-label">Critères</span>
+        <select name="category" aria-label="Type de repas">
+            <option value="">Tous les repas</option>
+            {% for key, label in CATEGORY_LABELS.items() %}<option value="{{ key }}" {{ 'selected' if filters.category == key }}>{{ label }}</option>{% endfor %}
+        </select>
+        <select name="max_time" aria-label="Temps total">
+            <option value="">Peu importe le temps</option>
+            {% for t, l in [(20, '20 min max'), (30, '30 min max'), (45, '45 min max'), (60, '1 h max'), (90, '1 h 30 max')] %}
+            <option value="{{ t }}" {{ 'selected' if filters.max_time == t|string }}>{{ l }}</option>{% endfor %}
+        </select>
+        <label class="toggle"><input type="checkbox" name="max_difficulty" value="1" {{ 'checked' if filters.max_difficulty }}>Facile</label>
+        <label class="toggle"><input type="checkbox" name="max_access" value="1" {{ 'checked' if filters.max_access }}>Ingrédients courants</label>
+        <label class="toggle"><input type="checkbox" name="no_equipment" value="1" {{ 'checked' if filters.no_equipment }}>Sans matériel spécial</label>
+        {% if filters %}<a href="/" class="btn btn-ghost btn-sm">Effacer</a>{% endif %}
+    </div>
 </form>
 
-{% else %}
-<div class="suggestion-card">
-    <div class="suggestion-card-body">
-        <div class="empty-suggestion">
-            <div class="empty-icon">🍳</div>
-            <p>Ajoute tes premiers plats dans la base pour que je puisse te faire des suggestions !</p>
-            <a href="/meals/add" class="btn btn-primary btn-lg">Ajouter un plat</a>
+{% if suggestion %}
+<article class="pick-card">
+    <a href="/meals/{{ suggestion.id }}" class="pick-photo" aria-label="Voir la recette">{{ photo(suggestion) }}</a>
+    <div class="pick-body">
+        {{ region_tag(suggestion) }}
+        <h2><a href="/meals/{{ suggestion.id }}">{{ suggestion.name }}</a></h2>
+        {{ meta_line(suggestion) }}
+        {{ flags(suggestion) }}
+        {% if recently_eaten %}<p class="pick-note alert">Déjà mangé il y a moins de 2 semaines.</p>{% endif %}
+        {% if exhausted %}<p class="pick-note alert">Tu as fait le tour de ces plats, on repart de zéro.</p>{% endif %}
+        {% if suggestion.notes %}<p class="pick-note">{{ suggestion.notes|truncate(170) }}</p>{% endif %}
+        <p class="pick-ingredients"><b>Au programme :</b> {{ suggestion.ingredients[:6]|join(', ') }}{% if suggestion.ingredients|length > 6 %}…{% endif %}</p>
+
+        <div class="pick-actions">
+            <form method="POST" action="/history/add" class="pick-eat">
+                <input type="hidden" name="meal_id" value="{{ suggestion.id }}">
+                <input type="hidden" name="eaten_date" value="{{ today }}">
+                <select name="meal_slot" aria-label="Créneau">{% for key, label in SLOT_LABELS.items() %}<option value="{{ key }}" {{ 'selected' if key == default_slot }}>{{ label }}</option>{% endfor %}</select>
+                <button type="submit" class="btn btn-primary btn-lg">Je mange ça</button>
+            </form>
+            <a class="btn btn-outline btn-lg" href="/?{% for k, v in filters.items() %}{{ k }}={{ v|urlencode }}&{% endfor %}seen={{ seen }}">Autre chose</a>
+            <a class="btn btn-ghost" href="/meals/{{ suggestion.id }}">Voir la recette</a>
         </div>
     </div>
-</div>
+</article>
+{% elif filters %}
+<div class="pick-empty"><p>Rien ne correspond à ces critères.</p><a href="/" class="btn btn-primary">Effacer les filtres</a></div>
+{% else %}
+<div class="pick-empty"><p>Ta base de plats est vide.</p><a href="/meals/add" class="btn btn-primary">Ajouter un plat</a></div>
 {% endif %}
 
+<div class="dash-grid">
+    <section class="panel">
+        <h2>Au menu aujourd'hui</h2>
+        {% if todays %}
+        <div class="today-list">
+            {% for t in todays %}
+            <div class="today-item {{ 'is-done' if t.done }}">
+                <span class="entry-slot" style="color:{{ SLOT_COLORS[t.meal_slot] }}">{{ SLOT_LABELS[t.meal_slot] }}</span>
+                <a href="/meals/{{ t.meal_id }}">{{ t.name }}</a>
+                {% if t.done %}<span class="done-mark">Mangé</span>
+                {% else %}<form method="POST" action="/planner/done"><input type="hidden" name="plan_id" value="{{ t.id }}"><button class="btn btn-outline btn-sm">C'est mangé</button></form>{% endif %}
+            </div>
+            {% endfor %}
+        </div>
+        {% else %}
+        <p class="hint">Rien de prévu pour aujourd'hui. Accepte la suggestion ci-dessus ou planifie ta semaine.</p>
+        {% endif %}
+    </section>
+    <section class="panel">
+        <h2>Raccourcis</h2>
+        <div class="shortcut-list">
+            <a class="shortcut" href="/planner"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><span><strong>Planifier ma semaine</strong><small>Génération automatique en un clic</small></span></a>
+            <a class="shortcut" href="/batch"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9h16l-1.5 11h-13z"/><path d="M8 9V6a4 4 0 018 0v3"/></svg><span><strong>Batch cooking</strong><small>Prépare tout le week-end</small></span></a>
+            <a class="shortcut" href="/shopping"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4h2l2.4 11h10.2L20 7H6"/><circle cx="9" cy="19.5" r="1.3"/><circle cx="17" cy="19.5" r="1.3"/></svg><span><strong>Liste de courses</strong><small>Triée par rayon</small></span></a>
+        </div>
+    </section>
+</div>
+
 <div class="stats-row">
-    <div class="stat-item">
-        <div class="stat-number">{{ total_meals }}</div>
-        <div class="stat-label">Plats dans la base</div>
-    </div>
-    <div class="stat-item">
-        <div class="stat-number">{{ planned_today }}</div>
-        <div class="stat-label">Plats prévus aujourd'hui</div>
-    </div>
-    <div class="stat-item">
-        <div class="stat-number">{{ week_planned }}</div>
-        <div class="stat-label">Plats cette semaine</div>
-    </div>
-    <div class="stat-item">
-        <div class="stat-number">{{ total_history }}</div>
-        <div class="stat-label">Plats déjà mangés</div>
-    </div>
+    <div class="stat-item"><span class="stat-number">{{ stats.total_meals }}</span><span class="stat-label">recettes</span></div>
+    <div class="stat-item"><span class="stat-number">{{ stats.week_planned }}</span><span class="stat-label">repas planifiés cette semaine</span></div>
+    <div class="stat-item"><span class="stat-number">{{ stats.total_history }}</span><span class="stat-label">déjà mangés</span></div>
 </div>
 
 {% endblock %}

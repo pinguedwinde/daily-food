@@ -1,47 +1,74 @@
 {% extends "base.html" %}
+{% from "_macros.html" import photo with context %}
 {% block title %}Planning de la semaine{% endblock %}
 {% block content %}
 
 <div class="page-header">
-    <h1>📅 Planning de la semaine</h1>
+    <h1>Planning de la semaine</h1>
+    {% if request.query_params.get('msg') == 'generated' %}<p class="flash ok">Semaine remplie ! Ajuste ce qui ne te convient pas avec ✕ puis +.</p>
+    {% elif request.query_params.get('msg') == 'full' %}<p class="flash warn">Rien à remplir : tous les créneaux à venir sont déjà planifiés (coche « Remplacer »).</p>
+    {% elif request.query_params.get('msg') == 'nomatch' %}<p class="flash warn">Aucun plat ne correspond à ces critères.</p>{% endif %}
 </div>
 
 <div class="planner-header">
     <div class="week-nav">
-        <a href="/planner?week={{ prev_week }}">← Semaine précédente</a>
-        <span class="week-label">{{ week_start.strftime('%d') }} – {{ week_end.strftime('%d %B %Y') }}</span>
-        <a href="/planner?week={{ next_week }}">Semaine suivante →</a>
+        <a href="/planner?week={{ prev_week }}">← Précédente</a>
+        <span class="week-label">{{ fr_date(week_start, False) }} – {{ fr_date(week_end) }}</span>
+        <a href="/planner?week={{ next_week }}">Suivante →</a>
     </div>
-    <a href="/planner?week={{ today.isoformat() }}" class="btn btn-outline btn-sm">Cette semaine</a>
+    {% if not is_current_week %}<a href="/planner" class="btn btn-outline btn-sm">Cette semaine</a>{% endif %}
+    <a href="/shopping?week={{ week_start.isoformat() }}" class="btn btn-outline btn-sm">Courses de la semaine</a>
 </div>
 
+<details class="generator" {{ 'open' if not week_days|selectattr('plans')|list }}>
+    <summary>Générer ma semaine automatiquement</summary>
+    <form method="POST" action="/planner/generate" class="generator-form">
+        <input type="hidden" name="week" value="{{ week_start.isoformat() }}">
+        <div class="gen-group">
+            <strong>Style</strong>
+            <label><input type="radio" name="mode" value="varied" checked> Varié : un plat différent à chaque repas</label>
+            <label><input type="radio" name="mode" value="batch"> Batch cooking : 4 plats répétés toute la semaine</label>
+        </div>
+        <div class="gen-group">
+            <strong>Repas à remplir</strong>
+            <label><input type="checkbox" name="slots" value="lunch"> Déjeuners</label>
+            <label><input type="checkbox" name="slots" value="dinner" checked> Dîners</label>
+        </div>
+        <div class="gen-group">
+            <strong>Critères</strong>
+            <select name="region" aria-label="Cuisine"><option value="">Toutes les cuisines (africain en tête)</option>
+                {% for key in REGION_ORDER %}<option value="{{ key }}">{{ REGION_LABELS[key] }}</option>{% endfor %}</select>
+            <label><input type="checkbox" name="easy" value="1"> Seulement des plats faciles</label>
+            <label><input type="checkbox" name="overwrite" value="1"> Remplacer ce qui est déjà planifié</label>
+        </div>
+        <button class="btn btn-primary">Générer</button>
+    </form>
+</details>
+
 <div class="planner-grid">
-    {% for day_data in week_days %}
-    {% set day = day_data.date %}
-    <div class="planner-day {% if day == today.isoformat() %}is-today{% endif %}">
+    {% for day in week_days %}
+    <div class="planner-day {{ 'is-today' if day.iso == today }}">
         <div class="planner-day-header">
-            <div class="day-name">{{ day_data.day_name }}</div>
-            <div class="day-number">{{ day.day }}</div>
+            <div class="day-name">{{ day.day_name }}</div>
+            <div class="day-number">{{ day.date.day }}</div>
         </div>
         <div class="planner-day-slots">
             {% for slot_key, slot_label in SLOT_LABELS.items() %}
-            {% set plan = day_data.plans.get(slot_key) %}
-            <div class="planner-slot slot-{{ slot_key }}">
+            {% set plan = day.plans.get(slot_key) %}
+            <div class="planner-slot slot-{{ slot_key }} {{ 'is-done' if plan and plan.done }}">
                 <div class="planner-slot-header">{{ slot_label }}</div>
                 <div class="planner-slot-content">
                     {% if plan %}
-                    <span class="meal-name">{{ plan.name }}</span>
+                    <a class="meal-name" href="/meals/{{ plan.meal_id }}">{{ plan.name }}</a>
                     <div class="slot-actions">
-                        <form method="POST" action="/planner/remove" style="display:inline;">
-                            <input type="hidden" name="plan_id" value="{{ plan.id }}">
-                            <button type="submit" class="remove-slot" title="Enlever">✕</button>
-                        </form>
+                        {% if not plan.done %}
+                        <form method="POST" action="/planner/done"><input type="hidden" name="plan_id" value="{{ plan.id }}"><button class="done-slot" title="Marquer comme mangé">✓</button></form>
+                        {% else %}<span class="done-mark" title="Mangé">✓</span>{% endif %}
+                        <form method="POST" action="/planner/remove"><input type="hidden" name="plan_id" value="{{ plan.id }}"><button class="remove-slot" title="Enlever">✕</button></form>
                     </div>
                     {% else %}
                     <span class="empty-slot">—</span>
-                    <div class="slot-actions">
-                        <a href="#" onclick="event.preventDefault();openModal('{{ day }}','{{ slot_key }}')" title="Ajouter un plat">+</a>
-                    </div>
+                    <div class="slot-actions"><button type="button" class="add-slot" onclick="openModal('{{ day.iso }}','{{ slot_key }}')" title="Ajouter un plat">+</button></div>
                     {% endif %}
                 </div>
             </div>
@@ -51,21 +78,29 @@
     {% endfor %}
 </div>
 
-<!-- Modal for adding meals -->
+<form method="POST" action="/planner/clear" class="clear-week" onsubmit="return confirm('Vider les repas non mangés de cette semaine ?')">
+    <input type="hidden" name="week" value="{{ week_start.isoformat() }}">
+    <button class="btn btn-ghost btn-sm">Vider la semaine</button>
+</form>
+
 <div id="meal-select-modal" class="modal-overlay">
     <div class="modal">
         <div class="modal-header">
             <h3>Choisir un plat</h3>
-            <button id="modal-close" class="modal-close">&times;</button>
+            <button id="modal-close" class="modal-close" aria-label="Fermer">&times;</button>
         </div>
+        <div class="modal-search"><input type="search" id="modal-search" placeholder="Filtrer…" autocomplete="off"></div>
         <div class="modal-body" id="modal-meal-list">
             <form method="POST" action="/planner/assign">
                 <input type="hidden" name="plan_date" id="modal-date">
                 <input type="hidden" name="meal_slot" id="modal-slot">
                 {% for meal in all_meals %}
-                <button type="submit" name="meal_id" value="{{ meal.id }}" class="meal-option" style="width:100%;text-align:left;background:none;border:1px solid var(--color-border-light);padding:12px 16px;border-radius:8px;margin-bottom:8px;cursor:pointer;font-family:var(--font);">
-                    <div class="meal-option-name">{{ meal.name }}</div>
-                    <div class="meal-option-meta">{{ CATEGORY_LABELS[meal.category] }}{% if meal.tags %} · {{ meal.tags|join(', ') }}{% endif %}</div>
+                <button type="submit" name="meal_id" value="{{ meal.id }}" class="meal-option" data-search="{{ (meal.name ~ ' ' ~ REGION_LABELS[meal.region] ~ ' ' ~ (meal.origin or '') ~ ' ' ~ meal.tags|join(' '))|lower }}" data-category="{{ meal.category }}">
+                    <div class="mo-thumb">{{ photo(meal) }}</div>
+                    <div>
+                        <div class="meal-option-name">{{ meal.name }}</div>
+                        <div class="meal-option-meta">{{ REGION_LABELS[meal.region] }} · {{ CATEGORY_LABELS[meal.category] }}{% if meal.total_time %} · {{ meal.total_time }} min{% endif %}</div>
+                    </div>
                 </button>
                 {% endfor %}
             </form>

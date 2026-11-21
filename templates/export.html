@@ -3,31 +3,56 @@
 {% block content %}
 
 <div class="page-header">
-    <h1>💾 Export / Import</h1>
-    <p>Sauvegarde ou restaure ta base de plats</p>
+    <h1>Export / Import</h1>
+    <p>{{ total }} recettes dans ta base. Sauvegarde-les, imprime-les ou partage-les.</p>
+    {% if msg == 'imported' %}<p class="flash ok">Import terminé : {{ n }} ajouté(s), {{ skipped }} ignoré(s) (déjà présents ou invalides).</p>
+    {% elif msg == 'restored' %}<p class="flash ok">{{ n }} recette(s) d'origine restaurée(s).</p>{% endif %}
 </div>
 
-<div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;">
-    <div class="form-container" style="margin:0;">
-        <h3 style="margin-bottom:16px;">⬇️ Exporter</h3>
-        <p style="color:var(--color-text-light);margin-bottom:24px;font-size:0.9rem;">
-            Télécharge un fichier JSON contenant tous tes plats, tags et ingrédients.
-        </p>
-        <a href="/export/download" class="btn btn-primary btn-lg" style="width:100%;">Télécharger l'export</a>
+<div class="export-grid">
+    <div class="form-container">
+        <h3>Exporter</h3>
+        <form method="GET" action="/export/download" class="export-form">
+            <label>Cuisine
+                <select name="region">
+                    <option value="">Toutes ({{ total }})</option>
+                    {% for key in REGION_ORDER %}{% if counts.get(key) %}<option value="{{ key }}">{{ REGION_LABELS[key] }} ({{ counts[key] }})</option>{% endif %}{% endfor %}
+                </select>
+            </label>
+            <div class="export-buttons">
+                <button class="btn btn-primary" name="format" value="json">JSON</button>
+                <button class="btn btn-outline" name="format" value="jsonl">JSONL</button>
+                <button class="btn btn-outline" name="format" value="csv">CSV (Excel)</button>
+            </div>
+        </form>
+        <p class="hint">Le JSON contient tout : étapes, ingrédients, difficulté, matériel… et peut être réimporté tel quel.</p>
+        <hr>
+        <h4>Livre de recettes imprimable</h4>
+        <div class="export-buttons">
+            <a class="btn btn-outline" href="/export/book" target="_blank">Toutes les recettes</a>
+            <a class="btn btn-outline" href="/export/book?batch=1" target="_blank">Batch cooking</a>
+            {% for key in REGION_ORDER %}{% if counts.get(key) %}<a class="btn btn-outline" href="/export/book?region={{ key }}" target="_blank">{{ REGION_LABELS[key] }}</a>{% endif %}{% endfor %}
+        </div>
+        <p class="hint">Ouvre la page puis Ctrl/Cmd + P → « Enregistrer au format PDF ».</p>
     </div>
 
-    <div class="form-container" style="margin:0;">
-        <h3 style="margin-bottom:16px;">⬆️ Importer</h3>
-        <p style="color:var(--color-text-light);margin-bottom:24px;font-size:0.9rem;">
-            Colle le contenu JSON d'un export précédent pour restaurer tes plats.
-            <br><small>Les plats existants ne sont pas supprimés.</small>
-        </p>
-        <form method="POST" action="/import">
-            <div class="form-group">
-                <textarea name="data" rows="10" placeholder="Colle ton JSON ici..." style="font-family:monospace;font-size:0.8rem;"></textarea>
-            </div>
-            <button type="submit" class="btn btn-success btn-lg" style="width:100%;">Importer</button>
+    <div class="form-container">
+        <h3>Importer</h3>
+        <form method="POST" action="/import" enctype="multipart/form-data">
+            <div class="form-group"><label for="file">Fichier JSON / JSONL</label><input type="file" id="file" name="file" accept=".json,.jsonl,.txt"></div>
+            <div class="form-group"><label for="data">…ou colle le contenu</label>
+                <textarea id="data" name="data" rows="6" placeholder="[ { &quot;name&quot;: &quot;…&quot; } ]" style="font-family:monospace;font-size:0.8rem;"></textarea></div>
+            <label class="toggle"><input type="checkbox" name="update"> Mettre à jour les plats déjà présents (même nom)</label>
+            <button type="submit" class="btn btn-success btn-lg" style="width:100%;margin-top:16px;">Importer</button>
         </form>
+        <p class="hint">Les plats déjà présents sont ignorés par défaut, aucun doublon n'est créé.</p>
+        {% if deleted %}
+        <hr>
+        <form method="POST" action="/export/restore-seed">
+            <p class="hint">{{ deleted }} recette(s) d'origine ont été supprimées de ta base.</p>
+            <button class="btn btn-outline btn-sm">Restaurer les recettes d'origine</button>
+        </form>
+        {% endif %}
     </div>
 </div>
 

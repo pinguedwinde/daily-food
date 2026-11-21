@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% from "_macros.html" import photo, difficulty with context %}
+{% block title %}Session batch cooking{% endblock %}
+{% block content %}
+
+<div class="page-header">
+    <a href="/batch" class="btn btn-outline btn-sm">← Changer la sélection</a>
+    <h1 style="margin-top:16px;">Ma session de batch cooking</h1>
+</div>
+
+<div class="facts batch-facts">
+    <div><span>Plats</span><strong>{{ meals|length }}</strong></div>
+    <div><span>Portions au total</span><strong>≈ {{ portions }}</strong></div>
+    <div><span>Temps actif estimé</span><strong>{{ active_time }} min</strong></div>
+    <div><span>Cuisson la plus longue</span><strong>{{ longest }} min</strong></div>
+</div>
+
+<div class="detail-columns">
+    <section class="detail-card" style="padding:24px;">
+        <h2>Une seule liste de courses</h2>
+        {% for aisle, items in aisles.items() %}
+        <h4 class="aisle">{{ aisle }}</h4>
+        {% for item in items %}
+        <label class="shopping-item"><input type="checkbox"><span class="item-name">{{ item.ingredient }}</span>
+            <span class="item-source">({{ item.sources|join(', ') }})</span></label>
+        {% endfor %}
+        {% endfor %}
+        {% if equipment %}<p class="equipment">Matériel à prévoir : {{ equipment|join(', ') }}</p>{% endif %}
+    </section>
+
+    <section class="detail-card" style="padding:24px;">
+        <h2>‍Plan de cuisine</h2>
+        <p class="hint">Lance d'abord les plats qui cuisent longtemps, prépare le reste pendant que ça mijote.</p>
+        {% for m in meals %}
+        <div class="batch-recipe">
+            <h3><span class="step-num">{{ loop.index }}</span> <a href="/meals/{{ m.id }}">{{ m.name }}</a>
+                <small>{{ m.prep_time or 0 }} min prépa{% if m.cook_time %} + {{ m.cook_time }} min cuisson{% endif %}</small></h3>
+            <ol class="steps">{% for s in m.steps %}<li>{{ s }}</li>{% endfor %}</ol>
+            {% if m.keeps_days %}<p class="hint">Se garde {{ m.keeps_days }} jours au frais (ou congèle en portions).</p>{% endif %}
+        </div>
+        {% endfor %}
+    </section>
+</div>
+
+<form method="POST" action="/batch/plan" class="generator-form batch-plan">
+    <h2>Répartir ces plats sur la semaine</h2>
+    <input type="hidden" name="ids" value="{{ ids }}">
+    <label>À partir du <input type="date" name="start" value="{{ start_default }}" required></label>
+    <label>Sur <select name="days">{% for n in [3, 5, 7, 10, 14] %}<option value="{{ n }}" {{ 'selected' if n == 7 }}>{{ n }} jours</option>{% endfor %}</select></label>
+    <label>Repas <select name="slot">{% for k, l in SLOT_LABELS.items() %}<option value="{{ k }}" {{ 'selected' if k == 'dinner' }}>{{ l }}</option>{% endfor %}</select></label>
+    <button class="btn btn-primary">Planifier</button>
+</form>
+
+<p class="print-hint"><button class="btn btn-ghost" onclick="window.print()">Imprimer cette session</button></p>
+
+{% endblock %}

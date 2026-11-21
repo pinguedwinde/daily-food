@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% from "_macros.html" import photo, badges with context %}
+{% block title %}Batch cooking{% endblock %}
+{% block content %}
+
+<div class="page-header">
+    <h1>Batch cooking</h1>
+    <p>Choisis 2 à 5 plats qui se conservent bien : tu obtiens une seule liste de courses et un plan de cuisine pour tout préparer d'un coup, puis tu répartis les repas sur la semaine.</p>
+</div>
+
+<form method="GET" action="/batch" id="filter-form" class="meals-filters">
+    <div class="filter-chips">
+        <label class="chip {{ 'active' if not filters.region }}"><input type="radio" name="region" value="">Toutes</label>
+        {% for key in REGION_ORDER %}
+        <label class="chip {{ 'active' if filters.region == key }}"><input type="radio" name="region" value="{{ key }}" {{ 'checked' if filters.region == key }}>{{ REGION_LABELS[key] }}</label>
+        {% endfor %}
+    </div>
+    <div class="filter-row">
+        <label class="toggle"><input type="checkbox" name="max_difficulty" value="1" {{ 'checked' if filters.max_difficulty }}> Facile</label>
+        <label class="toggle"><input type="checkbox" name="max_access" value="1" {{ 'checked' if filters.max_access }}> Ingrédients courants</label>
+        <label class="toggle"><input type="checkbox" name="no_equipment" value="1" {{ 'checked' if filters.no_equipment }}> Sans matériel spécial</label>
+    </div>
+</form>
+
+<form method="GET" action="/batch/session" id="batch-form">
+    <input type="hidden" name="ids" id="batch-ids">
+    <div class="meals-grid">
+        {% for meal in meals %}
+        <label class="meal-card batch-card">
+            <input type="checkbox" class="batch-check" value="{{ meal.id }}">
+            <div class="meal-card-image">{{ photo(meal) }}<span class="batch-tick">✓</span></div>
+            <div class="meal-card-body">
+                <h3>{{ meal.name }}</h3>
+                <div class="meal-card-meta">{{ badges(meal) }}</div>
+                <p class="batch-info">{% if meal.servings %}{{ meal.servings }} portions{% endif %}{% if meal.keeps_days %} · se garde {{ meal.keeps_days }} j{% endif %}</p>
+            </div>
+        </label>
+        {% else %}
+        <p class="empty-block">Aucun plat batch avec ces critères.</p>
+        {% endfor %}
+    </div>
+
+    <div class="batch-bar" id="batch-bar" hidden>
+        <span><strong id="batch-count">0</strong> plat(s) sélectionné(s)</span>
+        <button class="btn btn-primary btn-lg">Préparer ma session →</button>
+    </div>
+</form>
+
+{% endblock %}

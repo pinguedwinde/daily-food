@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+{% from "_macros.html" import photo with context %}
+{% block title %}Gestion des recettes{% endblock %}
+{% block content %}
+
+<div class="admin-head">
+    <div class="page-header" style="margin:0">
+        <h1>Gestion des recettes</h1>
+        <p>Clique sur une photo pour la remplacer, sur un nom pour le renommer. Coche plusieurs lignes pour agir en masse ou fusionner.</p>
+    </div>
+    <form method="POST" action="/admin/toggle"><button class="btn btn-outline btn-sm">Quitter le mode admin</button></form>
+</div>
+
+<div class="admin-summary" style="margin-bottom:16px">
+    <a href="/admin" class="{{ 'active' if not photo and not filters }}"><strong>{{ counts.total }}</strong>recettes</a>
+    <a href="/admin?photo=none" class="{{ 'active' if photo == 'none' }}"><strong>{{ counts.nophoto }}</strong>sans photo</a>
+    <a href="/admin/duplicates"><strong>{{ counts.dups }}</strong>doublons possibles</a>
+</div>
+
+<form method="GET" action="/admin" class="admin-filters" id="filter-form">
+    <input type="search" name="q" placeholder="Rechercher…" value="{{ filters.q or '' }}">
+    <select name="region" aria-label="Cuisine"><option value="">Toutes les cuisines</option>{% for key in REGION_ORDER %}<option value="{{ key }}" {{ 'selected' if filters.region == key }}>{{ REGION_LABELS[key] }}</option>{% endfor %}</select>
+    <select name="category" aria-label="Repas"><option value="">Tous les repas</option>{% for key, label in CATEGORY_LABELS.items() %}<option value="{{ key }}" {{ 'selected' if filters.category == key }}>{{ label }}</option>{% endfor %}</select>
+    <select name="photo" aria-label="Photo">
+        <option value="">Toutes les photos</option>
+        <option value="none" {{ 'selected' if photo == 'none' }}>Sans photo</option>
+        <option value="seed" {{ 'selected' if photo == 'seed' }}>Photo d'origine</option>
+        <option value="custom" {{ 'selected' if photo == 'custom' }}>Photo que j'ai ajoutée</option>
+        <option value="remote" {{ 'selected' if photo == 'remote' }}>Lien externe</option>
+        <option value="dup" {{ 'selected' if photo == 'dup' }}>Doublons possibles</option>
+    </select>
+    <button class="btn btn-primary btn-sm">Filtrer</button>
+    {% if filters or photo %}<a href="/admin" class="btn btn-ghost btn-sm">Effacer</a>{% endif %}
+    <span class="hint" style="margin-left:auto">{{ meals|length }} ligne(s)</span>
+</form>
+
+<form method="POST" action="/admin/bulk" id="bulk-form">
+<div class="admin-table-wrap">
+<table class="admin-table">
+    <thead><tr>
+        <th style="width:36px"><input type="checkbox" id="check-all" aria-label="Tout cocher"></th>
+        <th style="width:90px">Photo</th><th>Nom</th><th>Cuisine</th><th>Repas</th><th>Statut</th><th></th>
+    </tr></thead>
+    <tbody>
+    {% for m in meals %}
+    <tr id="row-{{ m.id }}" data-id="{{ m.id }}">
+        <td><input type="checkbox" name="ids" value="{{ m.id }}" class="row-check" aria-label="Sélectionner {{ m.name }}"></td>
+        <td><button type="button" class="thumb-btn" data-image-edit="{{ m.id }}" data-name="{{ m.name }}" data-url="{{ m.image_url or '' }}" data-region="{{ m.region }}" title="Changer la photo">{{ photo(m) }}</button></td>
+        <td><input type="text" class="admin-name" value="{{ m.name }}" data-field="name" data-id="{{ m.id }}" aria-label="Nom"></td>
+        <td><select class="admin-select" data-field="region" data-id="{{ m.id }}" aria-label="Cuisine">{% for key in REGION_ORDER %}<option value="{{ key }}" {{ 'selected' if m.region == key }}>{{ REGION_LABELS[key] }}</option>{% endfor %}</select></td>
+        <td><select class="admin-select" data-field="category" data-id="{{ m.id }}" aria-label="Repas">{% for key, label in CATEGORY_LABELS.items() %}<option value="{{ key }}" {{ 'selected' if m.category == key }}>{{ label }}</option>{% endfor %}</select></td>
+        <td>
+            {% if m.photo_status == 'none' %}<span class="pill bad">sans photo</span>
+            {% elif m.photo_status == 'custom' %}<span class="pill good">ma photo</span>
+            {% elif m.photo_status == 'remote' %}<span class="pill warn">lien externe</span>{% endif %}
+            {% if m.is_dup %}<a href="/admin/duplicates" class="pill warn" style="text-decoration:none">doublon ?</a>{% endif %}
+        </td>
+        <td><div class="row-actions">
+            <a href="/meals/{{ m.id }}">Voir</a>
+            <a href="/meals/{{ m.id }}/edit">Éditer</a>
+            <button type="button" class="danger" data-delete="{{ m.id }}" data-name="{{ m.name }}">Supprimer</button>
+        </div></td>
+    </tr>
+    {% else %}
+    <tr><td colspan="7" class="empty-block">Aucune recette pour ces critères.</td></tr>
+    {% endfor %}
+    </tbody>
+</table>
+</div>
+
+<div class="bulk-bar" id="bulk-bar" hidden>
+    <strong><span id="bulk-count">0</span> sélectionnée(s)</strong>
+    <select name="region_value" aria-label="Cuisine">{% for key in REGION_ORDER %}<option value="{{ key }}">{{ REGION_LABELS[key] }}</option>{% endfor %}</select>
+    <button class="btn btn-outline btn-sm" name="action" value="region">Changer la cuisine</button>
+    <select name="category_value" aria-label="Repas">{% for key, label in CATEGORY_LABELS.items() %}<option value="{{ key }}">{{ label }}</option>{% endfor %}</select>
+    <button class="btn btn-outline btn-sm" name="action" value="category">Changer le repas</button>
+    <button class="btn btn-outline btn-sm" name="action" value="merge" id="bulk-merge" onclick="return confirm('Fusionner : la première ligne cochée est conservée, les autres sont supprimées (planning et historique sont rattachés à celle conservée). Continuer ?')">Fusionner</button>
+    <button class="btn btn-outline btn-sm" name="action" value="clear_photo" onclick="return confirm('Retirer la photo des plats sélectionnés ?')">Retirer les photos</button>
+    <button class="btn btn-danger btn-sm" name="action" value="delete" onclick="return confirm('Supprimer définitivement les plats sélectionnés ?')">Supprimer</button>
+</div>
+</form>
+
+{% endblock %}

@@ -1,11 +1,19 @@
 {% extends "base.html" %}
+{% from "_macros.html" import stars with context %}
 {% block title %}Historique{% endblock %}
 {% block content %}
 
 <div class="page-header">
-    <h1>📜 Historique</h1>
-    <p>Ce qu'on a mangé ces derniers temps</p>
+    <h1>Historique</h1>
+    <p>Ce qu'on a mangé ces derniers temps. Note les plats pour savoir lesquels refaire.</p>
 </div>
+
+{% if top %}
+<div class="top-meals">
+    <strong>Les plus mangés :</strong>
+    {% for t in top %}<a href="/meals/{{ t.id }}">{{ t.name }} <small>×{{ t.c }}</small></a>{% endfor %}
+</div>
+{% endif %}
 
 {% if history_groups %}
 <div class="history-timeline">
@@ -15,14 +23,15 @@
         {% for entry in group.entries %}
         <div class="history-entry">
             <span class="entry-slot" style="color:{{ SLOT_COLORS[entry.meal_slot] }}">{{ SLOT_LABELS[entry.meal_slot] }}</span>
-            <span class="entry-meal"><a href="/meals/{{ entry.meal_id }}/edit">{{ entry.name }}</a></span>
+            <span class="entry-meal"><a href="/meals/{{ entry.meal_id }}">{{ entry.name }}</a></span>
             <span class="entry-meta">
-                {% if entry.eaten_by %}
-                <span>par {{ entry.eaten_by }}</span>
-                {% endif %}
-                {% if entry.rating %}
-                <span class="stars">{{ '★' * entry.rating }}{{ '☆' * (5 - entry.rating) }}</span>
-                {% endif %}
+                {% if entry.eaten_by %}<span>par {{ entry.eaten_by }}</span>{% endif %}
+                <span class="rate" aria-label="Note">
+                    {% for n in range(1, 6) %}
+                    <form method="POST" action="/history/{{ entry.id }}/rate"><input type="hidden" name="rating" value="{{ n }}"><button class="star {{ 'on' if entry.rating and n <= entry.rating }}" title="{{ n }}/5">★</button></form>
+                    {% endfor %}
+                </span>
+                <form method="POST" action="/history/{{ entry.id }}/delete" onsubmit="return confirm('Retirer cette entrée ?')"><button class="remove-slot" title="Retirer">✕</button></form>
             </span>
         </div>
         {% endfor %}
@@ -30,11 +39,11 @@
     {% endfor %}
 </div>
 {% else %}
-<div style="text-align:center;padding:60px 24px;color:var(--color-text-lighter);">
-    <div style="font-size:3rem;margin-bottom:16px;">📖</div>
-    <p style="font-size:1.1rem;">Pas encore d'historique.</p>
-    <p style="margin-top:8px;">Quand tu planifieras et mangeras des plats, ils apparaîtront ici.</p>
-    <a href="/planner" class="btn btn-primary" style="margin-top:24px;">Planifier un repas</a>
+<div class="empty-block">
+    <div style="font-size:3rem;margin-bottom:16px;"></div>
+    <p>Pas encore d'historique.</p>
+    <p class="hint">Clique sur « Je mange ça ! » ou sur ✓ dans le planning : les repas apparaîtront ici.</p>
+    <a href="/" class="btn btn-primary" style="margin-top:24px;">On mange quoi ?</a>
 </div>
 {% endif %}
 
