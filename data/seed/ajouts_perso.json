@@ -5714,5 +5714,853 @@
     ],
     "notes": "Recette Grand Frais, version simple pour la maison.",
     "image_query": "Joues de porc confites au cidre, miel et gingembre"
+  },
+  {
+    "slug": "gratin-ravioles-saint-marcellin",
+    "name": "Gratin de ravioles au Saint-Marcellin",
+    "region": "europeen",
+    "origin": "France (Dauphiné)",
+    "category": "dinner",
+    "prep_time": 15,
+    "cook_time": 15,
+    "difficulty": 1,
+    "ingredient_access": 2,
+    "equipment": [],
+    "servings": 4,
+    "batch_friendly": false,
+    "keeps_days": 2,
+    "tags": [
+      "végétarien",
+      "au four",
+      "gourmand",
+      "rapide"
+    ],
+    "ingredients": [
+      "8 plaques de Ravioles",
+      "4 Saint-Marcellin",
+      "40 cl de crème fraîche",
+      "sel, poivre",
+      "noix de muscade"
+    ],
+    "steps": [
+      "Préchauffez votre four à 200°C.",
+      "Dans une casserole, mettez la crème fraîche et les Saint-Marcellin coupés en petits morceaux, chauffez à feu doux, et faire fondre.",
+      "Dans un plat à gratin, mettez une plaque de ravioles, puis recouvrez de la sauce crème au Saint-Marcellin, puis répétez l'opération plusieurs fois, en terminant par la sauce.",
+      "Enfournez environ 15 min."
+    ],
+    "notes": "Ravioles du Dauphiné en plaques, au rayon frais. Servir avec une salade verte.",
+    "image_query": "Gratin de ravioles au Saint-Marcellin"
+  },
+  {
+    "slug": "gratin-pates-morbier",
+    "name": "Gratin de pâtes au Morbier",
+    "region": "europeen",
+    "origin": "France (Franche-Comté)",
+    "category": "dinner",
+    "prep_time": 20,
+    "cook_time": 20,
+    "difficulty": 1,
+    "ingredient_access": 1,
+    "equipment": [],
+    "servings": 4,
+    "batch_friendly": false,
+    "keeps_days": 2,
+    "tags": [
+      "végétarien",
+      "au four",
+      "gourmand",
+      "enfant"
+    ],
+    "ingredients": [
+      "400 g de pâtes",
+      "400 g de champignons frais",
+      "1 sauce béchamel",
+      "300 g de Morbier",
+      "sel, poivre"
+    ],
+    "steps": [
+      "Faites cuire les pâtes dans une casserole d'eau bouillante salée.",
+      "Lavez et faites cuire dans une poêle les champignons.",
+      "Faites votre béchamel ou prenez deux petites briques de béchamel .",
+      "Dans un plat à gratin, mettez les pâtes, les champignons, puis la béchamel.",
+      "Coupez le morbier en tranches et déposez-les dessus.",
+      "Passez au four à 180°C environ 20 min."
+    ],
+    "notes": "Recette Grand Frais, version simple pour la maison.",
+    "image_query": "Gratin de pâtes au Morbier"
+  },
+  {
+    "slug": "gratin-chou-fleur-fourme-ambert",
+    "name": "Gratin de chou-fleur à la fourme d'Ambert",
+    "region": "europeen",
+    "origin": "France (Auvergne)",
+    "category": "dinner",
+    "prep_time": 20,
+    "cook_time": 20,
+    "difficulty": 1,
+    "ingredient_access": 1,
+    "equipment": [],
+    "servings": 4,
+    "batch_friendly": false,
+    "keeps_days": 2,
+    "tags": [
+      "végétarien",
+      "au four",
+      "gourmand",
+      "sans gluten"
+    ],
+    "ingredients": [
+      "1 chou-fleur",
+      "50 cl de crème fraîche",
+      "300 g de Fourme d'Ambert",
+      "Chapelure",
+      "Sel et poivre"
+    ],
+    "steps": [
+      "Coupez, lavez et faites cuire à la vapeur le chou-fleur.",
+      "Coupez la Fourme d'Ambert en cubes.",
+      "Dans un plat à gratin, déposez le chou-fleur cuit. Salez et poivrez. Etalez la crème fraîche, puis déposez les dés de Fourme d'Ambert.",
+      "Terminez en saupoudrant un peu de chapelure.",
+      "Passez au grill du four quelques minutes afin que la chapelure devienne dorée (et non brûlée) et que la Fourme soit fondue."
+    ],
+    "notes": "Sans la chapelure, le gratin est sans gluten.",
+    "image_query": "Gratin de chou-fleur à la fourme d'Ambert"
+  },
+  {
+    "slug": "gratin-cabillaud-tomme-savoie",
+    "name": "Gratin de cabillaud à la tomme de Savoie",
+    "region": "europeen",
+    "origin": "France (Savoie)",
+    "category": "dinner",
+    "prep_time": 20,
+    "cook_time": 20,
+    "difficulty": 2,
+    "ingredient_access": 1,
+    "equipment": [],
+    "servings": 4,
+    "batch_friendly": false,
+    "keeps_days": 2,
+    "tags": [
+      "poisson",
+      "au four",
+      "gourmand"
+    ],
+    "ingredients": [
+      "2 dos de Cabillaud",
+      "500 g de pommes de terre",
+      "2 gousses d'ail pelées et hachées",
+      "50 cl de lait ½ écrémé",
+      "150 g de Tomme de Savoie",
+      "Noix de muscade",
+      "Chapelure",
+      "Sel et poivre"
+    ],
+    "steps": [
+      "Dans une grande casserole, mélangez le lait, la crème, le sel, le poivre, la noix de muscade et l'ail. Porter à ébullition. Mettez les dos de cabillaud. Retirez du feu et laissez pocher le cabillaud pendant 10/15 min.",
+      "Egouttez le poisson en gardant le mélange lait/crème.",
+      "Épluchez et lavez les pommes de terre. Coupez-les en rondelles. Mettez-les à cuire dans le mélange lait/crème. Vérifiez la cuisson.",
+      "Dans un plat à gratin, mettez le poisson, recouvrez-le de pomme de terre, puis de tomme de Savoie et versez le jus de cuisson dessus.",
+      "Parsemez d'un peu de chapelure.",
+      "Enfournez pendant 20 min à 210°C."
+    ],
+    "notes": "Recette Grand Frais, version simple pour la maison.",
+    "image_query": "Gratin de cabillaud à la tomme de Savoie"
+  },
+  {
+    "slug": "filet-mignon-sauce-epoisses",
+    "name": "Filet mignon sauce Époisses",
+    "region": "europeen",
+    "origin": "France (Bourgogne)",
+    "category": "dinner",
+    "prep_time": 20,
+    "cook_time": 20,
+    "difficulty": 2,
+    "ingredient_access": 2,
+    "equipment": [
+      "cocotte"
+    ],
+    "servings": 4,
+    "batch_friendly": false,
+    "keeps_days": 3,
+    "tags": [
+      "porc",
+      "festif",
+      "gourmand"
+    ],
+    "ingredients": [
+      "1 filet mignon",
+      "1 verre de vin blanc sec",
+      "1 oignon",
+      "300 g d'Epoisses",
+      "40 cl de crème fraîche"
+    ],
+    "steps": [
+      "Pelez et coupez l'oignon. Faites-le revenir dans une cocotte avec un peu de beurre. Ajoutez le filet mignon et faites-le dorer de tous les côtés et versez-y le verre de vin blanc. Salez et poivrez.",
+      "Laissez cuire à feu doux,et à couvert pendant 20 min.",
+      "Coupez l'Epoisses en petits cubes et mélangez-les à la crème fraîche.",
+      "Lorsque le filet mignon est cuit, ajoutez dans la cocotte le mélange crème/Epoisses.",
+      "Couvrez et laissez fondre le fromage."
+    ],
+    "notes": "Si le goût de l'Epoisses est trop prononcé pour vous, il suffit de rajouter un peu de crème fraîche.",
+    "image_query": "Filet mignon sauce Époisses"
+  },
+  {
+    "slug": "wok-legumes-gambas-citronnelle",
+    "name": "Wok de saison et gambas à la citronnelle",
+    "region": "asiatique",
+    "origin": "Asie (adapté)",
+    "category": "dinner",
+    "prep_time": 20,
+    "cook_time": 8,
+    "difficulty": 1,
+    "ingredient_access": 2,
+    "equipment": [],
+    "servings": 4,
+    "batch_friendly": false,
+    "keeps_days": 1,
+    "tags": [
+      "crevettes",
+      "rapide",
+      "wok"
+    ],
+    "ingredients": [
+      "2 barquettes de wok de saison tout-prêt d’environ 300 g (600 g)",
+      "12 gambas (ou grosses crevettes)",
+      "1 tige de citronnelle finement émincée",
+      "80 g d’arachides grillées concassées",
+      "4 c. à s. de sauce soja",
+      "3 c. à s. d’huile d’olive ou arachide pour la cuisson",
+      "1 c. à s. de miel liquide",
+      "3 c. à c. d’huile de sésame grillé (facultatif)",
+      "2 brins de coriandre (facultatif)"
+    ],
+    "steps": [
+      "Mélangez la sauce soja avec le miel, l’huile de sésame et la tige de citronnelle finement émincée.",
+      "Décortiquez les gambas et faites-les mariner 10 min dans la préparation.",
+      "Une fois marinées, poêlez-les dans le wok pour les caraméliser.",
+      "Réservez-les.",
+      "Dans le même wok, faites chauffer 2 cuillères à soupe d’huile d’olive puis faites sauter les légumes tout-prêts 6 à 7 min à feu très vif.",
+      "En fin de cuisson, rajouter la marinade des gambas, les arachides concassées et la coriandre fraîche ciselée. Faites cuire encore 1 minute.",
+      "Ajoutez les crevettes et servez bien chaud."
+    ],
+    "notes": "Piquez les crevettes sur la tige de citronnelle coupée en 4 pour en faire des brochettes !",
+    "image_query": "Wok de saison et gambas à la citronnelle"
+  },
+  {
+    "slug": "poulet-banane-plantain-lait-coco",
+    "name": "Poulet à la banane plantain et lait de coco",
+    "region": "antillais",
+    "origin": "Antilles",
+    "category": "dinner",
+    "prep_time": 30,
+    "cook_time": 60,
+    "difficulty": 2,
+    "ingredient_access": 2,
+    "equipment": [
+      "cocotte"
+    ],
+    "servings": 6,
+    "batch_friendly": true,
+    "keeps_days": 3,
+    "tags": [
+      "poulet",
+      "mijoté",
+      "sans gluten",
+      "batch cooking"
+    ],
+    "ingredients": [
+      "6 cuisses de poulet",
+      "3 bananes plantain",
+      "25 cl de lait de coco",
+      "1 petit bouquet de coriandre",
+      "5 c. à s. d’huile d’arachide",
+      "5 cl d’eau",
+      "Sel et poivre"
+    ],
+    "steps": [
+      "Épluchez les bananes, retirez les fils. Mettez-les dans une casserole avec une demi-cuillère à café de sel. Couvrez-les d’eau et faites cuire 30 min.",
+      "Pendant ce temps dans une cocotte, faites chauffer le beurre et 2 cuillères à soupe d’huile. Sur feu vif, faites dorer les morceaux de poulet sous toutes leurs faces. Quand ils sont bien colorés, baissez le feu au minimum. Salez, poivrez. Versez 5 cl d’eau, couvrez et laissez cuire 1h.",
+      "Égouttez les bananes et coupez-les en rondelles épaisses. Dans une poêle, faites chauffer 3 cuillères à soupe d’huile. Sur feu vif, faites-les dorer des 2 côtés. Salez, poivrez. Égouttez-les sur du papier absorbant et réservez-les au chaud.",
+      "Lavez, séchez et ciselez la coriandre.",
+      "Quand le poulet est cuit, retirez les morceaux de la cocotte et réservez-les dans un plat au chaud. Dans la même cocotte, versez le lait de coco, salez, poivrez et faites cuire à petit feu en mélangeant pendant 3 à 4 min.",
+      "Dressez vos assiettes avec les cuisses de poulet et les morceaux de bananes. Arrosez le tout de sauce coco. Parsemez de coriandre et servez aussitôt."
+    ],
+    "notes": "Recette Grand Frais, version simple pour la maison.",
+    "image_query": "Poulet à la banane plantain et lait de coco"
+  },
+  {
+    "slug": "mulet-farci-menthe-fines-herbes",
+    "name": "Mulet farci à la menthe et aux fines herbes",
+    "region": "europeen",
+    "origin": "France",
+    "category": "dinner",
+    "prep_time": 20,
+    "cook_time": 10,
+    "difficulty": 2,
+    "ingredient_access": 2,
+    "equipment": [],
+    "servings": 2,
+    "batch_friendly": false,
+    "keeps_days": 1,
+    "tags": [
+      "poisson",
+      "au four"
+    ],
+    "ingredients": [
+      "1 mulet de 500 g environ",
+      "Quelques noisettes de beurre",
+      "1 oignon",
+      "1 verre de vin blanc sec",
+      "Sel et poivre",
+      "1 oeuf",
+      "50 g de pistaches hachées",
+      "1/2 verre de lait",
+      "1/2 bouquet de menthe hachée",
+      "1/2 bouquet de persil haché"
+    ],
+    "steps": [
+      "Préparez la farce : mélangez bien l’oeuf, la menthe, le persil et les pistaches hachées, le sel et le poivre.",
+      "Farcir le mulet avec la préparation.",
+      "Coupez l’oignon en rondelles et faites-le revenir doucement dans une noisette de beurre puis mettez-le au fond d’un grand plat à four.",
+      "Posez le poisson dessus, arrosez de vin blanc et ajoutez quelques noisettes de beurre. Salez et poivrez.",
+      "Faites cuire 10 min à four chaud 180-210°C puis 10 min à four moyen 150-160°C.",
+      "Servez avec des pâtes fraîches."
+    ],
+    "notes": "Le mulet se remplace par une daurade ou un bar.",
+    "image_query": "Mulet farci à la menthe et aux fines herbes"
+  },
+  {
+    "slug": "merlan-roti-four-sauce-pistou",
+    "name": "Merlan rôti au four, sauce pistou",
+    "region": "europeen",
+    "origin": "France (Provence)",
+    "category": "dinner",
+    "prep_time": 20,
+    "cook_time": 20,
+    "difficulty": 2,
+    "ingredient_access": 1,
+    "equipment": [],
+    "servings": 2,
+    "batch_friendly": false,
+    "keeps_days": 1,
+    "tags": [
+      "poisson",
+      "au four",
+      "léger"
+    ],
+    "ingredients": [
+      "1 merlan de 500 g environ",
+      "1/2 botte de basilic",
+      "1 gousse d’ail",
+      "25 g de pignons de pin",
+      "15 g de parmesan râpé",
+      "5 cl d’huile d’olive",
+      "Quelques pincées de sel fin",
+      "Poivre noir",
+      "1 oignon nouveau",
+      "1 pic à brochette"
+    ],
+    "steps": [
+      "Préchauffez le four à 180°C (thermostat 6).",
+      "Épluchez l’ail, lavez et ciselez finement l’oignon nouveau.",
+      "Mixez ensemble le basilic effeuillé, l’ail, l’oignon, les pignons de pin et l’huile d’olive pour obtenir une pâte de pistou assez épaisse. Ajoutez enfin le parmesan râpé.",
+      "Lavez le merlan et séchez-le. Salez et poivrez.",
+      "Avec un couteau fin, pratiquez 3 entailles sur le dos du poisson et sur chaque face puis garnissez ces entailles de la pâte de pistou.",
+      "Disposez le merlan dans un plat de cuisson : fixez la queue dans la bouche avec un pic à brochette.",
+      "Ajoutez les légumes de votre choix. Arrosez d’un filet d’huile d’olive.",
+      "Laissez cuire 20 min au four."
+    ],
+    "notes": "Accompagnez de riz.",
+    "image_query": "Merlan rôti au four, sauce pistou"
+  },
+  {
+    "slug": "daurade-papillote-citron-fenouil",
+    "name": "Daurade royale en papillote, citron et fenouil",
+    "region": "europeen",
+    "origin": "France",
+    "category": "dinner",
+    "prep_time": 20,
+    "cook_time": 35,
+    "difficulty": 2,
+    "ingredient_access": 1,
+    "equipment": [],
+    "servings": 2,
+    "batch_friendly": false,
+    "keeps_days": 1,
+    "tags": [
+      "poisson",
+      "au four",
+      "léger",
+      "sans gluten"
+    ],
+    "ingredients": [
+      "1 daurade royale",
+      "1 bulbe de fenouil",
+      "1/2 oignon",
+      "5 cl d’huile d’olive",
+      "1/2 citron",
+      "Quelques tomates cerises",
+      "Sel et poivre"
+    ],
+    "steps": [
+      "Coupez le citron en tranches fines. Épluchez et émincez l’oignon très finement.",
+      "Lavez les tomates cerises.",
+      "Émincez le fenouil, gardez quelques branches de feuillage pour le décor.",
+      "Déposez le fenouil dans une petite casserole avec un filet d’huile d’olive et un peu d’eau, salez et laissez cuire à couvert 15 à 20 min. Égouttez après cuisson.",
+      "Préchauffez le four à 190°C. Superposez 2 feuilles de papier sulfurisé que vous badigeonnez avec un peu d’huile d’olive sur une face.",
+      "Déposez le fenouil cuit, puis la daurade par-dessus, légèrement salée et poivrée. Répartissez l’oignon émincé sur le poisson et arrosez d’un filet d’huile d’olive.",
+      "Décorez avec les tranches de citron, les tomates cerises et le feuillage de fenouil.",
+      "Refermez la papillote de façon hermétique et placez-la dans un plat.",
+      "Mettez au four et laissez cuire 15 min."
+    ],
+    "notes": "Recette Grand Frais, version simple pour la maison.",
+    "image_query": "Daurade royale en papillote, citron et fenouil"
+  },
+  {
+    "slug": "risotto-milanaise-poulet",
+    "name": "Risotto à la milanaise (poulet et safran)",
+    "region": "europeen",
+    "origin": "Italie",
+    "category": "dinner",
+    "prep_time": 10,
+    "cook_time": 25,
+    "difficulty": 2,
+    "ingredient_access": 1,
+    "equipment": [],
+    "servings": 4,
+    "batch_friendly": false,
+    "keeps_days": 2,
+    "tags": [
+      "riz",
+      "poulet",
+      "gourmand"
+    ],
+    "ingredients": [
+      "500 g d’escalopes de poulet",
+      "350 g de riz arborio",
+      "1 oignon",
+      "75 cl de bouillon de poulet",
+      "15 cl de vin blanc sec",
+      "100 g de parmesan",
+      "1 c. à c. de filaments de safran",
+      "Sel et poivre"
+    ],
+    "steps": [
+      "Émincez les escalopes de poulet en lanières.",
+      "Dans une poêle, faites chauffer l’huile d’olive, puis ajoutez le poulet et l’oignon préalablement émincé.",
+      "Ajoutez le riz, et faites le cuire jusqu’à ce qu’il devienne translucide. Mouillez avec le vin blanc et ajoutez le safran.",
+      "Incorporez la totalité du bouillon de poulet chaud, une louche à la fois en remuant continuellement. Assaisonnez à votre convenance.",
+      "Ajoutez le parmesan et servez chaud."
+    ],
+    "notes": "Recette Grand Frais, version simple pour la maison.",
+    "image_query": "Risotto à la milanaise (poulet et safran)"
+  },
+  {
+    "slug": "gratin-pates-mascarpone-gorgonzola",
+    "name": "Gratin de pâtes mascarpone, gorgonzola, brocolis et jambon",
+    "region": "europeen",
+    "origin": "Italie (adapté)",
+    "category": "dinner",
+    "prep_time": 30,
+    "cook_time": 20,
+    "difficulty": 1,
+    "ingredient_access": 1,
+    "equipment": [],
+    "servings": 4,
+    "batch_friendly": true,
+    "keeps_days": 3,
+    "tags": [
+      "au four",
+      "gourmand",
+      "batch cooking"
+    ],
+    "ingredients": [
+      "600 g de pâtes (penne, fusilli ou autres)",
+      "50 cl de crème fraîche épaisse",
+      "1 branche de brocolis",
+      "2 oignons",
+      "4 tranches de jambon",
+      "200 g de mascarpone",
+      "100 g de gorgonzola",
+      "Parmesan et basilic"
+    ],
+    "steps": [
+      "Faites cuire les pâtes al dente. Faites cuire le brocolis et laissez refroidir. Faites dorer les oignons hachés et mélangez à feu doux la crème, le mascarpone et le gorgonzola.",
+      "Coupez le brocolis ainsi que le jambon en fines lamelles.",
+      "Dans un plat, mettez une couche de pâtes, de brocolis, de jambon et de sauce. Parsemez de basilic et renouvelez les couches.",
+      "Parsemez le tout de parmesan et faites cuire 20 min à 180°C."
+    ],
+    "notes": "Recette Grand Frais, version simple pour la maison.",
+    "image_query": "Gratin de pâtes mascarpone, gorgonzola, brocolis et jambon"
+  },
+  {
+    "slug": "croc-hot-dog-beaufort",
+    "name": "Croc hot-dog au Beaufort",
+    "region": "europeen",
+    "origin": "France (Savoie)",
+    "category": "lunch",
+    "prep_time": 10,
+    "cook_time": 10,
+    "difficulty": 1,
+    "ingredient_access": 1,
+    "equipment": [],
+    "servings": 4,
+    "batch_friendly": false,
+    "keeps_days": 0,
+    "tags": [
+      "rapide",
+      "enfant",
+      "sandwich"
+    ],
+    "ingredients": [
+      "8 tranches de pain de mie aux céréales",
+      "4 saucisses de Strasbourg",
+      "200 g de concombre",
+      "1 barquette de tomates cerises",
+      "50 g de carottes râpées",
+      "100 g de mâche",
+      "200 g de Beaufort",
+      "4 c. à s. de Ketchup",
+      "2 c. à c. de moutarde"
+    ],
+    "steps": [
+      "Toastez le pain de mie.",
+      "Tartinez avec un peu de moutarde et le ketchup.",
+      "Lavez, essuyez et coupez le concombre en rondelles. Lavez, essuyez et coupez en 2 les tomates cerises.",
+      "Répartissez les crudités sur le pain de mie (mâche, carottes râpées, concombre et tomates cerises).",
+      "Coupez les saucisses de Strasbourg en 2, dans le sens de la longueur. Faites-les dorer sans matière grasse, dans une poêle.",
+      "Coupez le Beaufort en lamelles.",
+      "Placez les saucisses et le Beaufort sur les crudités, finissez par une tranche de pain de mie pour former le croc / Hot-dog."
+    ],
+    "notes": "Recette Grand Frais, version simple pour la maison.",
+    "image_query": "Croc hot-dog au Beaufort"
+  },
+  {
+    "slug": "gratin-asperges-gorgonzola",
+    "name": "Gratin d'asperges au gorgonzola",
+    "region": "europeen",
+    "origin": "Italie (adapté)",
+    "category": "dinner",
+    "prep_time": 20,
+    "cook_time": 25,
+    "difficulty": 1,
+    "ingredient_access": 2,
+    "equipment": [],
+    "servings": 6,
+    "batch_friendly": false,
+    "keeps_days": 2,
+    "tags": [
+      "au four",
+      "gourmand",
+      "léger"
+    ],
+    "ingredients": [
+      "200 g de Gorgonzola",
+      "20 cl de crème fraîche",
+      "500 g d'asperges vertes",
+      "4 tranches de jambon blanc"
+    ],
+    "steps": [
+      "Faites cuire les asperges et égouttez-les.",
+      "Écrasez le gorgonzola avec la crème fraîche.",
+      "Disposez les asperges dans un plat allant au four.",
+      "Coupez le jambon en dés et dispersez-les sur les asperges.",
+      "Recouvrez de crème au Gorgonzola.",
+      "Faites gratiner 20 à 25 min (thermostat 6-7)"
+    ],
+    "notes": "La fiche d'origine indiquait 50 g d'asperges, ce qui semble une erreur : j'ai compté 500 g.",
+    "image_query": "Gratin d'asperges au gorgonzola"
+  },
+  {
+    "slug": "tartiflette-roulee",
+    "name": "Tartiflette roulée",
+    "region": "europeen",
+    "origin": "France (Savoie)",
+    "category": "dinner",
+    "prep_time": 20,
+    "cook_time": 35,
+    "difficulty": 2,
+    "ingredient_access": 1,
+    "equipment": [],
+    "servings": 8,
+    "batch_friendly": false,
+    "keeps_days": 2,
+    "tags": [
+      "au four",
+      "festif",
+      "gourmand"
+    ],
+    "ingredients": [
+      "400 g de pommes de terre à chair ferme",
+      "6 œufs",
+      "1 oignon",
+      "100 g de gruyère râpé",
+      "1/2 reblochon",
+      "150 g de jambon de Bayonne (ou des lardons selon votre préférence)",
+      "Sel et poivre",
+      "Beurre"
+    ],
+    "steps": [
+      "Épluchez les pommes de terre puis râpez-les dans un saladier.",
+      "Dans un deuxième saladier, mélangez les œufs au fouet et ajoutez-y le gruyère, une pincée de sel et une de poivre.",
+      "Versez cette préparation dans le premier saladier sur les pommes de terre râpées et mélangez.",
+      "Répartissez ensuite sur une plaque de four recouverte de papier cuisson et enfournez pendant 30 min th5/6 (170°C). La préparation doit prendre sans griller.",
+      "En attendant, faites revenir l’oignon découpé en fines lamelles dans une poêle avec un peu de beurre (ou sans beurre mais avec les lardons si vous choisissez cette option).",
+      "Dès la sortie du four, décollez votre galette du papier de cuisson pour qu’elle ne colle pas tout en la laissant dessus puis répartissez le reblochon découpé en fines tranches sur toute la surface. Ajoutez le jambon ou les lardons sur le même principe et recouvrez avec l’oignon.",
+      "Roulez le tout dans le sens de la longueur le plus serré possible.",
+      "Remettez la préparation au four 5 min pour faire fondre le fromage.",
+      "Au moment de servir, découpez de belles tranches et servez avec une salade verte."
+    ],
+    "notes": "Recette Grand Frais, version simple pour la maison.",
+    "image_query": "Tartiflette roulée"
+  },
+  {
+    "slug": "creme-potimarron-gratinee",
+    "name": "Crème de potimarron gratinée",
+    "region": "europeen",
+    "origin": "France",
+    "category": "dinner",
+    "prep_time": 15,
+    "cook_time": 40,
+    "difficulty": 1,
+    "ingredient_access": 1,
+    "equipment": [],
+    "servings": 4,
+    "batch_friendly": true,
+    "keeps_days": 3,
+    "tags": [
+      "soupe",
+      "végétarien",
+      "batch cooking"
+    ],
+    "ingredients": [
+      "3 pommes de terre",
+      "500 g de potimarron épépiné (gardez la peau pour le goût)",
+      "100 ml de crème de mascarpone",
+      "4 c. à s de parmesan râpé",
+      "1 L de lait",
+      "4 tranches de pain de campagne",
+      "Sel et poivre"
+    ],
+    "steps": [
+      "Épluchez les pommes de terre et coupez-les en quartiers.",
+      "Versez le lait avec un verre d’eau dans une casserole et portez à ébullition.",
+      "Ajoutez les pommes de terre et le potimarron coupé en quartiers.",
+      "Assaisonnez de sel et de poivre et faites bouillir.",
+      "Laissez cuire ensuite pendant 40 min environ à feu moyen.",
+      "Mixez la préparation, incorporez la crème de mascarpone et ajustez l’assaisonnement.",
+      "Dressez dans des assiettes creuses résistantes à la chaleur. Déposez une tranche de pain de campagne coupées en mouillettes et parsemez de parmesan.",
+      "Passez quelques minutes sous le grill préchauffé pour faire fondre le fromage et servez aussitôt."
+    ],
+    "notes": "Le fromage de la tranche de pain n'est pas précisé dans la fiche : comté ou emmental râpé conviennent.",
+    "image_query": "Crème de potimarron gratinée"
+  },
+  {
+    "slug": "bettes-parmesan",
+    "name": "Bettes au parmesan",
+    "region": "europeen",
+    "origin": "Italie",
+    "category": "dinner",
+    "prep_time": 20,
+    "cook_time": 20,
+    "difficulty": 1,
+    "ingredient_access": 1,
+    "equipment": [],
+    "servings": 6,
+    "batch_friendly": false,
+    "keeps_days": 3,
+    "tags": [
+      "végétarien",
+      "léger",
+      "légumes"
+    ],
+    "ingredients": [
+      "1,5 kg de bettes",
+      "150 ml de lait entier",
+      "60 g de beurre",
+      "150 g de parmesan râpé",
+      "Noix de muscade"
+    ],
+    "steps": [
+      "Effeuillez les bettes à l’aide d’un couteau (conservez les feuilles pour une garniture de lasagnes ou un velouté).",
+      "Coupez les côtes en tronçons. Faites-les cuire 10 min dans l’eau bouillante salée, puis égouttez-les. Faites chauffer le lait et retirez du feu.",
+      "En parallèle faites chauffer le beurre dans une casserole et ajoutez les bettes à feu vif quelques minutes. Versez le lait chaud par dessus, baissez le feu et laissez mijoter 5 min.",
+      "Dressez dans un plat allant au four.",
+      "Saupoudrez d’un peu de noix de muscade et parsemez de parmesan fraîchement râpé. Salez, poivrez.",
+      "Passez quelques minutes sous le grill de votre four, pour faire dorer vos bettes.",
+      "Bon appétit !"
+    ],
+    "notes": "Recette Grand Frais, version simple pour la maison.",
+    "image_query": "Bettes au parmesan"
+  },
+  {
+    "slug": "beignets-poisson-blanc-petits-legumes",
+    "name": "Beignets de poisson blanc et ses petits légumes",
+    "region": "europeen",
+    "origin": "France",
+    "category": "dinner",
+    "prep_time": 30,
+    "cook_time": 18,
+    "difficulty": 2,
+    "ingredient_access": 1,
+    "equipment": [],
+    "servings": 4,
+    "batch_friendly": false,
+    "keeps_days": 1,
+    "tags": [
+      "poisson",
+      "enfant"
+    ],
+    "ingredients": [
+      "200 g de filet de poisson blanc (colin, cabillaud, ou sole par exemple)",
+      "60 g de farine",
+      "4 c. à s. de lait",
+      "Le jus de 2 oranges",
+      "20 g de beurre",
+      "400 g de carottes",
+      "250 g de pommes de terre vitelotte",
+      "2 panais",
+      "10 cl de crème fraîche liquide"
+    ],
+    "steps": [
+      "Après les avoir épluchées, lavez les carottes et coupez-les selon votre préférence : en julienne ou en lamelles à l’aide d’un économe.",
+      "Faites les cuire à la vapeur, de 10 à 12 min.",
+      "Dans une poêle, versez le jus d'orange et incorporez les carottes. Laissez réchauffer 2 min et assaisonnez.",
+      "Pour ajouter une autre touche de couleur dans votre assiette, vous pouvez également préparer une petite purée de panais et pommes de terre vitelotte, dont voici la recette ici.",
+      "Préparez les filets de poisson blanc : trempez-les dans le lait puis dans la farine afin de les paner.",
+      "Dans une poêle, mettez l'huile et un peu de beurre. Quand la poêle est bien chaude, ajoutez les beignets et faites les dorer 2 à 3 min (réduisez le feu pour ne pas les brûler).",
+      "Sortez le poisson de la poêle en évitant de récupérer trop de matière grasse (en utilisant une passoire, ou en épongeant avec du papier absorbant)."
+    ],
+    "notes": "N'hésitez pas à varier les goûts et les légumes ! Vos beignets se marieront très bien avec des carottes ou de la purée de panais et de pommes de terre !",
+    "image_query": "Beignets de poisson blanc et ses petits légumes"
+  },
+  {
+    "slug": "encornets-olives-tomates-capres",
+    "name": "Encornets aux olives, tomates et câpres",
+    "region": "europeen",
+    "origin": "Méditerranée",
+    "category": "dinner",
+    "prep_time": 15,
+    "cook_time": 20,
+    "difficulty": 2,
+    "ingredient_access": 2,
+    "equipment": [],
+    "servings": 4,
+    "batch_friendly": false,
+    "keeps_days": 2,
+    "tags": [
+      "poisson",
+      "mijoté",
+      "sans gluten"
+    ],
+    "ingredients": [
+      "1 kg d’encornets",
+      "2 oignons hachés",
+      "20 olives vertes farcies aux poivrons",
+      "1 c. à s. de câpres",
+      "3 gousses d’ail",
+      "400 g de tomates concassées",
+      "2 c. à s. de coriandre hachée",
+      "1 c. à s. de persil frisé haché",
+      "1 c. à c. d’origan",
+      "1 pincée de 4 épices",
+      "1 pincée de sucre",
+      "3 c. à s. d’huile d’olive",
+      "Sel et poivre"
+    ],
+    "steps": [
+      "Faites chauffer l’huile dans une sauteuse, ajoutez les encornets et faites-les cuire rapidement jusqu’à ce qu’ils deviennent opaques. Salez et poivrez.",
+      "Retirez les encornets de la sauteuse à l’aide d’une écumoire et réservez dans un plat.",
+      "Faites cuire les oignons et l’ail émincés pendant 5 min dans une sauteuse. Incorporez les tomates, l’origan, les 4 épices, le sucre et les olives aux poivrons.",
+      "Couvrez et laissez cuire 10 min à feu doux, puis encore 5 min à découvert. Incorporez les encornets avec leur jus. Ajoutez les câpres et réchauffez le tout. Salez et poivrez si nécessaire.",
+      "Servez sans attendre avec un riz blanc nature ou à l’apéritif en amuse-bouche."
+    ],
+    "notes": "Les encornets sont aussi appelés calamars.",
+    "image_query": "Encornets aux olives, tomates et câpres"
+  },
+  {
+    "slug": "filets-truite-champignons-moules",
+    "name": "Filets de truite aux champignons et aux moules",
+    "region": "europeen",
+    "origin": "France",
+    "category": "dinner",
+    "prep_time": 20,
+    "cook_time": 20,
+    "difficulty": 2,
+    "ingredient_access": 2,
+    "equipment": [],
+    "servings": 4,
+    "batch_friendly": false,
+    "keeps_days": 1,
+    "tags": [
+      "poisson",
+      "au four"
+    ],
+    "ingredients": [
+      "4 filets de truite",
+      "20 moules lavées",
+      "250 g de champignons de Paris",
+      "1 oignon jaune",
+      "1 carotte",
+      "1 branche de céleri",
+      "Quelques brins de persil plat",
+      "80 g de beurre",
+      "1 verre de vin blanc",
+      "huide d’olive",
+      "Sel, poivre du moulin",
+      "L’abus d’alcool est dangereux pour la santé. A consommer avec modération."
+    ],
+    "steps": [
+      "Préchauffez votre four à 180°C (th. 6). Beurrez un plat allant au four. Badigeonnez vos filets d’huile d’olive. Salez et poivrez. Réservez.",
+      "Lavez vos champignons et coupez-les en fines lamelles. Faites-les revenir dans 50 g de beurre avec l’oignon émincé.",
+      "Lavez vos légumes. épluchez et coupez la carotte et le céleri en petits cubes. Dans une casserole faites chauffer le verre de vin blanc, ajoutez les légumes et faites bouillir avec les moules à couvert quelques minutes.",
+      "Déposez ensuite vos filets de truite dans le plat beurré avec les champignons et les oignons, et parsemez avec le reste de beurre coupé en cubes.",
+      "Enfournez 10 min, puis ajoutez les moules décortiquées avec le bouillon vin blanc/ carotte/céleri. Poursuivez la cuisson pendant encore 10 min.",
+      "Servez chaud parsemé de persil plat ciselé."
+    ],
+    "notes": "Recette Grand Frais, version simple pour la maison.",
+    "image_query": "Filets de truite aux champignons et aux moules"
+  },
+  {
+    "slug": "cabillaud-roti-citrons",
+    "name": "Cabillaud rôti aux citrons",
+    "region": "europeen",
+    "origin": "Méditerranée",
+    "category": "dinner",
+    "prep_time": 15,
+    "cook_time": 20,
+    "difficulty": 1,
+    "ingredient_access": 1,
+    "equipment": [],
+    "servings": 4,
+    "batch_friendly": false,
+    "keeps_days": 1,
+    "tags": [
+      "poisson",
+      "au four",
+      "léger",
+      "sans gluten"
+    ],
+    "ingredients": [
+      "1 kg de cabillaud",
+      "2 citrons",
+      "2 citrons jaunes",
+      "2 oignons blancs",
+      "3 gousses d’ail",
+      "2 piments (facultatif)",
+      "6 c. à s. de coriandre hachée",
+      "3 c. à s. d’huile d’olive"
+    ],
+    "steps": [
+      "Placez le cabillaud dans un plat en céramique, salez et poivrez.",
+      "Versez le jus de deux citrons (1 jaune + 1 vert).",
+      "Faites revenir pendant quelques minutes dans une poêle avec l’huile d’olive vos oignons émincés et vos gousses d’ail broyées.",
+      "Retirez la poêle du feu et placez la moitié de l’oignon et de l’ail avec un peu de coriandre hachée dans le plat à rôtir. Déposez ensuite le poisson dessus puis le reste du mélange ail/ oignon, éventuellement les piments hachés et le reste de coriandre.",
+      "Laissez cuire 20 min dans un four préchauffé à 180°C (th. 6) jusqu’à ce que le poisson devienne opaque.",
+      "Servez garni des quartiers du citron vert et du citron jaune en plat de résistance ou en apéritif dînatoire.",
+      "Bon appétit !"
+    ],
+    "notes": "Bien que le cabillaud a une chair blanche fine et très délicate, il s’adapte à toutes les cuissons tant que l’on respecte la fragilité de sa chair.",
+    "image_query": "Cabillaud rôti aux citrons"
   }
 ]
